@@ -45,10 +45,9 @@
             this.lbl_login.BackColor = System.Drawing.Color.Transparent;
             this.lbl_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lbl_login.Location = new System.Drawing.Point(123, 59);
-            this.lbl_login.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_login.Location = new System.Drawing.Point(92, 48);
             this.lbl_login.Name = "lbl_login";
-            this.lbl_login.Size = new System.Drawing.Size(319, 91);
+            this.lbl_login.Size = new System.Drawing.Size(261, 73);
             this.lbl_login.TabIndex = 9;
             this.lbl_login.Text = "Prelude";
             // 
@@ -59,10 +58,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.label1.Location = new System.Drawing.Point(199, 150);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(149, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 25);
+            this.label1.Size = new System.Drawing.Size(132, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Đổi mật khẩu mới";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -74,20 +72,18 @@
             this.Klabel_nhaptentaikhoan.BackColor = System.Drawing.Color.Transparent;
             this.Klabel_nhaptentaikhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Klabel_nhaptentaikhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.Klabel_nhaptentaikhoan.Location = new System.Drawing.Point(42, 252);
-            this.Klabel_nhaptentaikhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Klabel_nhaptentaikhoan.Location = new System.Drawing.Point(32, 205);
             this.Klabel_nhaptentaikhoan.Name = "Klabel_nhaptentaikhoan";
-            this.Klabel_nhaptentaikhoan.Size = new System.Drawing.Size(180, 25);
+            this.Klabel_nhaptentaikhoan.Size = new System.Drawing.Size(146, 20);
             this.Klabel_nhaptentaikhoan.TabIndex = 14;
             this.Klabel_nhaptentaikhoan.Text = "Nhập mật khẩu mới";
             // 
             // kryptonTextBox1
             // 
             this.kryptonTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonTextBox1.Location = new System.Drawing.Point(47, 298);
-            this.kryptonTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(35, 242);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(477, 32);
+            this.kryptonTextBox1.Size = new System.Drawing.Size(358, 28);
             this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.kryptonTextBox1.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -107,20 +103,18 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.label2.Location = new System.Drawing.Point(42, 363);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(32, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 25);
+            this.label2.Size = new System.Drawing.Size(176, 20);
             this.label2.TabIndex = 16;
             this.label2.Text = "Xác nhận mật khẩu mới";
             // 
             // kryptonTextBox2
             // 
             this.kryptonTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonTextBox2.Location = new System.Drawing.Point(47, 415);
-            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonTextBox2.Location = new System.Drawing.Point(35, 337);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.Size = new System.Drawing.Size(477, 32);
+            this.kryptonTextBox2.Size = new System.Drawing.Size(358, 28);
             this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.kryptonTextBox2.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -135,8 +129,7 @@
             // kryptonButton1
             // 
             this.kryptonButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonButton1.Location = new System.Drawing.Point(424, 540);
-            this.kryptonButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonButton1.Location = new System.Drawing.Point(318, 439);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -148,7 +141,7 @@
             this.kryptonButton1.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.kryptonButton1.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.kryptonButton1.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton1.Size = new System.Drawing.Size(100, 34);
+            this.kryptonButton1.Size = new System.Drawing.Size(75, 28);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.kryptonButton1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -179,8 +172,7 @@
             // kryptonButton2
             // 
             this.kryptonButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.kryptonButton2.Location = new System.Drawing.Point(47, 540);
-            this.kryptonButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.kryptonButton2.Location = new System.Drawing.Point(35, 439);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -192,7 +184,7 @@
             this.kryptonButton2.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.kryptonButton2.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.kryptonButton2.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton2.Size = new System.Drawing.Size(100, 34);
+            this.kryptonButton2.Size = new System.Drawing.Size(75, 28);
             this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -222,9 +214,9 @@
             // 
             // DoiMatKhau
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 703);
+            this.ClientSize = new System.Drawing.Size(436, 571);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonTextBox2);
@@ -233,6 +225,7 @@
             this.Controls.Add(this.Klabel_nhaptentaikhoan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_login);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DoiMatKhau";
             this.Text = "DoiMatKhau";
             this.ResumeLayout(false);
