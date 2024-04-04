@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,22 @@ namespace GUI
         public GvChonLopHocPhan()
         {
             InitializeComponent();
+            dtgvDanhSachLopHocPhan.DataSource = HocPhanBUS.Instance.LayDanhSachHocPhan();
         }
+
+        DataTable TimKiemMaHP(string MaHP)
+        {
+
+            DataTable dataTable = new DataTable();
+            dataTable = HocPhanBUS.Instance.TimKiemMaHP(MaHP);
+
+            return dataTable;
+        }
+
+        private void btnTimMaHocPhan_Click(object sender, EventArgs e)
+        {
+            dtgvDanhSachLopHocPhan.DataSource = TimKiemMaHP(txtTimMaHocPhan.Text);
+        }
+
     }
 }
