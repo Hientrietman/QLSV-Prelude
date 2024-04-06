@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{1F83C7A9-A98B-4D7A-9731-B8726F3F8053}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_QLSTK", "Setup_QLSTK\Setup_QLSTK.vdproj", "{0D910697-2991-4AFE-99E8-738D051DACAF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,8 +33,6 @@ Global
 		{1F83C7A9-A98B-4D7A-9731-B8726F3F8053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F83C7A9-A98B-4D7A-9731-B8726F3F8053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F83C7A9-A98B-4D7A-9731-B8726F3F8053}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D910697-2991-4AFE-99E8-738D051DACAF}.Debug|Any CPU.ActiveCfg = Debug
-		{0D910697-2991-4AFE-99E8-738D051DACAF}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
