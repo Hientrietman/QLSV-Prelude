@@ -26,5 +26,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            GvChonLopHocPhan gvChonLopHocPhan = new GvChonLopHocPhan();
+            gvChonLopHocPhan.ShowDialog();
+        }
     }
 }
