@@ -34,5 +34,18 @@ namespace GUI
             dtgvDanhSachLopHocPhan.DataSource = TimKiemMaHP(txtTimMaHocPhan.Text);
         }
 
+        private void dtgvDanhSachLopHocPhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dtgvDanhSachLopHocPhan.Columns["DanhSachSV"].Index && e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dtgvDanhSachLopHocPhan.Rows[e.RowIndex];
+                string maHocPhan = row.Cells["MaHocPhan"].Value.ToString();
+
+                DanhSachSinhVienCuaLopHP form = new DanhSachSinhVienCuaLopHP(maHocPhan);
+                this.Hide();
+                form.ShowDialog();
+                this.Show();
+            }
+        }
     }
 }
