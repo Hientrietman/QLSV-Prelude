@@ -25,5 +25,11 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            TaoTaiKhoan taoTaiKhoan = new TaoTaiKhoan();
+            taoTaiKhoan.ShowDialog();
+        }
     }
 }
