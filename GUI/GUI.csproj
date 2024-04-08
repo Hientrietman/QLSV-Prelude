@@ -105,6 +105,12 @@
     <Compile Include="QuenMatKhau.Designer.cs">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="SinhVienXemDiemThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVienXemDiemThi.Designer.cs">
+      <DependentUpon>SinhVienXemDiemThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaoTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,8 +149,14 @@
     <EmbeddedResource Include="GvChonLopHocPhan.resx">
       <DependentUpon>GvChonLopHocPhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinhVienXemDiemThi.resx">
+      <DependentUpon>SinhVienXemDiemThi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaoTaiKhoan.resx">
       <DependentUpon>TaoTaiKhoan.cs</DependentUpon>

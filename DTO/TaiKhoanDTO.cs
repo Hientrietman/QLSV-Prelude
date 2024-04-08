@@ -34,12 +34,12 @@ namespace DTO
             MatKhau = row["MatKhau"].ToString();
             VaiTro = Convert.ToInt32(row["VaiTro"]);
             TrangThai = row["TrangThai"] != DBNull.Value ? Convert.ToInt32(row["TrangThai"]) : (int?)null;
-            Email = row["Email"].ToString();
+            /*Email = row["Email"].ToString();
             SDT = row["SDT"].ToString();
             NgaySinh = Convert.ToDateTime(row["NgaySinh"]);
             DiaChi = row["DiaChi"].ToString();
             HoTen = row["HoTen"].ToString();
-            GioiTinh = row["GioiTinh"].ToString();
+            GioiTinh = row["GioiTinh"].ToString();*/
         }
 
         public TaiKhoanDTO(string maTK, string tenDangNhap, string matKhau, int vaiTro, string hoten="")
