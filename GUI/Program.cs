@@ -16,7 +16,10 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GvChonLopHocPhan());
+//HEAD
+            Application.Run(new QuenMatKhau());
+            //
+            // f6ab09d13d9358ef6803078b90567f8055cfff99
         }
     }
 }
