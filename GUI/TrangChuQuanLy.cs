@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DAO;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,22 @@ namespace GUI
 {
     public partial class TrangChuQuanLy : Form
     {
-        public TrangChuQuanLy()
+        private TaiKhoanDAO loginAccount;
+
+        public TaiKhoanDAO LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value; }
+        }
+        public TrangChuQuanLy(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
+        }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            TaoTaiKhoan taoTaiKhoan = new TaoTaiKhoan();
+            taoTaiKhoan.ShowDialog();
         }
     }
 }

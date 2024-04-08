@@ -44,6 +44,7 @@
             this.DiemQuaTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemGiuaKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemCuoiKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
             this.Them = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnXuatExcel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -188,6 +189,7 @@
             this.dtgvDanhSachSVCuaLopHocPhan.Size = new System.Drawing.Size(969, 321);
             this.dtgvDanhSachSVCuaLopHocPhan.TabIndex = 22;
             this.dtgvDanhSachSVCuaLopHocPhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachSVCuaLopHocPhan_CellContentClick);
+
             // 
             // STT
             // 
@@ -360,5 +362,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemCuoiKy;
         private System.Windows.Forms.DataGridViewButtonColumn Them;
         private System.Windows.Forms.DataGridViewButtonColumn Sua;
+
     }
 }

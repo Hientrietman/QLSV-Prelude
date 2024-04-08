@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DAO
 {
@@ -46,5 +48,16 @@ namespace DAO
             return result > 0;
         }
 
+        public DataTable LayDiemSinhVienBangMSSV(string MaSinhVien)
+        {
+            string query = String.Format("EXEC GetDiemByMaSV @MaSV = '{0}'", MaSinhVien);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable LayDiemSinhVienBangMssvVaNamHoc(string MaSinhVien, string NamHoc)
+        {
+            string query = String.Format("EXEC LoadDiemByMaSVAndNamHoc @MaSV = '{0}', @NamHoc = '{1}'", MaSinhVien, NamHoc);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

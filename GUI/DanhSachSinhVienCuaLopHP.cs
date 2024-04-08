@@ -63,8 +63,10 @@ namespace GUI
 
                 //workbook.Activate();
 
+
                 excelApp.DisplayAlerts = false;
                 workbook.Saved = true;
+
             }
             catch (Exception ex)
             {
