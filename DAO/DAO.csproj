@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="HocPhanDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuenMatKhauDAO.cs" />
     <Compile Include="SinhVienDAO.cs" />
