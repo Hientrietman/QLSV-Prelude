@@ -52,6 +52,7 @@
     <Compile Include="HocPhanBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuenMatKhauBUS.cs" />
+    <Compile Include="SinhVienBUS.cs" />
     <Compile Include="TaoTaiKhoanBUS.cs" />
   </ItemGroup>
   <ItemGroup>
