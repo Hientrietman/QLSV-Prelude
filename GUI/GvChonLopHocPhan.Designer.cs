@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDanhSachHocPhan = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhongHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DanhSachSV = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachLopHocPhan)).BeginInit();
@@ -150,20 +151,20 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtTimMaHocPhan.StateCommon.Border.Rounding = 10;
             this.txtTimMaHocPhan.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.txtTimMaHocPhan.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimMaHocPhan.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimMaHocPhan.TabIndex = 20;
             // 
             // dtgvDanhSachLopHocPhan
             // 
             this.dtgvDanhSachLopHocPhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDanhSachLopHocPhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDanhSachLopHocPhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvDanhSachLopHocPhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDanhSachLopHocPhan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -172,54 +173,70 @@
             this.TenHocPhan,
             this.MaGV,
             this.Nam,
-            this.PhongHoc});
+            this.PhongHoc,
+            this.DanhSachSV});
             this.dtgvDanhSachLopHocPhan.Location = new System.Drawing.Point(1, 130);
             this.dtgvDanhSachLopHocPhan.Name = "dtgvDanhSachLopHocPhan";
             this.dtgvDanhSachLopHocPhan.Size = new System.Drawing.Size(891, 321);
             this.dtgvDanhSachLopHocPhan.TabIndex = 22;
+            this.dtgvDanhSachLopHocPhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachLopHocPhan_CellContentClick);
             // 
             // STT
             // 
             this.STT.DataPropertyName = "STT";
-            this.STT.FillWeight = 50F;
+            this.STT.FillWeight = 53.31879F;
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
             // 
             // MaHocPhan
             // 
             this.MaHocPhan.DataPropertyName = "MaHocPhan";
+            this.MaHocPhan.FillWeight = 106.6376F;
             this.MaHocPhan.HeaderText = "Mã Học Phần";
             this.MaHocPhan.Name = "MaHocPhan";
             // 
             // MaMonHoc
             // 
             this.MaMonHoc.DataPropertyName = "MaMonHoc";
+            this.MaMonHoc.FillWeight = 106.6376F;
             this.MaMonHoc.HeaderText = "Mã Môn Học";
             this.MaMonHoc.Name = "MaMonHoc";
             // 
             // TenHocPhan
             // 
             this.TenHocPhan.DataPropertyName = "TenHocPhan";
+            this.TenHocPhan.FillWeight = 106.6376F;
             this.TenHocPhan.HeaderText = "Tên Học Phần";
             this.TenHocPhan.Name = "TenHocPhan";
             // 
             // MaGV
             // 
             this.MaGV.DataPropertyName = "MaGV";
+            this.MaGV.FillWeight = 106.6376F;
             this.MaGV.HeaderText = "Mã Giáo Viên";
             this.MaGV.Name = "MaGV";
             // 
             // Nam
             // 
             this.Nam.DataPropertyName = "Nam";
+            this.Nam.FillWeight = 96.63198F;
             this.Nam.HeaderText = "Năm Học";
             this.Nam.Name = "Nam";
             // 
             // PhongHoc
             // 
             this.PhongHoc.DataPropertyName = "PhongHoc";
+            this.PhongHoc.FillWeight = 95.17769F;
             this.PhongHoc.HeaderText = "Phòng Học";
             this.PhongHoc.Name = "PhongHoc";
+            // 
+            // DanhSachSV
+            // 
+            this.DanhSachSV.FillWeight = 78.32138F;
+            this.DanhSachSV.HeaderText = "Danh Sách SV";
+            this.DanhSachSV.Name = "DanhSachSV";
+            this.DanhSachSV.Text = "Danh Sách SV";
+            this.DanhSachSV.UseColumnTextForButtonValue = true;
             // 
             // GvChonLopHocPhan
             // 
@@ -251,6 +268,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnTimMaHocPhan;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtTimMaHocPhan;
         private System.Windows.Forms.DataGridView dtgvDanhSachLopHocPhan;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHocPhan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaMonHoc;
@@ -258,6 +276,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhongHoc;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewButtonColumn DanhSachSV;
     }
 }
