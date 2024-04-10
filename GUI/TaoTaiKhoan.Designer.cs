@@ -179,7 +179,6 @@
             this.Kcb_chonloaitaikhoan.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.Kcb_chonloaitaikhoan.StateCommon.DropBack.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.Kcb_chonloaitaikhoan.TabIndex = 57;
-    
             // 
             // Klabel_chonloaitaikhoan
             // 
@@ -210,7 +209,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TaoTaiKhoan";
             this.Text = "Tạo tài khoản";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Kcb_chonloaitaikhoan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
