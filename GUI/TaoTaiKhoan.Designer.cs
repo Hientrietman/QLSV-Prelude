@@ -121,6 +121,7 @@
             this.lbl_login.Size = new System.Drawing.Size(277, 42);
             this.lbl_login.TabIndex = 7;
             this.lbl_login.Text = "Tạo Tài Khoản";
+            this.lbl_login.Click += new System.EventHandler(this.lbl_login_Click);
             // 
             // txtPassWord
             // 
@@ -179,7 +180,6 @@
             this.Kcb_chonloaitaikhoan.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.Kcb_chonloaitaikhoan.StateCommon.DropBack.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.Kcb_chonloaitaikhoan.TabIndex = 57;
-    
             // 
             // Klabel_chonloaitaikhoan
             // 

@@ -104,7 +104,10 @@ namespace GUI
             return true;
         }
 
+        private void lbl_login_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 
