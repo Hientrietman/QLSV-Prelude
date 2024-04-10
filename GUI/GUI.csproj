@@ -108,8 +108,9 @@
     <Compile Include="SuaDiemChoSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SuaDiemChoSinhVien.Designer.cs">
-      <DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+	<Compile Include="SuaDiemChoSinhVien.Designer.cs">
+		<DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+	</Compile>
     <Compile Include="SinhVienXemDiemThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,8 +167,9 @@
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SuaDiemChoSinhVien.resx">
-      <DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+	<EmbeddedResource Include="SuaDiemChoSinhVien.resx">
+		<DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="SinhVienXemDiemThi.resx">
       <DependentUpon>SinhVienXemDiemThi.cs</DependentUpon>
     </EmbeddedResource>
