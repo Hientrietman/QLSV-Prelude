@@ -105,6 +105,12 @@
     <Compile Include="QuenMatKhau.Designer.cs">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuaDiemChoSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+	<Compile Include="SuaDiemChoSinhVien.Designer.cs">
+		<DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+	</Compile>
     <Compile Include="SinhVienXemDiemThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemDiemChoSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemDiemChoSinhVien.Designer.cs">
+      <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChuGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +167,9 @@
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
+	<EmbeddedResource Include="SuaDiemChoSinhVien.resx">
+		<DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="SinhVienXemDiemThi.resx">
       <DependentUpon>SinhVienXemDiemThi.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChuSinhVien.resx">
       <DependentUpon>TrangChuSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemDiemChoSinhVien.resx">
+      <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

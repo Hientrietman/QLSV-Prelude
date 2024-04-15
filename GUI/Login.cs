@@ -27,6 +27,7 @@ namespace GUI
         public Login()
         {
             InitializeComponent();
+            txt_PassWord.UseSystemPasswordChar = true;
         }
 
         bool LoginAccount(string tenDangNHap, string matKhau)

@@ -59,6 +59,5 @@ namespace DAO
             string query = String.Format("EXEC LoadDiemByMaSVAndNamHoc @MaSV = '{0}', @NamHoc = '{1}'", MaSinhVien, NamHoc);
             return DataProvider.Instance.ExecuteQuery(query);
         }
-
     }
 }

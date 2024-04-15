@@ -14,10 +14,11 @@ namespace GUI
 {
     public partial class DanhSachSinhVienCuaLopHP : Form
     {
-        public DanhSachSinhVienCuaLopHP()
+        public DanhSachSinhVienCuaLopHP(string maHocPhan)
         {
             InitializeComponent();
             dtgvDanhSachSVCuaLopHocPhan.DataSource = SinhVienBUS.Instance.LayDanhSachSVCuaLopHocPhan(lblTenLopHocPhan.Text);
+            lblTenLopHocPhan.Text = maHocPhan;
         }
 
         DataTable TimKiemSVTrongLopHocPhan(string MaHP, string MaSV)
@@ -62,6 +63,10 @@ namespace GUI
 
                 //workbook.Activate();
 
+
+                excelApp.DisplayAlerts = false;
+                workbook.Saved = true;
+
             }
             catch (Exception ex)
             {
@@ -72,6 +77,38 @@ namespace GUI
         private void btnXuatExcel_Click(object sender, EventArgs e)
         {
             XuatExcel(dtgvDanhSachSVCuaLopHocPhan);
+        }
+
+        private void dtgvDanhSachSVCuaLopHocPhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dtgvDanhSachSVCuaLopHocPhan.Columns["Them"].Index)
+            {
+                // Lấy dữ liệu từ dòng được nhấn
+                string maSinhVien = dtgvDanhSachSVCuaLopHocPhan.Rows[e.RowIndex].Cells["MaSV"].Value.ToString();
+                string maHocPhan = lblTenLopHocPhan.Text;
+                string tenSinhVien = dtgvDanhSachSVCuaLopHocPhan.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
+
+                // Mở form ThemDiemSinhVien và truyền dữ liệu
+                ThemDiemChoSinhVien formThemDiem = new ThemDiemChoSinhVien(maSinhVien, maHocPhan, tenSinhVien);
+                this.Hide();
+                formThemDiem.ShowDialog();
+                dtgvDanhSachSVCuaLopHocPhan.DataSource = SinhVienBUS.Instance.LayDanhSachSVCuaLopHocPhan(lblTenLopHocPhan.Text);
+                this.Show();
+            }
+            else if (e.RowIndex >= 0 && e.ColumnIndex == dtgvDanhSachSVCuaLopHocPhan.Columns["Sua"].Index)
+            {
+                // Lấy dữ liệu từ dòng được nhấn
+                string maSinhVien = dtgvDanhSachSVCuaLopHocPhan.Rows[e.RowIndex].Cells["MaSV"].Value.ToString();
+                string maHocPhan = lblTenLopHocPhan.Text;
+                string tenSinhVien = dtgvDanhSachSVCuaLopHocPhan.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
+
+                // Mở form SuaDiemSinhVien và truyền dữ liệu
+                SuaDiemChoSinhVien formSuaDiem = new SuaDiemChoSinhVien(maSinhVien, maHocPhan, tenSinhVien);
+                this.Hide();
+                formSuaDiem.ShowDialog();
+                dtgvDanhSachSVCuaLopHocPhan.DataSource = SinhVienBUS.Instance.LayDanhSachSVCuaLopHocPhan(lblTenLopHocPhan.Text);
+                this.Show();
+            }
         }
     }
 }

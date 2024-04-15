@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTenLopHocPhan = new System.Windows.Forms.Label();
             this.lblDanhSachSVCuaLopHocPhan = new System.Windows.Forms.Label();
@@ -44,8 +44,9 @@
             this.DiemQuaTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemGiuaKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemCuoiKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+
+            this.Them = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Sua = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnXuatExcel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -163,14 +164,14 @@
             // dtgvDanhSachSVCuaLopHocPhan
             // 
             this.dtgvDanhSachSVCuaLopHocPhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDanhSachSVCuaLopHocPhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDanhSachSVCuaLopHocPhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvDanhSachSVCuaLopHocPhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDanhSachSVCuaLopHocPhan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -181,12 +182,14 @@
             this.DiemQuaTrinh,
             this.DiemGiuaKy,
             this.DiemCuoiKy,
-            this.Column1,
-            this.Column2});
+            this.Them,
+            this.Sua});
             this.dtgvDanhSachSVCuaLopHocPhan.Location = new System.Drawing.Point(1, 130);
             this.dtgvDanhSachSVCuaLopHocPhan.Name = "dtgvDanhSachSVCuaLopHocPhan";
             this.dtgvDanhSachSVCuaLopHocPhan.Size = new System.Drawing.Size(969, 321);
             this.dtgvDanhSachSVCuaLopHocPhan.TabIndex = 22;
+            this.dtgvDanhSachSVCuaLopHocPhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachSVCuaLopHocPhan_CellContentClick);
+
             // 
             // STT
             // 
@@ -244,21 +247,21 @@
             this.DiemCuoiKy.HeaderText = "Điểm Cuối Kỳ";
             this.DiemCuoiKy.Name = "DiemCuoiKy";
             // 
-            // Column1
+            // Them
             // 
-            this.Column1.FillWeight = 53.41833F;
-            this.Column1.HeaderText = "Thêm";
-            this.Column1.Name = "Column1";
-            this.Column1.Text = "Thêm";
-            this.Column1.UseColumnTextForButtonValue = true;
+            this.Them.FillWeight = 53.41833F;
+            this.Them.HeaderText = "Thêm";
+            this.Them.Name = "Them";
+            this.Them.Text = "Thêm";
+            this.Them.UseColumnTextForButtonValue = true;
             // 
-            // Column2
+            // Sua
             // 
-            this.Column2.FillWeight = 53.41833F;
-            this.Column2.HeaderText = "Sửa";
-            this.Column2.Name = "Column2";
-            this.Column2.Text = "Sửa";
-            this.Column2.UseColumnTextForButtonValue = true;
+            this.Sua.FillWeight = 53.41833F;
+            this.Sua.HeaderText = "Sửa";
+            this.Sua.Name = "Sua";
+            this.Sua.Text = "Sửa";
+            this.Sua.UseColumnTextForButtonValue = true;
             // 
             // btnXuatExcel
             // 
@@ -357,7 +360,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemQuaTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemGiuaKy;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemCuoiKy;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.DataGridViewButtonColumn Them;
+        private System.Windows.Forms.DataGridViewButtonColumn Sua;
+
     }
 }
