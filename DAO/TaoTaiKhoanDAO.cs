@@ -19,14 +19,14 @@ namespace DAO
         {
 
 
-            string query = String.Format("INSERT INTO TaiKhoan (MaTK, TenDangNhap, MatKhau, VaiTro) VALUES ('{0}', '{1}', '{2}', {3})",
-                                       taikhoan.MaTK, taikhoan.TenDangNhap, taikhoan.MatKhau, taikhoan.VaiTro);
-            string query2 = String.Format("update {0} SET MaTK ='{1}' where {2} = '{3}'", thucthe, taikhoan.TenDangNhap, Ma,taikhoan.TenDangNhap);
+            string query = String.Format("INSERT INTO TaiKhoan (TenDangNhap, MatKhau, VaiTro) VALUES ('{0}', '{1}', {2})",
+                                      taikhoan.TenDangNhap, taikhoan.MatKhau, taikhoan.VaiTro);
+            string query2 = String.Format("update {0} SET TenDangNhap = '{1}' where {2} = '{3}'", thucthe, taikhoan.TenDangNhap, Ma, taikhoan.TenDangNhap);
             int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query);
             int rowAffedted2 = DataProvider.Instance.ExecuteNonQuery(query2);
             return rowsAffected + rowAffedted2 > 1;
 
-       
+
 
 
             //ThemTaiKhoanVoiVaiTro(taikhoan);
@@ -70,7 +70,7 @@ namespace DAO
                 Ma = "MaNQL";
             }
 
-            string query = String.Format("select COUNT(*) from {0} where {1} = '{2}'", thucthe,Ma, taikhoan.MaTK);
+            string query = String.Format("select COUNT(*) from {0} where {1} = '{2}'", thucthe, Ma, taikhoan.TenDangNhap);
             int count = (int)DataProvider.Instance.ExecuteScalar(query);
             return count > 0;
         }

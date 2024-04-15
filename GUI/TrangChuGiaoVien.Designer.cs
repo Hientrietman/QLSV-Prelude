@@ -101,7 +101,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(286, 817);
+            this.pnlMenu.Size = new System.Drawing.Size(359, 817);
             this.pnlMenu.TabIndex = 1;
             // 
             // panel9
@@ -351,7 +351,7 @@
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(283, 77);
+            this.panel2.Size = new System.Drawing.Size(356, 77);
             this.panel2.TabIndex = 2;
             // 
             // pictureBox1
@@ -369,7 +369,7 @@
             // 
             this.lblMSSV.AutoSize = true;
             this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV.Location = new System.Drawing.Point(131, 48);
+            this.lblMSSV.Location = new System.Drawing.Point(111, 48);
             this.lblMSSV.Name = "lblMSSV";
             this.lblMSSV.Size = new System.Drawing.Size(91, 20);
             this.lblMSSV.TabIndex = 1;

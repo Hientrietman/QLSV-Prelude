@@ -90,6 +90,7 @@
             this.txt_UserName.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txt_UserName.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_UserName.TabIndex = 9;
+            this.txt_UserName.Text = "47.01.104.001";
             // 
             // lbl_password
             // 
@@ -118,6 +119,7 @@
             this.txt_PassWord.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txt_PassWord.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PassWord.TabIndex = 11;
+            this.txt_PassWord.Text = "12345678";
             // 
             // btnLogin
             // 

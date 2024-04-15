@@ -1,5 +1,6 @@
 ﻿using DAO;
 using DTO;
+using BUS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,22 @@ namespace GUI
         public TrangChuGiaoVien(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
+            lblName.Text = LayTenGiangVien(TaiKhoan.TenDangNhap); ;
+            lblMSSV.Text = TaiKhoan.TenDangNhap;
+        }
+
+        private string LayTenGiangVien(string tenDangNhap)
+        {
+            string maGV = "";
+
+            DataTable dt = GiangVienBUS.Instance.LayThongTinGiangVien(tenDangNhap);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                maGV = dt.Rows[0]["HoTen"].ToString();
+            }
+
+            return maGV;
         }
 
         private void button4_Click(object sender, EventArgs e)

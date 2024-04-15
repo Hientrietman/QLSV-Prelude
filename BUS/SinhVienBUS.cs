@@ -27,5 +27,10 @@ namespace BUS
 
             return SinhVienDAO.Instance.TimKiemMaSVTrongLopHocPhan(MaHP, MaSV);
         }
+
+        public DataTable LayThongTinSinhVien(string MaSV)
+        {
+            return SinhVienDAO.Instance.LayThongTinSinhVien(MaSV);
+        }
     }
 }
