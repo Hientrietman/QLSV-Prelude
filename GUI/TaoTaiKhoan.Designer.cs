@@ -121,6 +121,7 @@
             this.lbl_login.Size = new System.Drawing.Size(277, 42);
             this.lbl_login.TabIndex = 7;
             this.lbl_login.Text = "Tạo Tài Khoản";
+            this.lbl_login.Click += new System.EventHandler(this.lbl_login_Click);
             // 
             // txtPassWord
             // 

@@ -52,7 +52,7 @@ namespace GUI
                 TaiKhoanDTO loginAccount = TaiKhoanDAO.Instance.GetAccountByUserName(tenDangNHap);
                 if (loginAccount.VaiTro == 0)
                 {
-                    TrangChuSinhVien f = new TrangChuSinhVien(loginAccount);
+                    TrangChuSinhVien f = new TrangChuSinhVien(tenDangNHap);
                     this.Hide();
                     f.ShowDialog();
                     this.Show();
@@ -164,6 +164,11 @@ namespace GUI
             {
                 txt_PassWord.UseSystemPasswordChar = true;
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -130,7 +130,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox8.Image = global::GUI.Properties.Resources.gopy;
             this.pictureBox8.Location = new System.Drawing.Point(9, 5);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(58, 49);
@@ -164,7 +164,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox7.Image = global::GUI.Properties.Resources.magnifying_glass;
             this.pictureBox7.Location = new System.Drawing.Point(9, 5);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(58, 49);
@@ -199,7 +199,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox6.Image = global::GUI.Properties.Resources.podium;
             this.pictureBox6.Location = new System.Drawing.Point(9, 5);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(58, 49);
@@ -233,7 +233,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox5.Image = global::GUI.Properties.Resources.calendar;
             this.pictureBox5.Location = new System.Drawing.Point(9, 5);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(58, 49);
@@ -267,7 +267,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox4.Image = global::GUI.Properties.Resources.tkb;
             this.pictureBox4.Location = new System.Drawing.Point(9, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 49);
@@ -301,7 +301,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox3.Image = global::GUI.Properties.Resources.id_card;
             this.pictureBox3.Location = new System.Drawing.Point(9, 5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 49);
@@ -335,7 +335,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.bell;
             this.pictureBox2.Location = new System.Drawing.Point(9, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(58, 49);
@@ -357,7 +357,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.GV;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(82, 77);
