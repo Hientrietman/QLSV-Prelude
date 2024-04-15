@@ -32,5 +32,10 @@ namespace DAO
 
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable LayThongTinSinhVien(string MaSV)
+        {
+            string query = String.Format("SELECT * FROM SinhVien WHERE MaSV = '{0}'", MaSV);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

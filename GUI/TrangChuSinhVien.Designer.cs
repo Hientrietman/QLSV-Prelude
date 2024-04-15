@@ -54,9 +54,9 @@
             this.btnThongbaochung = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMSSV = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
@@ -100,7 +100,6 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1571, 768);
             this.panel10.TabIndex = 3;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
             // pnlMenu
             // 
@@ -116,7 +115,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(289, 768);
+            this.pnlMenu.Size = new System.Drawing.Size(356, 768);
             this.pnlMenu.TabIndex = 1;
             // 
             // panel9
@@ -361,13 +360,33 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblMSSV);
             this.panel2.Controls.Add(this.lblName);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(283, 77);
+            this.panel2.Size = new System.Drawing.Size(353, 77);
             this.panel2.TabIndex = 2;
+            // 
+            // lblMSSV
+            // 
+            this.lblMSSV.AutoSize = true;
+            this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMSSV.Location = new System.Drawing.Point(114, 47);
+            this.lblMSSV.Name = "lblMSSV";
+            this.lblMSSV.Size = new System.Drawing.Size(111, 20);
+            this.lblMSSV.TabIndex = 3;
+            this.lblMSSV.Text = "47.01.104.001";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(111, 17);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(146, 24);
+            this.lblName.TabIndex = 2;
+            this.lblName.Text = "Nguyễn Văn A";
             // 
             // pictureBox1
             // 
@@ -379,27 +398,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblMSSV
-            // 
-            this.lblMSSV.AutoSize = true;
-            this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV.Location = new System.Drawing.Point(131, 48);
-            this.lblMSSV.Name = "lblMSSV";
-            this.lblMSSV.Size = new System.Drawing.Size(111, 20);
-            this.lblMSSV.TabIndex = 1;
-            this.lblMSSV.Text = "47.01.104.001";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(110, 15);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(146, 24);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Nguyễn Văn A";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // btnDangXuat
             // 
@@ -423,6 +421,7 @@
             this.ClientSize = new System.Drawing.Size(1571, 768);
             this.Controls.Add(this.panel1);
             this.Name = "TrangChuSinhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ Sinh Viên";
             this.panel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
@@ -476,8 +475,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lblMSSV;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Button btnDangXuat;
     }
 }

@@ -34,19 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
@@ -108,9 +108,9 @@
     <Compile Include="SuaDiemChoSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-	<Compile Include="SuaDiemChoSinhVien.Designer.cs">
-		<DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
-	</Compile>
+    <Compile Include="SuaDiemChoSinhVien.Designer.cs">
+      <DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="SinhVienXemDiemThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,9 +167,9 @@
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="SuaDiemChoSinhVien.resx">
-		<DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
-	</EmbeddedResource>
+    <EmbeddedResource Include="SuaDiemChoSinhVien.resx">
+      <DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SinhVienXemDiemThi.resx">
       <DependentUpon>SinhVienXemDiemThi.cs</DependentUpon>
     </EmbeddedResource>
