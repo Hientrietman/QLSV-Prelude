@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +18,8 @@ namespace GUI
         public DanhSachSinhVienCuaLopHP(string maHocPhan)
         {
             InitializeComponent();
-            dtgvDanhSachSVCuaLopHocPhan.DataSource = SinhVienBUS.Instance.LayDanhSachSVCuaLopHocPhan(lblTenLopHocPhan.Text);
             lblTenLopHocPhan.Text = maHocPhan;
+            dtgvDanhSachSVCuaLopHocPhan.DataSource = SinhVienBUS.Instance.LayDanhSachSVCuaLopHocPhan(lblTenLopHocPhan.Text);
         }
 
         DataTable TimKiemSVTrongLopHocPhan(string MaHP, string MaSV)

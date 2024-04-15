@@ -10,14 +10,17 @@ namespace DTO
     public class HocPhanDTO
     {
 
-        public HocPhanDTO(string maHocPhan, string maMonHoc, string tenHocPhan, string maGiaoVien, string nam, string phongHoc)
+        public HocPhanDTO(string maHocPhan, string maMonHoc, string tenHocPhan, string maGiaoVien, string nam, string ngayMoDau, string ngayKetThuc, string tinChi, string thongTin)
         {
             this.MaHP = maHocPhan;
             this.MaMH = maMonHoc;
             this.TenHocPhan = tenHocPhan;
             this.Nam = nam;
             this.MaGV = maGiaoVien;
-            this.PhongHoc = phongHoc;
+            this.NgayMoDau = ngayMoDau;
+            this.NgayKetThuc = ngayKetThuc;
+            this.TinChi = tinChi;
+            this.ThongTin = thongTin;
         }
 
         public HocPhanDTO(DataRow row)
@@ -27,7 +30,10 @@ namespace DTO
             this.TenHocPhan = row["tenHocPhan"].ToString();
             this.Nam = row["nam"].ToString();
             this.MaGV = row["MaGV"].ToString();
-            this.PhongHoc = row["phongHoc"].ToString();
+            this.NgayMoDau = row["NgayMoDau"].ToString();
+            this.NgayKetThuc = row["NgayKetThuc"].ToString();
+            this.TinChi = row["TinChi"].ToString();
+            this.thongTin = row["ThongTin"].ToString();
         }
 
         private string maHP;
@@ -70,12 +76,35 @@ namespace DTO
             set { nam = value; }
         }
 
-        private string phongHoc;
+        private string ngayMoDau;
 
-        public string PhongHoc
+        public string NgayMoDau
         {
-            get { return phongHoc; }
-            set { phongHoc = value; }
+            get { return ngayMoDau; }
+            set { ngayMoDau = value; }
+        }
+
+        private string ngayKetThuc;
+
+        public string NgayKetThuc
+        {
+            get { return ngayKetThuc; }
+            set { ngayKetThuc = value; }
+        }
+
+        private string tinChi;
+
+        public string TinChi
+        {
+            get { return tinChi; }
+            set { tinChi = value; }
+        }
+
+        private string thongTin;
+        public string ThongTin
+        {
+            get { return thongTin; }
+            set { thongTin = value; }
         }
     }
 }

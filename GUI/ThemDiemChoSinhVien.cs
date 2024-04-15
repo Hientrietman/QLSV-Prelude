@@ -47,10 +47,10 @@ namespace GUI
             }
             else
             {
-                // Nếu không có dữ liệu, các ô textbox sẽ được vô hiệu hóa
-                txtDiemQuaTrinh.Enabled = false;
-                txtDiemGiuaKy.Enabled = false;
-                txtDiemCuoiKy.Enabled = false;
+                // Nếu không có dữ liệu tức là chưa có 1 con điểm nào cả thì sẽ enable
+                txtDiemQuaTrinh.Enabled = true;
+                txtDiemGiuaKy.Enabled = true;
+                txtDiemCuoiKy.Enabled = true;
             }
         }
 
@@ -65,9 +65,9 @@ namespace GUI
                 float? diemGiuaKy = string.IsNullOrEmpty(txtDiemGiuaKy.Text) ? null : (float?)Convert.ToDouble(txtDiemGiuaKy.Text);
                 float? diemCuoiKy = string.IsNullOrEmpty(txtDiemCuoiKy.Text) ? null : (float?)Convert.ToDouble(txtDiemCuoiKy.Text);
 
-                if ((txtDiemQuaTrinh.Enabled == true) && (txtDiemGiuaKy.Enabled == true) && (txtDiemCuoiKy.Enabled == true))
+                if (!DiemDAO.Instance.CheckKhoaChinh(maHocPhan, maSV))
                 {
-                    DiemDAO.Instance.SetKhoaChinh(lblMaLopHPParam.Text, lblMSSVParam.Text);
+                    DiemDAO.Instance.SetKhoaChinh(maHocPhan, maSV);
                 }
 
                 if (DiemBUS.Instance.UpdateDiemSinhVien(maHocPhan, maSV, diemQuaTrinh, diemGiuaKy, diemCuoiKy))

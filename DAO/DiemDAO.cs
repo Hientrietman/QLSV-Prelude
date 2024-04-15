@@ -40,6 +40,14 @@ namespace DAO
 
         }
 
+        public bool CheckKhoaChinh(string maHocPhan, string maSV)
+        {
+            string query = String.Format("SELECT * FROM Diem WHERE MaSinhVien = '{0}' AND MaHocPhan = '{1}'", maSV, maHocPhan);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
         public bool SetKhoaChinh(string maHocPhan, string maSV)
         {
             string query = String.Format("EXEC InsertDiemNull @MaSinhVien = '{0}' , @MaHocPhan = '{1}'", maSV, maHocPhan);
