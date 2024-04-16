@@ -42,7 +42,10 @@
             this.TenHocPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhongHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayMoDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThongTin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DanhSachSV = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,14 +59,14 @@
             this.panel1.Controls.Add(this.lblDanhSachHocPhan);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(891, 79);
+            this.panel1.Size = new System.Drawing.Size(955, 79);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GUI.Properties.Resources.sach;
-            this.pictureBox1.Location = new System.Drawing.Point(743, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(792, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -76,7 +79,7 @@
             this.lblDanhSachHocPhan.BackColor = System.Drawing.Color.Transparent;
             this.lblDanhSachHocPhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDanhSachHocPhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblDanhSachHocPhan.Location = new System.Drawing.Point(106, 25);
+            this.lblDanhSachHocPhan.Location = new System.Drawing.Point(140, 22);
             this.lblDanhSachHocPhan.Name = "lblDanhSachHocPhan";
             this.lblDanhSachHocPhan.Size = new System.Drawing.Size(582, 29);
             this.lblDanhSachHocPhan.TabIndex = 1;
@@ -96,7 +99,7 @@
             // btnTimMaHocPhan
             // 
             this.btnTimMaHocPhan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimMaHocPhan.Location = new System.Drawing.Point(298, 90);
+            this.btnTimMaHocPhan.Location = new System.Drawing.Point(330, 90);
             this.btnTimMaHocPhan.Name = "btnTimMaHocPhan";
             this.btnTimMaHocPhan.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnTimMaHocPhan.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -140,7 +143,7 @@
             // txtTimMaHocPhan
             // 
             this.txtTimMaHocPhan.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTimMaHocPhan.Location = new System.Drawing.Point(139, 92);
+            this.txtTimMaHocPhan.Location = new System.Drawing.Point(171, 92);
             this.txtTimMaHocPhan.Name = "txtTimMaHocPhan";
             this.txtTimMaHocPhan.Size = new System.Drawing.Size(144, 28);
             this.txtTimMaHocPhan.StateCommon.Back.Color1 = System.Drawing.Color.White;
@@ -173,66 +176,90 @@
             this.TenHocPhan,
             this.MaGV,
             this.Nam,
-            this.PhongHoc,
+            this.NgayMoDau,
+            this.NgayKetThuc,
+            this.TinChi,
+            this.ThongTin,
             this.DanhSachSV});
             this.dtgvDanhSachLopHocPhan.Location = new System.Drawing.Point(1, 130);
             this.dtgvDanhSachLopHocPhan.Name = "dtgvDanhSachLopHocPhan";
-            this.dtgvDanhSachLopHocPhan.Size = new System.Drawing.Size(891, 321);
+            this.dtgvDanhSachLopHocPhan.Size = new System.Drawing.Size(955, 321);
             this.dtgvDanhSachLopHocPhan.TabIndex = 22;
             this.dtgvDanhSachLopHocPhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachLopHocPhan_CellContentClick);
             // 
             // STT
             // 
             this.STT.DataPropertyName = "STT";
-            this.STT.FillWeight = 53.31879F;
+            this.STT.FillWeight = 52.9023F;
             this.STT.HeaderText = "STT";
             this.STT.Name = "STT";
             // 
             // MaHocPhan
             // 
             this.MaHocPhan.DataPropertyName = "MaHocPhan";
-            this.MaHocPhan.FillWeight = 106.6376F;
+            this.MaHocPhan.FillWeight = 105.8046F;
             this.MaHocPhan.HeaderText = "Mã Học Phần";
             this.MaHocPhan.Name = "MaHocPhan";
             // 
             // MaMonHoc
             // 
             this.MaMonHoc.DataPropertyName = "MaMonHoc";
-            this.MaMonHoc.FillWeight = 106.6376F;
+            this.MaMonHoc.FillWeight = 105.8046F;
             this.MaMonHoc.HeaderText = "Mã Môn Học";
             this.MaMonHoc.Name = "MaMonHoc";
             // 
             // TenHocPhan
             // 
             this.TenHocPhan.DataPropertyName = "TenHocPhan";
-            this.TenHocPhan.FillWeight = 106.6376F;
+            this.TenHocPhan.FillWeight = 105.8046F;
             this.TenHocPhan.HeaderText = "Tên Học Phần";
             this.TenHocPhan.Name = "TenHocPhan";
             // 
             // MaGV
             // 
             this.MaGV.DataPropertyName = "MaGV";
-            this.MaGV.FillWeight = 106.6376F;
+            this.MaGV.FillWeight = 105.8046F;
             this.MaGV.HeaderText = "Mã Giáo Viên";
             this.MaGV.Name = "MaGV";
             // 
             // Nam
             // 
             this.Nam.DataPropertyName = "Nam";
-            this.Nam.FillWeight = 96.63198F;
+            this.Nam.FillWeight = 95.87715F;
             this.Nam.HeaderText = "Năm Học";
             this.Nam.Name = "Nam";
             // 
-            // PhongHoc
+            // NgayMoDau
             // 
-            this.PhongHoc.DataPropertyName = "PhongHoc";
-            this.PhongHoc.FillWeight = 95.17769F;
-            this.PhongHoc.HeaderText = "Phòng Học";
-            this.PhongHoc.Name = "PhongHoc";
+            this.NgayMoDau.DataPropertyName = "NgayMoDau";
+            this.NgayMoDau.FillWeight = 99.21888F;
+            this.NgayMoDau.HeaderText = "Ngày mở đầu";
+            this.NgayMoDau.Name = "NgayMoDau";
+            // 
+            // NgayKetThuc
+            // 
+            this.NgayKetThuc.DataPropertyName = "NgayKetThuc";
+            this.NgayKetThuc.FillWeight = 99.21888F;
+            this.NgayKetThuc.HeaderText = "Ngày kết thúc";
+            this.NgayKetThuc.Name = "NgayKetThuc";
+            // 
+            // TinChi
+            // 
+            this.TinChi.DataPropertyName = "TinChi";
+            this.TinChi.FillWeight = 78.07944F;
+            this.TinChi.HeaderText = "Tín chỉ";
+            this.TinChi.Name = "TinChi";
+            // 
+            // ThongTin
+            // 
+            this.ThongTin.DataPropertyName = "ThongTin";
+            this.ThongTin.FillWeight = 99.21888F;
+            this.ThongTin.HeaderText = "Thông tin";
+            this.ThongTin.Name = "ThongTin";
             // 
             // DanhSachSV
             // 
-            this.DanhSachSV.FillWeight = 78.32138F;
+            this.DanhSachSV.FillWeight = 107.0886F;
             this.DanhSachSV.HeaderText = "Danh Sách SV";
             this.DanhSachSV.Name = "DanhSachSV";
             this.DanhSachSV.Text = "Danh Sách SV";
@@ -242,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 463);
+            this.ClientSize = new System.Drawing.Size(956, 463);
             this.Controls.Add(this.dtgvDanhSachLopHocPhan);
             this.Controls.Add(this.btnTimMaHocPhan);
             this.Controls.Add(this.txtTimMaHocPhan);
@@ -275,7 +302,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHocPhan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhongHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayMoDau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayKetThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThongTin;
         private System.Windows.Forms.DataGridViewButtonColumn DanhSachSV;
     }
 }

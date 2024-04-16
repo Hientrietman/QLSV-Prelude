@@ -21,7 +21,7 @@ namespace DAO
 
         public DataTable LayDanhSachSVCuaLopHocPhan(string MaHocPhan)
         {
-            string query = String.Format("EXEC LayDanhSachSVCuaLopHocPhan @MaHocPhan = '{0}';", MaHocPhan);
+            string query = String.Format("EXEC LayDanhSachSVCuaLopHocPhan @MaHocPhan = '{0}'", MaHocPhan);
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

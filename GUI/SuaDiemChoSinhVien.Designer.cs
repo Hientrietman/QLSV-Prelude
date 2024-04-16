@@ -89,6 +89,7 @@
             // txtDiemQuaTrinh
             // 
             this.txtDiemQuaTrinh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDiemQuaTrinh.Enabled = false;
             this.txtDiemQuaTrinh.Location = new System.Drawing.Point(238, 159);
             this.txtDiemQuaTrinh.Name = "txtDiemQuaTrinh";
             this.txtDiemQuaTrinh.Size = new System.Drawing.Size(188, 32);
@@ -204,6 +205,7 @@
             // txtDiemCuoiKy
             // 
             this.txtDiemCuoiKy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDiemCuoiKy.Enabled = false;
             this.txtDiemCuoiKy.Location = new System.Drawing.Point(238, 236);
             this.txtDiemCuoiKy.Name = "txtDiemCuoiKy";
             this.txtDiemCuoiKy.Size = new System.Drawing.Size(188, 32);
@@ -222,6 +224,7 @@
             // txtDiemGiuaKy
             // 
             this.txtDiemGiuaKy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDiemGiuaKy.Enabled = false;
             this.txtDiemGiuaKy.Location = new System.Drawing.Point(238, 198);
             this.txtDiemGiuaKy.Name = "txtDiemGiuaKy";
             this.txtDiemGiuaKy.Size = new System.Drawing.Size(188, 32);
