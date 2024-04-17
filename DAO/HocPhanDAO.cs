@@ -32,5 +32,31 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
+        public bool KiemTraMaMH(string mamh)
+        {
+            string query = String.Format("Select count(*) from MonHoc where MaMH = '{0}'",mamh);
+            int count = (int)DataProvider.Instance.ExecuteScalar(query);
+            return count>0;
+        }
+
+        public string LayTinChi(string tinchi)
+        {
+            string query = String.Format("select TinChi from MonHoc where MaMH = '{0}'",tinchi);
+            return DataProvider.Instance.ExecuteQuery(query).Rows[0]["TinChi"].ToString();
+        }
+
+        public bool KiemTraMaGV(string mamh)
+        {
+            string query = String.Format("select count(*) from GiangVien where MaGV = '{0}'",mamh);
+            int count = (int)DataProvider.Instance.ExecuteScalar(query);
+            return count> 0;
+        }
+
+        public string LayTenMonHoc(string text)
+        {
+            string query = String.Format("select TenMH from MonHoc where MaMH = '{0}'", text);
+            return DataProvider.Instance.ExecuteQuery(query).Rows[0]["TenMH"].ToString();
+             
+        }
     }
 }
