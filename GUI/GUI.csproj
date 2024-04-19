@@ -137,6 +137,12 @@
     <Compile Include="ThemDiemChoSinhVien.Designer.cs">
       <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinCaNhan.Designer.cs">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChuGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThongTinCaNhan.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrangChuGiaoVien.resx">
       <DependentUpon>TrangChuGiaoVien.cs</DependentUpon>
     </EmbeddedResource>

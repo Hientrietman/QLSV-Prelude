@@ -11,6 +11,8 @@ namespace DTO
 
     public class TaiKhoanDTO
     {
+        private TaiKhoanDTO taiKhoan;
+
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
         public int VaiTro { get; set; }
@@ -35,6 +37,11 @@ namespace DTO
             VaiTro = vaiTro;
             TrangThai = trangthai;
             // Khởi tạo các thuộc tính khác nếu cần
+        }
+
+        public TaiKhoanDTO(TaiKhoanDTO taiKhoan)
+        {
+            this.taiKhoan = taiKhoan;
         }
     }
 }
