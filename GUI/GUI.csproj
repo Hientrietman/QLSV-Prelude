@@ -34,19 +34,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>C:\Users\HOANG\Downloads\Compressed\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
@@ -93,6 +93,12 @@
     <Compile Include="GvChonLopHocPhan.Designer.cs">
       <DependentUpon>GvChonLopHocPhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="InThoiKhoaBieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InThoiKhoaBieu.Designer.cs">
+      <DependentUpon>InThoiKhoaBieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,9 +114,9 @@
     <Compile Include="SuaDiemChoSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-	<Compile Include="SuaDiemChoSinhVien.Designer.cs">
-		<DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
-	</Compile>
+    <Compile Include="SuaDiemChoSinhVien.Designer.cs">
+      <DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="SinhVienXemDiemThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="ThemDiemChoSinhVien.Designer.cs">
       <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemLHPVaoTKB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemLHPVaoTKB.Designer.cs">
+      <DependentUpon>ThemLHPVaoTKB.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangChuGiaoVien.cs">
       <SubType>Form</SubType>
@@ -161,15 +173,18 @@
     <EmbeddedResource Include="GvChonLopHocPhan.resx">
       <DependentUpon>GvChonLopHocPhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InThoiKhoaBieu.resx">
+      <DependentUpon>InThoiKhoaBieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="SuaDiemChoSinhVien.resx">
-		<DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
-	</EmbeddedResource>
+    <EmbeddedResource Include="SuaDiemChoSinhVien.resx">
+      <DependentUpon>SuaDiemChoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SinhVienXemDiemThi.resx">
       <DependentUpon>SinhVienXemDiemThi.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +203,9 @@
     </Compile>
     <EmbeddedResource Include="ThemDiemChoSinhVien.resx">
       <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemLHPVaoTKB.resx">
+      <DependentUpon>ThemLHPVaoTKB.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
