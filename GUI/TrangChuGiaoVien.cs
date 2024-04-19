@@ -28,7 +28,7 @@ namespace GUI
             InitializeComponent();
             lblName.Text = LayTenGiangVien(TaiKhoan.TenDangNhap); ;
             lblMSSV.Text = TaiKhoan.TenDangNhap;
-            taiKhoan = new TaiKhoanDTO (TaiKhoan);
+            taiKhoan = TaiKhoan;
         }
 
         private string LayTenGiangVien(string tenDangNhap)
@@ -53,7 +53,9 @@ namespace GUI
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
-            ThongTinCaNhan thongTinCaNhan = new ThongTinCaNhan(taiKhoan);
+            ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
+            f.ShowDialog();
+            this.Close();
             
         }
     }

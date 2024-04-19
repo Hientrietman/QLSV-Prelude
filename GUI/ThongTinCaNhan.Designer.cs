@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.txtGioiTinh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtLop = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtMaKhoa = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtHoTen = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -37,7 +36,6 @@
             this.txtDiaChi = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtNamSinh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.lblGioiTinh = new System.Windows.Forms.Label();
-            this.lblLop = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSoDienThoai = new System.Windows.Forms.Label();
             this.btnHuy = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -46,6 +44,8 @@
             this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblHoTenSV = new System.Windows.Forms.Label();
             this.btnXacNhan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblLop = new System.Windows.Forms.Label();
+            this.txtLop = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.SuspendLayout();
             // 
             // txtGioiTinh
@@ -64,23 +64,6 @@
             this.txtGioiTinh.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtGioiTinh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGioiTinh.TabIndex = 70;
-            // 
-            // txtLop
-            // 
-            this.txtLop.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLop.Location = new System.Drawing.Point(598, 189);
-            this.txtLop.Name = "txtLop";
-            this.txtLop.Size = new System.Drawing.Size(188, 28);
-            this.txtLop.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtLop.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txtLop.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txtLop.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtLop.StateCommon.Border.Rounding = 10;
-            this.txtLop.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.txtLop.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLop.TabIndex = 69;
             // 
             // txtMaKhoa
             // 
@@ -122,7 +105,7 @@
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.Location = new System.Drawing.Point(598, 135);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(188, 29);
+            this.txtEmail.Size = new System.Drawing.Size(188, 28);
             this.txtEmail.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtEmail.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.txtEmail.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -133,14 +116,13 @@
             this.txtEmail.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtEmail.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.TabIndex = 66;
-            this.txtEmail.Text = "NSV1@gmail.com";
             // 
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSoDienThoai.Location = new System.Drawing.Point(598, 79);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(188, 29);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(188, 28);
             this.txtSoDienThoai.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtSoDienThoai.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.txtSoDienThoai.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -151,14 +133,13 @@
             this.txtSoDienThoai.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtSoDienThoai.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDienThoai.TabIndex = 65;
-            this.txtSoDienThoai.Text = "0999999999";
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDiaChi.Location = new System.Drawing.Point(210, 131);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(188, 29);
+            this.txtDiaChi.Size = new System.Drawing.Size(188, 28);
             this.txtDiaChi.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtDiaChi.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.txtDiaChi.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -169,14 +150,13 @@
             this.txtDiaChi.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtDiaChi.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.TabIndex = 64;
-            this.txtDiaChi.Text = "280 ADV";
             // 
             // txtNamSinh
             // 
             this.txtNamSinh.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNamSinh.Location = new System.Drawing.Point(210, 185);
             this.txtNamSinh.Name = "txtNamSinh";
-            this.txtNamSinh.Size = new System.Drawing.Size(188, 29);
+            this.txtNamSinh.Size = new System.Drawing.Size(188, 28);
             this.txtNamSinh.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtNamSinh.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.txtNamSinh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -187,7 +167,6 @@
             this.txtNamSinh.StateCommon.Content.Color1 = System.Drawing.Color.Black;
             this.txtNamSinh.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamSinh.TabIndex = 63;
-            this.txtNamSinh.Text = "2003-01-01";
             // 
             // lblGioiTinh
             // 
@@ -199,17 +178,6 @@
             this.lblGioiTinh.Size = new System.Drawing.Size(93, 24);
             this.lblGioiTinh.TabIndex = 62;
             this.lblGioiTinh.Text = "Giới tính:";
-            // 
-            // lblLop
-            // 
-            this.lblLop.AutoSize = true;
-            this.lblLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblLop.Location = new System.Drawing.Point(485, 189);
-            this.lblLop.Name = "lblLop";
-            this.lblLop.Size = new System.Drawing.Size(51, 24);
-            this.lblLop.TabIndex = 61;
-            this.lblLop.Text = "Lớp:";
             // 
             // lblEmail
             // 
@@ -362,6 +330,35 @@
             this.btnXacNhan.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.TabIndex = 53;
             this.btnXacNhan.Values.Text = "Chỉnh sửa";
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
+            // 
+            // lblLop
+            // 
+            this.lblLop.AutoSize = true;
+            this.lblLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.lblLop.Location = new System.Drawing.Point(485, 189);
+            this.lblLop.Name = "lblLop";
+            this.lblLop.Size = new System.Drawing.Size(51, 24);
+            this.lblLop.TabIndex = 61;
+            this.lblLop.Text = "Lớp:";
+            // 
+            // txtLop
+            // 
+            this.txtLop.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLop.Location = new System.Drawing.Point(598, 189);
+            this.txtLop.Name = "txtLop";
+            this.txtLop.Size = new System.Drawing.Size(188, 28);
+            this.txtLop.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtLop.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txtLop.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txtLop.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtLop.StateCommon.Border.Rounding = 10;
+            this.txtLop.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.txtLop.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLop.TabIndex = 69;
             // 
             // ThongTinCaNhan
             // 
@@ -397,7 +394,6 @@
         #endregion
 
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtGioiTinh;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLop;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtMaKhoa;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtHoTen;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtEmail;
@@ -405,7 +401,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtDiaChi;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtNamSinh;
         private System.Windows.Forms.Label lblGioiTinh;
-        private System.Windows.Forms.Label lblLop;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblSoDienThoai;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnHuy;
@@ -414,5 +409,7 @@
         private System.Windows.Forms.Label lblDiaChi;
         private System.Windows.Forms.Label lblHoTenSV;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnXacNhan;
+        private System.Windows.Forms.Label lblLop;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLop;
     }
 }

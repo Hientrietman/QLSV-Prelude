@@ -24,5 +24,6 @@ namespace DAO
             string query = String.Format("SELECT * FROM GiangVien WHERE MaGV = '{0}'", MaGV);
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
     }
 }
