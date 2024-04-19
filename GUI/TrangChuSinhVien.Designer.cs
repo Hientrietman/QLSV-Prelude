@@ -297,7 +297,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(285, 61);
             this.panel4.TabIndex = 4;
-
             // 
             // btnInfo
             // 
@@ -313,6 +312,7 @@
             this.btnInfo.Text = "Thông tin cá nhân";
             this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // pictureBox3
             // 
