@@ -297,6 +297,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(285, 61);
             this.panel4.TabIndex = 4;
+
             // 
             // btnInfo
             // 

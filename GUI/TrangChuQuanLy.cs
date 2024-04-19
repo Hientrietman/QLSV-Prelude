@@ -22,11 +22,13 @@ namespace GUI
             get { return loginAccount; }
             set { loginAccount = value; }
         }
+        private TaiKhoanDTO taiKhoanHienTai;
         public TrangChuQuanLy(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
             lblName.Text = LayTenQuanLy(TaiKhoan.TenDangNhap); ;
             lblMSSV.Text = TaiKhoan.TenDangNhap;
+            taiKhoanHienTai = TaiKhoan;
         }
 
         private string LayTenQuanLy(string tenDangNhap)
