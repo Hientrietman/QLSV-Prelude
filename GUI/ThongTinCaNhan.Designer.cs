@@ -51,6 +51,7 @@
             // txtGioiTinh
             // 
             this.txtGioiTinh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtGioiTinh.Enabled = false;
             this.txtGioiTinh.Location = new System.Drawing.Point(598, 242);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(188, 28);
@@ -68,6 +69,7 @@
             // txtMaKhoa
             // 
             this.txtMaKhoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMaKhoa.Enabled = false;
             this.txtMaKhoa.Location = new System.Drawing.Point(210, 237);
             this.txtMaKhoa.Name = "txtMaKhoa";
             this.txtMaKhoa.ReadOnly = true;
@@ -86,6 +88,7 @@
             // txtHoTen
             // 
             this.txtHoTen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtHoTen.Enabled = false;
             this.txtHoTen.Location = new System.Drawing.Point(210, 79);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(188, 28);
@@ -103,6 +106,7 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(598, 135);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(188, 28);
@@ -120,6 +124,7 @@
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSoDienThoai.Enabled = false;
             this.txtSoDienThoai.Location = new System.Drawing.Point(598, 79);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(188, 28);
@@ -137,6 +142,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDiaChi.Enabled = false;
             this.txtDiaChi.Location = new System.Drawing.Point(210, 131);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(188, 28);
@@ -154,6 +160,7 @@
             // txtNamSinh
             // 
             this.txtNamSinh.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNamSinh.Enabled = false;
             this.txtNamSinh.Location = new System.Drawing.Point(210, 185);
             this.txtNamSinh.Name = "txtNamSinh";
             this.txtNamSinh.Size = new System.Drawing.Size(188, 28);
@@ -346,6 +353,7 @@
             // txtLop
             // 
             this.txtLop.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLop.Enabled = false;
             this.txtLop.Location = new System.Drawing.Point(598, 189);
             this.txtLop.Name = "txtLop";
             this.txtLop.Size = new System.Drawing.Size(188, 28);

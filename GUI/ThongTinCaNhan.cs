@@ -51,7 +51,7 @@ namespace GUI
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-
+            //ChinhSuaThongTinCaNhan f = new ChinhSuaThongTinCaNhan();
         }
     }
 }
