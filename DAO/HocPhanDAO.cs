@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace DAO
 {
@@ -76,6 +77,14 @@ namespace DAO
         {
             string query = String.Format("EXEC LayThoiKhoaBieuSinhVien @MaSinhVien = '{0}',@HocKy = '{1}', @NamHoc = '{2}'", MSSV, HocKy, NamHoc);
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public bool KiemTraTKB(string MSSV, int HocKy, string NamHoc)
+        {
+            string query = String.Format("SELECT CASE WHEN EXISTS " +
+                "(SELECT * FROM ThoiKhoaBieu WHERE MaSinhVien = '{0}' AND HocKy = '{1}' AND NamHoc = '{2}') " +
+                "THEN 1 ELSE 0 END", MSSV, HocKy, NamHoc);
+            int exists = (int)DataProvider.Instance.ExecuteScalar(query);
+            return exists == 1;
         }
     }
 }

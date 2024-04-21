@@ -55,5 +55,9 @@ namespace BUS
         {
             return HocPhanDAO.Instance.TimThoiKhoaBieu(MSSV, HocKy, NamHoc);
         }
+        public bool KiemTraTKB(string MSSV, int HocKy, string NamHoc)
+        {
+            return HocPhanDAO.Instance.KiemTraTKB(MSSV, HocKy, NamHoc);
+        }
     }
 }
