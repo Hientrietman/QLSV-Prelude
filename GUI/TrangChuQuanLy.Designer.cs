@@ -53,6 +53,9 @@
             this.lblMSSV = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -68,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDangXuat
@@ -117,6 +122,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.pnlMenu.Controls.Add(this.panel1);
             this.pnlMenu.Controls.Add(this.panel8);
             this.pnlMenu.Controls.Add(this.panel7);
             this.pnlMenu.Controls.Add(this.panel6);
@@ -134,7 +140,7 @@
             // 
             this.panel8.Controls.Add(this.btnSearch);
             this.panel8.Controls.Add(this.pictureBox7);
-            this.panel8.Location = new System.Drawing.Point(1, 425);
+            this.panel8.Location = new System.Drawing.Point(3, 485);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(285, 61);
             this.panel8.TabIndex = 8;
@@ -153,7 +159,7 @@
             // 
             this.panel7.Controls.Add(this.btnQLHP);
             this.panel7.Controls.Add(this.pictureBox6);
-            this.panel7.Location = new System.Drawing.Point(1, 363);
+            this.panel7.Location = new System.Drawing.Point(3, 423);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(285, 61);
             this.panel7.TabIndex = 7;
@@ -172,7 +178,7 @@
             // 
             this.panel6.Controls.Add(this.btnUpdateMes);
             this.panel6.Controls.Add(this.pictureBox5);
-            this.panel6.Location = new System.Drawing.Point(1, 301);
+            this.panel6.Location = new System.Drawing.Point(3, 361);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(285, 61);
             this.panel6.TabIndex = 6;
@@ -206,7 +212,7 @@
             // 
             this.panel5.Controls.Add(this.btnQLInfo);
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(1, 237);
+            this.panel5.Location = new System.Drawing.Point(3, 297);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(285, 61);
             this.panel5.TabIndex = 5;
@@ -240,7 +246,7 @@
             // 
             this.panel4.Controls.Add(this.btnTaiKhoan);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(1, 174);
+            this.panel4.Location = new System.Drawing.Point(3, 234);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(285, 61);
             this.panel4.TabIndex = 4;
@@ -347,6 +353,41 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnInfo);
+            this.panel1.Controls.Add(this.pictureBox8);
+            this.panel1.Location = new System.Drawing.Point(3, 175);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(285, 61);
+            this.panel1.TabIndex = 5;
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnInfo.Location = new System.Drawing.Point(67, 1);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(215, 55);
+            this.btnInfo.TabIndex = 1;
+            this.btnInfo.Text = "Thông tin cá nhân";
+            this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::GUI.Properties.Resources.id_card;
+            this.pictureBox8.Location = new System.Drawing.Point(9, 5);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(58, 49);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            // 
             // TrangChuQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,6 +414,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,5 +446,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblMSSV;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
