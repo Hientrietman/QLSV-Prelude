@@ -45,6 +45,22 @@ namespace GUI
                 txtNamSinh.Text = dt.Rows[0]["NgaySinh"].ToString();
                 txtSoDienThoai.Text = dt.Rows[0]["SDT"].ToString();
             }
+            else
+            {
+                lblLop.Visible = false;
+                txtLop.Visible = false;
+                lblMaKhoa.Visible = false;
+                txtMaKhoa.Visible = false;
+                lblGioiTinh.Location = lblLop.Location;
+                txtGioiTinh.Location = txtLop.Location;
+                DataTable dt = QuanLyBUS.Instance.LayThongTinQuanLy(taiKhoanDTO.TenDangNhap);
+                txtHoTen.Text = dt.Rows[0]["HoTen"].ToString();
+                txtDiaChi.Text = dt.Rows[0]["DiaChi"].ToString();
+                txtEmail.Text = dt.Rows[0]["Email"].ToString();
+                txtGioiTinh.Text = dt.Rows[0]["GioiTinh"].ToString();
+                txtNamSinh.Text = dt.Rows[0]["NgaySinh"].ToString();
+                txtSoDienThoai.Text = dt.Rows[0]["SDT"].ToString();
+            }
 
         }
 

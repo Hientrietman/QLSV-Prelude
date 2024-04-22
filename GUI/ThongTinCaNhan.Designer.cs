@@ -191,7 +191,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblEmail.Location = new System.Drawing.Point(478, 135);
+            this.lblEmail.Location = new System.Drawing.Point(503, 135);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(68, 24);
             this.lblEmail.TabIndex = 60;
@@ -344,7 +344,7 @@
             this.lblLop.AutoSize = true;
             this.lblLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblLop.Location = new System.Drawing.Point(485, 189);
+            this.lblLop.Location = new System.Drawing.Point(511, 189);
             this.lblLop.Name = "lblLop";
             this.lblLop.Size = new System.Drawing.Size(51, 24);
             this.lblLop.TabIndex = 61;

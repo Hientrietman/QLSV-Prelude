@@ -50,5 +50,12 @@ namespace GUI
             TaoTaiKhoan taoTaiKhoan = new TaoTaiKhoan();
             taoTaiKhoan.ShowDialog();
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan f = new ThongTinCaNhan(taiKhoanHienTai);
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }
