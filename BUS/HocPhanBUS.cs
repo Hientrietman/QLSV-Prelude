@@ -28,6 +28,10 @@ namespace BUS
         {
             return HocPhanDAO.Instance.LayDanhSachHocPhan();
         }
+        public DataTable LayDanhSachHocPhanEdit()
+        {
+            return HocPhanDAO.Instance.LayDanhSachHocPhanEdit();
+        }
 
         public DataTable ThemHocPhan(HocPhanDTO hocPhan)
         {
@@ -37,9 +41,23 @@ namespace BUS
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
+
+        public DataTable SuaHocPhan(HocPhanDTO hocPhan)
+        {
+
+            string query = String.Format("UPDATE HocPhan SET MaMonHoc = '{1}', TenHocPhan = '{2}', MaGV = '{3}', Nam = '{4}', NgayMoDau = '{5}', NgayKetThuc = '{6}', TinChi = '{7}', ThongTin = '{8}' WHERE MaHocPhan = '{0}'",
+                hocPhan.MaHP, hocPhan.MaMH, hocPhan.TenHocPhan, hocPhan.MaGV, hocPhan.Nam, hocPhan.NgayMoDau, hocPhan.NgayKetThuc, hocPhan.TinChi, hocPhan.ThongTin);
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
         public bool KiemTraMaMonHoc(string mamh)
         {
             return HocPhanDAO.Instance.KiemTraMaMH(mamh);
+        }
+        public bool KiemTraMaHocPhan(string MaHP)
+        {
+            return HocPhanDAO.Instance.KiemTraMaHP(MaHP);
         }
 
         public string LayTinChi(string tinchi)
@@ -47,7 +65,11 @@ namespace BUS
             return HocPhanDAO.Instance.LayTinChi(tinchi);
 
         }
+        public string LayTinChiEdit(string tinchi)
+        {
+            return HocPhanDAO.Instance.LayTinChiEdit(tinchi);
 
+        }
         public bool KiemTraMaGiangVien(string mamh)
         {
             return HocPhanDAO.Instance.KiemTraMaGV(mamh);
@@ -56,6 +78,34 @@ namespace BUS
         public string LayTenMonHoc(string text)
         {
             return HocPhanDAO.Instance.LayTenMonHoc(text);
+        }
+        public string LayTenMonHocEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayTenMonHocEdit(text);
+        }
+        public string LayMaMonHocEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayMaMonHocEdit(text);
+        }
+        public string LayMaGiangVienEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayMaGiangVienEdit(text);
+        }
+        public string LayNgayMoDauEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayNgayMoDauEdit(text);
+        }
+        public string LayNgayKetThucEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayNgayKetThucEdit(text);
+        }
+        public string LayNamEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayNamEdit(text);
+        }
+        public string LayThongTinEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayThongTinEdit(text);
         }
     }
 }
