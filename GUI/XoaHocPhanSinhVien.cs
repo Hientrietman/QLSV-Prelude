@@ -65,23 +65,30 @@ namespace GUI
 
         private void dtgvDanHSachThoiKhoaBieuSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+           
             if (e.ColumnIndex == dtgvDanHSachThoiKhoaBieuSinhVien.Columns["Xoa"].Index && e.RowIndex >= 0)
             {
-
                 string maHocPhan = dtgvDanHSachThoiKhoaBieuSinhVien.Rows[e.RowIndex].Cells["MaHocPhan"].Value.ToString();
 
+               
                 bool result = HocPhanBUS.Instance.XoaHocPhanTrongThoiKhoaBieuSinhVien(maHocPhan);
+
                 if (result)
                 {
+                   
+                    dtgvDanHSachThoiKhoaBieuSinhVien.Rows.RemoveAt(e.RowIndex); 
+                    
+                    if (dtgvDanHSachThoiKhoaBieuSinhVien.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Không còn học phần nào trong thời khóa biểu.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
 
-                    btnTimKiem_Click(sender, e);
                     MessageBox.Show("Xóa học phần thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
                     MessageBox.Show("Xóa học phần không thành công.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
         }
     }
