@@ -34,7 +34,7 @@ namespace GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SinhVienXemDiemThi sinhVienXemDiemThi=new SinhVienXemDiemThi();
+            SinhVienXemDiemThi sinhVienXemDiemThi = new SinhVienXemDiemThi();
             sinhVienXemDiemThi.ShowDialog();
         }
 
