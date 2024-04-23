@@ -24,5 +24,9 @@ namespace BUS
         {
             return QuanLyDAO.Instance.LayThongTinQuanLy(MaNQL);
         }
+        public bool ChinhSuaThongTinQuanLy(string MaQL, string Email, string SDT, DateTime NgaySinh, string DiaChi, string HoTen, string GioiTinh)
+        {
+            return QuanLyDAO.Instance.ChinhSuaThongTinQuanLy(MaQL, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh);
+        }
     }
 }

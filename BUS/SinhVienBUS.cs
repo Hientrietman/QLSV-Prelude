@@ -32,5 +32,9 @@ namespace BUS
         {
             return SinhVienDAO.Instance.LayThongTinSinhVien(MaSV);
         }
+        public bool ChinhSuaThongTinSinhVien(string MaSV, string Lop, string Email, string SDT, DateTime NgaySinh, string DiaChi, string HoTen, string GioiTinh)
+        {
+            return SinhVienDAO.Instance.ChinhSuaThongTinSinhVien(MaSV, Lop, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh);
+        }
     }
 }

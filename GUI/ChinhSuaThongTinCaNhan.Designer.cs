@@ -452,6 +452,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ChinhSuaThongTinCaNhan";
             this.Text = "ChinhSuaThongTinCaNhan";
+            this.Load += new System.EventHandler(this.ChinhSuaThongTinCaNhan_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
