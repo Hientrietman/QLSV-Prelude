@@ -33,7 +33,7 @@ namespace BUS
         {
             string query = String.Format("INSERT INTO HocPhan (MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam,NgayMoDau,NgayKetThuc,TinChi,ThongTin ) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}','{7}','{8}')",
                 hocPhan.MaHP, hocPhan.MaMH, hocPhan.TenHocPhan, hocPhan.MaGV, hocPhan.Nam, hocPhan.NgayMoDau, hocPhan.NgayKetThuc, hocPhan.TinChi, hocPhan.ThongTin);
-          
+
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -56,6 +56,28 @@ namespace BUS
         public string LayTenMonHoc(string text)
         {
             return HocPhanDAO.Instance.LayTenMonHoc(text);
+        }
+
+
+        // lay danh sach thoi khoa bieu
+        public DataTable LayThoiKhoaBieuSinhVien(string maSV, string HocKy, string NamHoc)
+        {
+            return HocPhanDAO.Instance.LayThoiKhoaBieuSinhVien(maSV, HocKy, NamHoc);
+        }
+
+        public bool XoaHocPhanTrongThoiKhoaBieuSinhVien(string maHocPhan)
+        {
+            try
+            {
+
+                return HocPhanDAO.Instance.XoaHocPhanTrongThoiKhoaBieuSinhVien(maHocPhan);
+            }
+            catch (Exception ex)
+            {
+
+
+                return false;
+            }
         }
     }
 }

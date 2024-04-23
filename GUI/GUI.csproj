@@ -34,22 +34,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>C:\Users\ADMIN\Downloads\Compressed\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>C:\Users\ADMIN\Downloads\Compressed\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>C:\Users\ADMIN\Downloads\Compressed\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>C:\Users\ADMIN\Downloads\Compressed\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>C:\Users\ADMIN\Downloads\Compressed\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -161,6 +165,12 @@
     <Compile Include="TrangChuSinhVien.Designer.cs">
       <DependentUpon>TrangChuSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="XoaHocPhanSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaHocPhanSinhVien.Designer.cs">
+      <DependentUpon>XoaHocPhanSinhVien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DanhSachSinhVienCuaLopHP.resx">
       <DependentUpon>DanhSachSinhVienCuaLopHP.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemDiemChoSinhVien.resx">
       <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaHocPhanSinhVien.resx">
+      <DependentUpon>XoaHocPhanSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
