@@ -60,14 +60,14 @@
             this.panel1.Controls.Add(this.lblDanhSachHocPhan);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(891, 79);
+            this.panel1.Size = new System.Drawing.Size(969, 79);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GUI.Properties.Resources.sach;
-            this.pictureBox1.Location = new System.Drawing.Point(743, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(801, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,7 +80,7 @@
             this.lblDanhSachHocPhan.BackColor = System.Drawing.Color.Transparent;
             this.lblDanhSachHocPhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDanhSachHocPhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblDanhSachHocPhan.Location = new System.Drawing.Point(192, 25);
+            this.lblDanhSachHocPhan.Location = new System.Drawing.Point(273, 20);
             this.lblDanhSachHocPhan.Name = "lblDanhSachHocPhan";
             this.lblDanhSachHocPhan.Size = new System.Drawing.Size(401, 33);
             this.lblDanhSachHocPhan.TabIndex = 1;
@@ -96,8 +96,8 @@
             this.txtDiemQuaTrinh.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtDiemQuaTrinh.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.txtDiemQuaTrinh.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txtDiemQuaTrinh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.txtDiemQuaTrinh.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtDiemQuaTrinh.StateCommon.Border.Rounding = 10;
             this.txtDiemQuaTrinh.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -111,7 +111,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(1, 85);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(891, 379);
+            this.panel2.Size = new System.Drawing.Size(969, 379);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -131,7 +131,7 @@
             this.panel3.Controls.Add(this.btnCapNhat);
             this.panel3.Controls.Add(this.txtDiemQuaTrinh);
             this.panel3.Controls.Add(this.lblLopHocPhan);
-            this.panel3.Location = new System.Drawing.Point(147, 27);
+            this.panel3.Location = new System.Drawing.Point(197, 30);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(575, 321);
             this.panel3.TabIndex = 0;
@@ -145,8 +145,8 @@
             this.btnHuy.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btnHuy.OverrideDefault.Border.Color1 = System.Drawing.Color.Red;
             this.btnHuy.OverrideDefault.Border.Color2 = System.Drawing.Color.Red;
-            this.btnHuy.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnHuy.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnHuy.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.Red;
             this.btnHuy.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.Red;
@@ -156,8 +156,8 @@
             this.btnHuy.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnHuy.StateCommon.Border.Color1 = System.Drawing.Color.Red;
             this.btnHuy.StateCommon.Border.Color2 = System.Drawing.Color.Red;
-            this.btnHuy.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnHuy.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnHuy.StateCommon.Border.Rounding = 8;
             this.btnHuy.StateCommon.Border.Width = 2;
@@ -168,8 +168,8 @@
             this.btnHuy.StateTracking.Back.Color2 = System.Drawing.Color.Red;
             this.btnHuy.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btnHuy.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnHuy.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnHuy.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnHuy.StateTracking.Border.Rounding = 8;
             this.btnHuy.StateTracking.Border.Width = 2;
@@ -212,8 +212,8 @@
             this.txtDiemCuoiKy.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtDiemCuoiKy.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.txtDiemCuoiKy.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txtDiemCuoiKy.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.txtDiemCuoiKy.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtDiemCuoiKy.StateCommon.Border.Rounding = 10;
             this.txtDiemCuoiKy.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -231,8 +231,8 @@
             this.txtDiemGiuaKy.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.txtDiemGiuaKy.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.txtDiemGiuaKy.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txtDiemGiuaKy.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.txtDiemGiuaKy.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.txtDiemGiuaKy.StateCommon.Border.Rounding = 10;
             this.txtDiemGiuaKy.StateCommon.Content.Color1 = System.Drawing.Color.Black;
@@ -315,8 +315,8 @@
             this.btnCapNhat.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btnCapNhat.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCapNhat.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnCapNhat.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnCapNhat.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCapNhat.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCapNhat.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -326,8 +326,8 @@
             this.btnCapNhat.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnCapNhat.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCapNhat.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnCapNhat.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnCapNhat.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCapNhat.StateCommon.Border.Rounding = 8;
             this.btnCapNhat.StateCommon.Border.Width = 2;
@@ -338,8 +338,8 @@
             this.btnCapNhat.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCapNhat.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btnCapNhat.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnCapNhat.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnCapNhat.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCapNhat.StateTracking.Border.Rounding = 8;
             this.btnCapNhat.StateTracking.Border.Width = 2;
@@ -365,11 +365,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 463);
+            this.ClientSize = new System.Drawing.Size(970, 463);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Location = new System.Drawing.Point(667, 296);
             this.Name = "SuaDiemChoSinhVien";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "SuaDiemChoSinhVien";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -47,7 +47,7 @@ namespace GUI
 
         private void button4_Click(object sender, EventArgs e)
         {
-            GvChonLopHocPhan gvChonLopHocPhan = new GvChonLopHocPhan();
+            GvChonLopHocPhan gvChonLopHocPhan = new GvChonLopHocPhan(taiKhoan);
             gvChonLopHocPhan.ShowDialog();
         }
 
@@ -57,6 +57,11 @@ namespace GUI
             f.ShowDialog();
             this.Close();
             
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

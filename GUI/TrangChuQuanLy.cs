@@ -57,5 +57,10 @@ namespace GUI
             f.ShowDialog();
             this.Close();
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

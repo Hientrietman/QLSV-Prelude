@@ -1,4 +1,6 @@
-﻿using DAO;
+﻿using BUS;
+using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +15,28 @@ namespace GUI
 {
     public partial class SinhVienXemDiemThi : Form
     {
-        public SinhVienXemDiemThi()
+        private TaiKhoanDTO taiKhoan;
+        public SinhVienXemDiemThi(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
+            taiKhoan = TaiKhoan;
+            lblMaSinhVienParam.Text = taiKhoan.TenDangNhap;
+            lblHoTenSVParam.Text = LayTenSinhVien(taiKhoan.TenDangNhap);
             dtgvBangDiemSinhVien.DataSource = DiemDAO.Instance.LayDiemSinhVienBangMSSV(lblMaSinhVienParam.Text);
+        }
+
+        private string LayTenSinhVien(string tenDangNhap)
+        {
+            string TenSV = "";
+
+            DataTable dt = SinhVienBUS.Instance.LayThongTinSinhVien(tenDangNhap);
+
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                TenSV = dt.Rows[0]["HoTen"].ToString();
+            }
+
+            return TenSV;
         }
 
         private void btnLoc_Click(object sender, EventArgs e)

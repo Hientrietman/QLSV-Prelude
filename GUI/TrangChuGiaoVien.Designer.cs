@@ -84,7 +84,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1620, 817);
+            this.panel1.Size = new System.Drawing.Size(1571, 768);
             this.panel1.TabIndex = 2;
             // 
             // pnlMenu
@@ -101,7 +101,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(359, 817);
+            this.pnlMenu.Size = new System.Drawing.Size(359, 768);
             this.pnlMenu.TabIndex = 1;
             // 
             // panel9
@@ -298,7 +298,6 @@
             this.btnInfo.Text = "Thông tin cá nhân";
             this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.UseVisualStyleBackColor = false;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // pictureBox3
             // 
@@ -393,21 +392,23 @@
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDangXuat.Location = new System.Drawing.Point(1125, 20);
+            this.btnDangXuat.Location = new System.Drawing.Point(1392, 17);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(125, 48);
             this.btnDangXuat.TabIndex = 0;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // TrangChuGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.ClientSize = new System.Drawing.Size(1620, 817);
+            this.ClientSize = new System.Drawing.Size(1571, 768);
             this.Controls.Add(this.panel1);
             this.Name = "TrangChuGiaoVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrangchuGiaoVien";
             this.panel1.ResumeLayout(false);
             this.pnlMenu.ResumeLayout(false);

@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,24 +15,26 @@ namespace GUI
 {
     public partial class GvChonLopHocPhan : Form
     {
-        public GvChonLopHocPhan()
+        private TaiKhoanDTO taiKhoan;
+        public GvChonLopHocPhan(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
-            dtgvDanhSachLopHocPhan.DataSource = HocPhanBUS.Instance.LayDanhSachHocPhan();
+            taiKhoan = TaiKhoan;
+            dtgvDanhSachLopHocPhan.DataSource = HocPhanBUS.Instance.LayDanhSachHocPhanCuaGV(taiKhoan.TenDangNhap);
         }
 
-        DataTable TimKiemMaHP(string MaHP)
+        DataTable TimKiemMaHPCuaGV(string MaGV, string MaHP)
         {
 
             DataTable dataTable = new DataTable();
-            dataTable = HocPhanBUS.Instance.TimKiemMaHP(MaHP);
+            dataTable = HocPhanBUS.Instance.TimKiemMaHPCuaGV(MaGV, MaHP);
 
             return dataTable;
         }
 
         private void btnTimMaHocPhan_Click(object sender, EventArgs e)
         {
-            dtgvDanhSachLopHocPhan.DataSource = TimKiemMaHP(txtTimMaHocPhan.Text);
+            dtgvDanhSachLopHocPhan.DataSource = TimKiemMaHPCuaGV(taiKhoan.TenDangNhap, txtTimMaHocPhan.Text);
         }
 
         private void dtgvDanhSachLopHocPhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -42,9 +45,9 @@ namespace GUI
                 string maHocPhan = row.Cells["MaHocPhan"].Value.ToString();
 
                 DanhSachSinhVienCuaLopHP form = new DanhSachSinhVienCuaLopHP(maHocPhan);
-                this.Hide();
-                form.ShowDialog();
-                this.Show();
+                //this.Hide();
+                form.Show();
+                //this.Show();
             }
         }
     }
