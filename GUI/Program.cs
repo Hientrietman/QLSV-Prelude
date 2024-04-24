@@ -16,9 +16,8 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            Application.Run(new QuanLyHocPhan());
-
+          
+            Application.Run(new Login());
 
         }
     }

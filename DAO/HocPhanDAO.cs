@@ -24,6 +24,13 @@ namespace DAO
         {
             return DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER (ORDER BY MaHocPhan) AS STT, MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam, ThongTin FROM  HocPhan;");
         }
+
+        public DataTable LayDanhSachHocPhanCuaGV(string TenDangNhap)
+        {
+            string query = String.Format("SELECT ROW_NUMBER() OVER (ORDER BY MaHocPhan) AS STT, MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam, NgayMoDau, NgayKetThuc, TinChi, ThongTin FROM  HocPhan WHERE HocPhan.MaGV = '{0}';", TenDangNhap);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
         public DataTable LayDanhSachHocPhanCuaSV(string MSSV, int HocKy, string NamHoc)
         {
             string query = String.Format("EXEC GetHocPhanTheoSinhVien @MaSinhVien = '{0}', @HocKy = '{1}', @NamHoc = '{2}'", MSSV, HocKy, NamHoc);
@@ -42,6 +49,28 @@ namespace DAO
             string query = String.Format("SELECT ROW_NUMBER() OVER(ORDER BY MaHocPhan) AS STT, MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam, NgayMoDau, NgayKetThuc, TinChi, ThongTin FROM HocPhan WHERE dbo.fuConvertToUnsign1(MaHocPhan) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%'", MaHP);
 
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable TimKiemMaHPCuaGV(string MaGV, string MaHP)
+        {
+
+            string query = String.Format("SELECT ROW_NUMBER() OVER(ORDER BY MaHocPhan) AS STT, MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam, NgayMoDau, NgayKetThuc, TinChi, ThongTin FROM HocPhan WHERE HocPhan.MaGV = '{0}' AND dbo.fuConvertToUnsign1(MaHocPhan) LIKE N'%' + dbo.fuConvertToUnsign1(N'{1}') + '%'", MaGV, MaHP);
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable LayDanhSachHocPhanCoDK(string MaSinhVien, string Nam)
+        {
+            string query = String.Format("EXEC LayDanhSachHocPhanCoDK '{0}', '{1}';", MaSinhVien, Nam);
+            return DataProvider.Instance.ExecuteQuery(query);
+
+        }
+
+        public DataTable TimKiemMaHocPhanCoDK(string MaSinhVien, string Nam, string MaHocPhan)
+        {
+            string query = String.Format("EXEC TimKiemMaHocPhanCoDK '{0}', '{1}', '{2}';", MaSinhVien, Nam, MaHocPhan);
+            return DataProvider.Instance.ExecuteQuery(query);
+
         }
         public DataTable TimKiemLopHP(int NamHoc, string MaHP)
         {
@@ -133,8 +162,8 @@ namespace DAO
         {
             string query = String.Format("select TenHocPhan from HocPhan where MaHocPhan = '{0}'", text);
             return DataProvider.Instance.ExecuteQuery(query).Rows[0]["TenHocPhan"].ToString();
-        }    
-
+        }
+      
         // lay thoi khoa bieu sinh vien
         public DataTable LayThoiKhoaBieuSinhVien(string maSV, string HocKy, string NamHoc)
         {
