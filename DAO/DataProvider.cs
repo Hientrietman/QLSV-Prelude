@@ -24,6 +24,7 @@ namespace DAO
 
 
 
+
         //trả về giá trị DataTable
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

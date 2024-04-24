@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiemBUS.cs" />
+    <Compile Include="DoiMatKhauBUS.cs" />
     <Compile Include="GiangVienBUS.cs" />
     <Compile Include="HocPhanBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
