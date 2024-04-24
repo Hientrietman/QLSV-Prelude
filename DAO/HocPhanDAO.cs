@@ -133,7 +133,7 @@ namespace DAO
         {
             string query = String.Format("select TenHocPhan from HocPhan where MaHocPhan = '{0}'", text);
             return DataProvider.Instance.ExecuteQuery(query).Rows[0]["TenHocPhan"].ToString();
-             
+        }    
 
         // lay thoi khoa bieu sinh vien
         public DataTable LayThoiKhoaBieuSinhVien(string maSV, string HocKy, string NamHoc)
@@ -193,6 +193,7 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query).Rows[0]["ThongTin"].ToString();
 
         }
+
     }
 
 }
