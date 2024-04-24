@@ -9,10 +9,10 @@ namespace DTO
 {
     public class SinhVienDTO
     {
-        public SinhVienDTO(string maSV, string maTK, string maKhoa, string hoTen, string lop, string email, string sdt, string ngaySinh, string gioiTinh)
+        public SinhVienDTO(string maSV, string tenDangNhap, string maKhoa, string hoTen, string lop, string email, string sdt, string ngaySinh, string gioiTinh)
         {
             this.MaSV = maSV;
-            this.MaTK = maTK;
+            this.TenDangNhap = tenDangNhap;
             this.MaKhoa = maKhoa;
             this.HoTen = hoTen;
             this.Lop = lop;
@@ -25,7 +25,7 @@ namespace DTO
         public SinhVienDTO(DataRow row)
         {
             this.MaSV = row["MaSV"].ToString();
-            this.MaTK = row["MaTK"].ToString();
+            this.TenDangNhap = row["TenDangNhap"].ToString();
             this.MaKhoa = row["MaKhoa"].ToString();
             this.HoTen = row["HoTen"].ToString();
             this.Lop = row["Lop"].ToString();
@@ -42,11 +42,11 @@ namespace DTO
             set { maSV = value; }
         }
 
-        private string maTK;
-        public string MaTK
+        private string tenDangNhap;
+        public string TenDangNhap
         {
-            get { return maTK; }
-            set { maTK = value; }
+            get { return tenDangNhap; }
+            set { tenDangNhap = value; }
         }
 
         private string maKhoa;
