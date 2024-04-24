@@ -223,6 +223,9 @@
     <EmbeddedResource Include="ChinhSuaThongTinCaNhan.resx">
       <DependentUpon>ChinhSuaThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachSinhVien.resx">
+      <DependentUpon>DanhSachSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhSachSinhVienCuaLopHP.resx">
       <DependentUpon>DanhSachSinhVienCuaLopHP.cs</DependentUpon>
     </EmbeddedResource>
