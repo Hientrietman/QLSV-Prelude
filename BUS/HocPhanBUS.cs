@@ -151,7 +151,7 @@ namespace BUS
         public string LayThongTinEdit(string text)
         {
             return HocPhanDAO.Instance.LayThongTinEdit(text);
-
+        }
 
         }
         // lay danh sach thoi khoa bieu
