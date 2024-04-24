@@ -25,7 +25,7 @@ namespace GUI
         private void btn_them_Click(object sender, EventArgs e)
         {
             // Kiểm tra xem tất cả các text box đã được điền đầy đủ và đáp ứng các điều kiện kiểm tra
-            if (txt_mahp.Text != "" && txt_mahp.Text.Length == 10 && txt_mamh.Text != "" && txt_magv.Text != "" && txt_nam.Text != "" && txt_ngaybatdau.Text != "" && txt_ngayketthuc.Text != "" && label4.Text == "" && label6.Text == "" && label7.Text == "" && label8.Text == "")
+            if (txt_mahp.Text != "" && txt_mahp.Text.Length == 10 && txt_mamh.Text != ""&&  txt_magv.Text != "" && txt_nam.Text != "" && txt_ngaybatdau.Text != "" && txt_ngayketthuc.Text != "" && label4.Text == "" && label6.Text == "" && label7.Text == "" && label8.Text == "")
             {
                 // Kiểm tra định dạng của ngày bắt đầu và kết thúc
                 DateTime ngayBatDau, ngayKetThuc;
@@ -53,12 +53,42 @@ namespace GUI
             }
         }
 
+        private void btn_sua_Click(object sender, EventArgs e)
+        {
+            if (txt_mahp.Text != "" && txt_mahp.Text.Length == 10)
+            {
+                HocPhanDTO hocPhan = new HocPhanDTO(txt_mahp.Text, txt_mamh.Text, txt_tenhp.Text, txt_magv.Text, txt_nam.Text, txt_ngaybatdau.Text, txt_ngayketthuc.Text, txt_tinchi.Text, txt_thongtin.Text);
 
+                if (KiemTraMaHocPhan(txt_mahp.Text))
+                {
+                    //txt_mahp_Edit();
 
+                    HocPhanBUS.Instance.SuaHocPhan(hocPhan);
+                    MessageBox.Show("Sửa thành công");
+                    dtgv_hocphan.DataSource = HocPhanBUS.Instance.LayDanhSachHocPhanEdit();
+
+                }
+                else
+                {
+                    // Hiển thị thông báo lỗi nếu định dạng ngày không hợp lệ
+                    MessageBox.Show("Mã học phần không tồn tại!");
+
+                }
+            }
+            else 
+            {
+                // Nếu không đáp ứng các điều kiện, hiển thị thông báo lỗi hoặc thực hiện hành động phù hợp khác
+                MessageBox.Show("Vui lòng điền đúng mã học phần!");
+            }
+        }
 
         private bool KiemTraMaMonHoc(string mamh)
         {
             return HocPhanBUS.Instance.KiemTraMaMonHoc(mamh);
+        }
+        private bool KiemTraMaHocPhan(string MaHP)
+        {
+            return HocPhanBUS.Instance.KiemTraMaHocPhan(MaHP);
         }
         private bool KiemTraMaGiangVien(string mamh)
         {
@@ -67,6 +97,10 @@ namespace GUI
         private string LayTinChiMonHoc(string tinchi)
         {
             return HocPhanBUS.Instance.LayTinChi(tinchi);
+        }
+        private string LayTinChiEdit(string tinchi)
+        {
+            return HocPhanBUS.Instance.LayTinChiEdit(tinchi);
         }
 
         private void txt_mamh_Leave(object sender, EventArgs e)
@@ -86,38 +120,66 @@ namespace GUI
 
 
         }
-
-        private void txt_magv_Leave(object sender, EventArgs e)
-        {
-            if (!KiemTraMaGiangVien(txt_magv.Text))
-            {
-                lbl_Emagv.Text = "Giảng viên này không tồn tại!";
-            }
-            else if(txt_magv.Text == " ")
-            {
-                lbl_Emagv.Text = " ";
-            }
-            else if(KiemTraMaGiangVien(txt_magv.Text))
-            {
-                lbl_Emagv.Text = " ";
-            
-            }
-            
-        }
-
         private void txt_mahp_Leave(object sender, EventArgs e)
         {
+            if (!KiemTraMaMonHoc(txt_mamh.Text))
+            {
+                lbl_Emamh.Text = "Mã môn học này không tồn tại!";
+                txt_tinchi.Clear();
+                txt_tenhp.Clear();
+            }
+            else if (KiemTraMaMonHoc(txt_mamh.Text))
+            {
+
+                txt_tinchi.Text = LayTinChiMonHoc(txt_mamh.Text);
+                lbl_Emamh.Text = " ";
+                txt_tenhp.Text = HocPhanBUS.Instance.LayTenMonHoc(txt_mamh.Text);
+            }
+
+
+        }
+     private void txt_mahp_Edit(object sender, EventArgs e)
+    {
             // Kiểm tra độ dài của mã học phần
             if (txt_mahp.Text.Length != 10)
             {
                 // Hiển thị thông báo lỗi trên label4
                 label4.Text = "Mã học phần phải có 10 ký tự!";
             }
-            else
+            if (!KiemTraMaHocPhan(txt_mahp.Text))
             {
-                // Nếu mã học phần đúng độ dài, xóa thông báo lỗi trên label4 (nếu có)
-                label4.Text = "";
+                lbl_Emamh.Text = "Mã học phần này không tồn tại!";
+               
             }
+            else if (KiemTraMaHocPhan(txt_mahp.Text))
+            {
+                txt_tinchi.Text = LayTinChiEdit(txt_mahp.Text);
+                lbl_Emamh.Text = " ";
+                txt_tenhp.Text = HocPhanBUS.Instance.LayTenMonHocEdit(txt_mahp.Text);
+                txt_mamh.Text = HocPhanBUS.Instance.LayMaMonHocEdit(txt_mahp.Text);
+                txt_magv.Text = HocPhanBUS.Instance.LayMaGiangVienEdit(txt_mahp.Text);
+                txt_nam.Text = HocPhanBUS.Instance.LayNamEdit(txt_mahp.Text);
+                txt_ngaybatdau.Text = HocPhanBUS.Instance.LayNgayMoDauEdit(txt_mahp.Text);
+                txt_ngayketthuc.Text = HocPhanBUS.Instance.LayNgayKetThucEdit(txt_mahp.Text);
+                txt_thongtin.Text = HocPhanBUS.Instance.LayThongTinEdit(txt_mahp.Text);
+            }
+    }
+    private void txt_magv_Leave(object sender, EventArgs e)
+        {
+            if (!KiemTraMaGiangVien(txt_magv.Text))
+            {
+                lbl_Emagv.Text = "Giảng viên này không tồn tại!";
+            }
+            else if (txt_magv.Text == " ")
+            {
+                lbl_Emagv.Text = " ";
+            }
+            else if (KiemTraMaGiangVien(txt_magv.Text))
+            {
+                lbl_Emagv.Text = " ";
+
+            }
+
         }
 
         private void txt_ngaybatdau_Leave(object sender, EventArgs e)
@@ -180,6 +242,7 @@ namespace GUI
             }
         }
 
+
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             /*hocPhanStr = txt_mahp.Text;*/
@@ -233,5 +296,6 @@ namespace GUI
                 txt_thongtin.Text = Convert.ToString(row.Cells["ThongTin"].Value);
             }
         }
+
     }
 }

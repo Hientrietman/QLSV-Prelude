@@ -44,6 +44,13 @@ namespace BUS
         {
             return HocPhanDAO.Instance.LayDanhSachHocPhan();
         }
+
+        public DataTable LayDanhSachHocPhanEdit()
+        {
+            return HocPhanDAO.Instance.LayDanhSachHocPhanEdit();
+        }
+
+
         public DataTable LayDanhSachHocPhanCuaSV(string MSSV, int HocKy, string NamHoc)
         {
             return HocPhanDAO.Instance.LayDanhSachHocPhanCuaSV(MSSV,HocKy,NamHoc);
@@ -60,9 +67,20 @@ namespace BUS
         {
             return HocPhanDAO.Instance.KiemTraTKB(MSSV, HocKy, NamHoc);
         }
+
         public DataTable ThemHocPhan(HocPhanDTO hocPhan)
         {
             string query = String.Format("INSERT INTO HocPhan (MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam,NgayMoDau,NgayKetThuc,TinChi,ThongTin ) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}','{7}','{8}')",
+                hocPhan.MaHP, hocPhan.MaMH, hocPhan.TenHocPhan, hocPhan.MaGV, hocPhan.Nam, hocPhan.NgayMoDau, hocPhan.NgayKetThuc, hocPhan.TinChi, hocPhan.ThongTin);
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+
+        public DataTable SuaHocPhan(HocPhanDTO hocPhan)
+        {
+
+            string query = String.Format("UPDATE HocPhan SET MaMonHoc = '{1}', TenHocPhan = '{2}', MaGV = '{3}', Nam = '{4}', NgayMoDau = '{5}', NgayKetThuc = '{6}', TinChi = '{7}', ThongTin = '{8}' WHERE MaHocPhan = '{0}'",
                 hocPhan.MaHP, hocPhan.MaMH, hocPhan.TenHocPhan, hocPhan.MaGV, hocPhan.Nam, hocPhan.NgayMoDau, hocPhan.NgayKetThuc, hocPhan.TinChi, hocPhan.ThongTin);
 
             return DataProvider.Instance.ExecuteQuery(query);
@@ -72,13 +90,21 @@ namespace BUS
         {
             return HocPhanDAO.Instance.KiemTraMaMH(mamh);
         }
+        public bool KiemTraMaHocPhan(string MaHP)
+        {
+            return HocPhanDAO.Instance.KiemTraMaHP(MaHP);
+        }
 
         public string LayTinChi(string tinchi)
         {
             return HocPhanDAO.Instance.LayTinChi(tinchi);
 
         }
+        public string LayTinChiEdit(string tinchi)
+        {
+            return HocPhanDAO.Instance.LayTinChiEdit(tinchi);
 
+        }
         public bool KiemTraMaGiangVien(string mamh)
         {
             return HocPhanDAO.Instance.KiemTraMaGV(mamh);
@@ -88,6 +114,35 @@ namespace BUS
         {
             return HocPhanDAO.Instance.LayTenMonHoc(text);
         }
+
+        public string LayTenMonHocEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayTenMonHocEdit(text);
+        }
+        public string LayMaMonHocEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayMaMonHocEdit(text);
+        }
+        public string LayMaGiangVienEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayMaGiangVienEdit(text);
+        }
+        public string LayNgayMoDauEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayNgayMoDauEdit(text);
+        }
+        public string LayNgayKetThucEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayNgayKetThucEdit(text);
+        }
+        public string LayNamEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayNamEdit(text);
+        }
+        public string LayThongTinEdit(string text)
+        {
+            return HocPhanDAO.Instance.LayThongTinEdit(text);
+
 
 
         // lay danh sach thoi khoa bieu
@@ -132,6 +187,7 @@ namespace BUS
 
             int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, parametersArray);
             return rowsAffected > 0;*/
+
         }
     }
 }
