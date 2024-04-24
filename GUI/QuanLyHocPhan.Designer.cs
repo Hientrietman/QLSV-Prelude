@@ -66,6 +66,7 @@
             this.dtgv_hocphan.Name = "dtgv_hocphan";
             this.dtgv_hocphan.Size = new System.Drawing.Size(458, 504);
             this.dtgv_hocphan.TabIndex = 99;
+            this.dtgv_hocphan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_hocphan_CellClick);
             // 
             // txt_mahp
             // 
@@ -133,6 +134,7 @@
             this.btn_xoa.TabIndex = 13;
             this.btn_xoa.Text = "Xoá";
             this.btn_xoa.UseVisualStyleBackColor = true;
+            this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
             // btn_sua
             // 
