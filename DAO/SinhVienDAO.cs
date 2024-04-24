@@ -45,5 +45,27 @@ namespace DAO
             return result > 0;
 
         }
+
+        public DataTable LayToanBoSinhVien()
+        {
+            string query = String.Format("EXEC LayDSSV");
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable timKiemSVTrongDSSV(string maSV, string maKhoa, string lop)
+        {
+            // Sử dụng String.Format để tạo câu lệnh SQL với các tham số được thay thế
+            string query = "EXEC TimKiemSVTrongDSSV ";
+            query += (maSV != null) ? $"@MaSV = '{maSV}', " : "@MaSV = NULL, "; // Kiểm tra và thêm tham số maSV
+            query += (maKhoa != null) ? $"@MaKhoa = '{maKhoa}', " : "@MaKhoa = NULL, "; // Kiểm tra và thêm tham số maKhoa
+            query += (lop != null) ? $"@Lop = '{lop}'" : "@Lop = NULL"; // Kiểm tra và thêm tham số lop
+
+            // Gọi phương thức ExecuteQuery để thực hiện câu lệnh SQL
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+
+
     }
 }
