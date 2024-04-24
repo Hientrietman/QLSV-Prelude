@@ -10,7 +10,7 @@ namespace DTO
     public class HocPhanDTO
     {
 
-        public HocPhanDTO(string maHocPhan, string maMonHoc, string tenHocPhan, string maGiaoVien, string nam, string ngayMoDau, string ngayKetThuc, string tinChi, string thongTin)
+        public HocPhanDTO(string maHocPhan, string maMonHoc, string tenHocPhan, string maGiaoVien, string nam, string ngayMoDau, string ngayKetThuc, string tinChi, string thongTin, string NamHoc)
         {
             this.MaHP = maHocPhan;
             this.MaMH = maMonHoc;
@@ -21,6 +21,8 @@ namespace DTO
             this.NgayKetThuc = ngayKetThuc;
             this.TinChi = tinChi;
             this.ThongTin = thongTin;
+
+
         }
 
         public HocPhanDTO(DataRow row)
@@ -34,6 +36,10 @@ namespace DTO
             this.NgayKetThuc = row["NgayKetThuc"].ToString();
             this.TinChi = row["TinChi"].ToString();
             this.thongTin = row["ThongTin"].ToString();
+        }
+
+        public HocPhanDTO(string text1, string text2, string text3, string text4, string text5, string text6, string text7, string text8, string text9)
+        {
         }
 
         private string maHP;
@@ -105,6 +111,12 @@ namespace DTO
         {
             get { return thongTin; }
             set { thongTin = value; }
+        }
+        private string namHoc;
+        public string NamHoc
+        {
+            get { return namHoc; }
+            set { namHoc = value; }     
         }
     }
 }

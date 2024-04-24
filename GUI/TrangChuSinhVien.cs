@@ -51,6 +51,14 @@ namespace GUI
             return maSV;
         }
 
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            //string MSSV = lblMSSV.Text;
+            //string HoTenSV = lblName.Text;
+            SinhVienXemThoiKhoaBieu sinhVienXemThoiKhoaBieu = new SinhVienXemThoiKhoaBieu(lblMSSV.Text, lblName.Text);
+            sinhVienXemThoiKhoaBieu.ShowDialog();
 
+
+        }
     }
 }
