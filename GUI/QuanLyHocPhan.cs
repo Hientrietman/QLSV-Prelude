@@ -242,6 +242,60 @@ namespace GUI
             }
         }
 
-        
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            /*hocPhanStr = txt_mahp.Text;*/
+            if (txt_mahp.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mã học phần cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_mahp.Focus();
+            }
+            else
+            {
+                try
+                {
+                    // Thực hiện xóa học phần dựa trên mã học phần được nhập từ textbox
+                    HocPhanDTO hocPhan = new HocPhanDTO(txt_mahp.Text, "", "", "", "", "", "", "", "");
+                    bool success = HocPhanBUS.Instance.XoaHocPhan(hocPhan);
+
+                    if (success)
+                    {
+                        // Load lại bảng datagridview sau khi xóa học phần
+                        dtgv_hocphan.DataSource = HocPhanBUS.Instance.LayDanhSachHocPhan();
+                        MessageBox.Show("Đã xóa học phần thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa học phần thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dtgv_hocphan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dtgv_hocphan.Rows[e.RowIndex];
+
+                /*DataGridViewRow row = new DataGridViewRow();
+                row = dtgv_hocphan.Rows[e.RowIndex];*/
+                txt_mahp.Text = Convert.ToString(row.Cells["MaHocPhan"].Value);
+                txt_mamh.Text = Convert.ToString(row.Cells["MaMonHoc"].Value);
+                txt_tenhp.Text = Convert.ToString(row.Cells["TenHocPhan"].Value);
+                txt_magv.Text = Convert.ToString(row.Cells["MaGV"].Value);
+                txt_nam.Text = Convert.ToString(row.Cells["Nam"].Value);
+                txt_ngaybatdau.Text = Convert.ToString(row.Cells["NgayMoDau"].Value);
+                txt_ngayketthuc.Text = Convert.ToString(row.Cells["NgayKetThuc"].Value);
+                txt_tinchi.Text = Convert.ToString(row.Cells["TinChi"].Value);
+                txt_thongtin.Text = Convert.ToString(row.Cells["ThongTin"].Value);
+            }
+        }
+
     }
 }

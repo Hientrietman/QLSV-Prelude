@@ -23,21 +23,56 @@ namespace BUS
         {
             return HocPhanDAO.Instance.TimKiemMaHP(MaHP);
         }
+        public DataTable TimKiemLopHP(int NamHoc, string MaHP)
+        {
+            return HocPhanDAO.Instance.TimKiemLopHP(NamHoc,MaHP);
+        }
+        public bool KiemTraNamHoc(int kiemtraNamHoc, string MaHocPhan)
+        {
+            return HocPhanDAO.Instance.KiemTraNamHoc(kiemtraNamHoc, MaHocPhan);
+        }
+        public bool KiemTraHocPhan(string MSSV, int HocKy, string NamHoc, string MaHP)
+        {
+            return HocPhanDAO.Instance.KiemTraHocPhan(MSSV, HocKy, NamHoc, MaHP);
+        }
+        public bool KiemTraMonHoc(string MSSV, int HocKy, string NamHoc, string MaHP, string MaMH)
+        {
+            return HocPhanDAO.Instance.KiemTraMonHoc(MSSV, HocKy, NamHoc, MaHP, MaMH);
+        }
 
         public DataTable LayDanhSachHocPhan()
         {
             return HocPhanDAO.Instance.LayDanhSachHocPhan();
         }
+
         public DataTable LayDanhSachHocPhanEdit()
         {
             return HocPhanDAO.Instance.LayDanhSachHocPhanEdit();
+        }
+
+
+        public DataTable LayDanhSachHocPhanCuaSV(string MSSV, int HocKy, string NamHoc)
+        {
+            return HocPhanDAO.Instance.LayDanhSachHocPhanCuaSV(MSSV,HocKy,NamHoc);
+        }
+        public DataTable ThemHocPhan(string MSSV, int HocKy, string NamHoc, string MaHP)
+        {
+            return HocPhanDAO.Instance.ThemHocPhan(MSSV, HocKy, NamHoc,MaHP);
+        }
+        public DataTable TimThoiKhoaBieu(string MSSV, int HocKy, string NamHoc)
+        {
+            return HocPhanDAO.Instance.TimThoiKhoaBieu(MSSV, HocKy, NamHoc);
+        }
+        public bool KiemTraTKB(string MSSV, int HocKy, string NamHoc)
+        {
+            return HocPhanDAO.Instance.KiemTraTKB(MSSV, HocKy, NamHoc);
         }
 
         public DataTable ThemHocPhan(HocPhanDTO hocPhan)
         {
             string query = String.Format("INSERT INTO HocPhan (MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam,NgayMoDau,NgayKetThuc,TinChi,ThongTin ) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}','{7}','{8}')",
                 hocPhan.MaHP, hocPhan.MaMH, hocPhan.TenHocPhan, hocPhan.MaGV, hocPhan.Nam, hocPhan.NgayMoDau, hocPhan.NgayKetThuc, hocPhan.TinChi, hocPhan.ThongTin);
-          
+
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -79,6 +114,7 @@ namespace BUS
         {
             return HocPhanDAO.Instance.LayTenMonHoc(text);
         }
+
         public string LayTenMonHocEdit(string text)
         {
             return HocPhanDAO.Instance.LayTenMonHocEdit(text);
@@ -106,6 +142,52 @@ namespace BUS
         public string LayThongTinEdit(string text)
         {
             return HocPhanDAO.Instance.LayThongTinEdit(text);
+
+
+
+        // lay danh sach thoi khoa bieu
+        public DataTable LayThoiKhoaBieuSinhVien(string maSV, string HocKy, string NamHoc)
+        {
+            return HocPhanDAO.Instance.LayThoiKhoaBieuSinhVien(maSV, HocKy, NamHoc);
+        }
+
+        public bool XoaHocPhanTrongThoiKhoaBieuSinhVien(string maHocPhan)
+        {
+            try
+            {
+
+                return HocPhanDAO.Instance.XoaHocPhanTrongThoiKhoaBieuSinhVien(maHocPhan);
+            }
+            catch (Exception ex)
+            {
+
+
+                return false;
+            }
+        }
+
+        public bool XoaHocPhan(HocPhanDTO hocPhan)
+        {
+
+            /*string query = String.Format("DELETE FROM HocPhan WHERE MaHocPhan = '{0}'",hocPhan.MaHP);*/
+            string query = String.Format("DELETE FROM Diem WHERE MaHocPhan = '{0}'; DELETE FROM DangKy WHERE MaHocPhan = '{0}'; DELETE FROM HocPhan WHERE MaHocPhan = '{0}';", hocPhan.MaHP);
+            int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, new object[] { hocPhan.MaMH });
+            return rowsAffected > 0;
+
+            /*string query = "DELETE FROM HocPhan WHERE MaHocPhan = @MaHocPhan";
+
+            // Create a list of SqlParameter objects
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            // Add the parameter for MaHocPhan
+            parameters.Add(new SqlParameter("@MaHocPhan", SqlDbType.VarChar) { Value = hocPhanStr });
+
+            // Convert the list to an array
+            SqlParameter[] parametersArray = parameters.ToArray();
+
+            int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, parametersArray);
+            return rowsAffected > 0;*/
+
         }
     }
 }

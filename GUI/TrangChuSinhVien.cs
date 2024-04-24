@@ -23,17 +23,22 @@ namespace GUI
             get { return loginAccount; }
             set { loginAccount = value; }
         }
-
+        private TaiKhoanDTO taiKhoan;
         public TrangChuSinhVien(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
             lblName.Text = LayTenSinhVien(TaiKhoan.TenDangNhap); ;
             lblMSSV.Text = TaiKhoan.TenDangNhap;
+            taiKhoan = TaiKhoan;
+        }
+
+        public TrangChuSinhVien()
+        {
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            SinhVienXemDiemThi sinhVienXemDiemThi=new SinhVienXemDiemThi();
+            SinhVienXemDiemThi sinhVienXemDiemThi = new SinhVienXemDiemThi();
             sinhVienXemDiemThi.ShowDialog();
         }
 
@@ -51,6 +56,11 @@ namespace GUI
             return maSV;
         }
 
-
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
+            f.ShowDialog();
+            this.Close();
+        }
     }
 }
