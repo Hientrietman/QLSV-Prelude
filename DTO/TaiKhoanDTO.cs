@@ -11,17 +11,12 @@ namespace DTO
 
     public class TaiKhoanDTO
     {
-        public string MaTK { get; set; }
+        private TaiKhoanDTO taiKhoan;
+
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
         public int VaiTro { get; set; }
         public int? TrangThai { get; set; }
-        public string Email { get; set; }
-        public string SDT { get; set; }
-        public DateTime NgaySinh { get; set; }
-        public string DiaChi { get; set; }
-        public string HoTen { get; set; }
-        public string GioiTinh { get; set; }
 
         public TaiKhoanDTO()
         {
@@ -29,26 +24,24 @@ namespace DTO
 
         public TaiKhoanDTO(DataRow row)
         {
-            MaTK = row["MaTK"].ToString();
             TenDangNhap = row["TenDangNhap"].ToString();
             MatKhau = row["MatKhau"].ToString();
             VaiTro = Convert.ToInt32(row["VaiTro"]);
             TrangThai = row["TrangThai"] != DBNull.Value ? Convert.ToInt32(row["TrangThai"]) : (int?)null;
-            /*Email = row["Email"].ToString();
-            SDT = row["SDT"].ToString();
-            NgaySinh = Convert.ToDateTime(row["NgaySinh"]);
-            DiaChi = row["DiaChi"].ToString();
-            HoTen = row["HoTen"].ToString();
-            GioiTinh = row["GioiTinh"].ToString();*/
         }
 
-        public TaiKhoanDTO(string maTK, string tenDangNhap, string matKhau, int vaiTro, string hoten="")
+        public TaiKhoanDTO(string tenDangNhap, string matKhau, int vaiTro, int trangthai)
         {
-            MaTK = maTK;
             TenDangNhap = tenDangNhap;
             MatKhau = matKhau;
             VaiTro = vaiTro;
+            TrangThai = trangthai;
             // Khởi tạo các thuộc tính khác nếu cần
+        }
+
+        public TaiKhoanDTO(TaiKhoanDTO taiKhoan)
+        {
+            this.taiKhoan = taiKhoan;
         }
     }
 }

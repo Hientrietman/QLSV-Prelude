@@ -45,13 +45,13 @@ namespace GUI
             }
 
             // Tạo tài khoản mới
-            TaiKhoanDTO taiKhoan = new TaiKhoanDTO(txtUserName.Text, txtUserName.Text, txtPassWord.Text, Kcb_chonloaitaikhoan.SelectedIndex);
+            TaiKhoanDTO taiKhoan = new TaiKhoanDTO(txtUserName.Text, txtPassWord.Text, Kcb_chonloaitaikhoan.SelectedIndex, 1);
 
             // Thêm tài khoản mới vào cơ sở dữ liệu
         
             if (!TaoTaiKhoanBUS.Instance.KiemTraThucThe(taiKhoan))
             {
-                MessageBox.Show(String.Format("Không có {0} nào có mã {1} tồn tại ! ", Kcb_chonloaitaikhoan.SelectedItem, taiKhoan.MaTK), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(String.Format("Không có {0} nào có mã {1} tồn tại ! ", Kcb_chonloaitaikhoan.SelectedItem, taiKhoan.TenDangNhap), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -99,7 +99,10 @@ namespace GUI
             return true;
         }
 
+        private void lbl_login_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

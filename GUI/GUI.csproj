@@ -54,8 +54,24 @@
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -75,6 +91,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChinhSuaThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChinhSuaThongTinCaNhan.Designer.cs">
+      <DependentUpon>ChinhSuaThongTinCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangKyHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKyHocPhan.Designer.cs">
+      <DependentUpon>DangKyHocPhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachSinhVienCuaLopHP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +138,12 @@
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyHocPhan.Designer.cs">
+      <DependentUpon>QuanLyHocPhan.cs</DependentUpon>
     </Compile>
     <Compile Include="QuenMatKhau.cs">
       <SubType>Form</SubType>
@@ -149,6 +183,12 @@
     <Compile Include="ThemLHPVaoTKB.Designer.cs">
       <DependentUpon>ThemLHPVaoTKB.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinCaNhan.Designer.cs">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChuGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +207,15 @@
     <Compile Include="TrangChuSinhVien.Designer.cs">
       <DependentUpon>TrangChuSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="XoaHocPhanSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XoaHocPhanSinhVien.Designer.cs">
+      <DependentUpon>XoaHocPhanSinhVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChinhSuaThongTinCaNhan.resx">
+      <DependentUpon>ChinhSuaThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhSachSinhVienCuaLopHP.resx">
       <DependentUpon>DanhSachSinhVienCuaLopHP.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyHocPhan.resx">
+      <DependentUpon>QuanLyHocPhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
@@ -207,11 +259,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThongTinCaNhan.resx">
+      <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChuGiaoVien.resx">
+      <DependentUpon>TrangChuGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChuQuanLy.resx">
+      <DependentUpon>TrangChuQuanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChuSinhVien.resx">
+      <DependentUpon>TrangChuSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemDiemChoSinhVien.resx">
       <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemLHPVaoTKB.resx">
       <DependentUpon>ThemLHPVaoTKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XoaHocPhanSinhVien.resx">
+      <DependentUpon>XoaHocPhanSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -275,6 +342,63 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gop_y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gopy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hourglass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper-plane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\podium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tkb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paper-plane %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archives.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

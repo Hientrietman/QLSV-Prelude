@@ -165,6 +165,11 @@ namespace GUI
                 txt_PassWord.UseSystemPasswordChar = true;
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

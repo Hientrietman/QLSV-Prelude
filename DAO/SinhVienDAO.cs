@@ -21,7 +21,7 @@ namespace DAO
 
         public DataTable LayDanhSachSVCuaLopHocPhan(string MaHocPhan)
         {
-            string query = String.Format("EXEC LayDanhSachSVCuaLopHocPhan @MaHocPhan = '{0}';", MaHocPhan);
+            string query = String.Format("EXEC LayDanhSachSVCuaLopHocPhan @MaHocPhan = '{0}'", MaHocPhan);
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -31,6 +31,19 @@ namespace DAO
             string query = String.Format("EXEC TimKiemSVTrongLopHocPhan @MaHocPhan = '{0}', @MaSV = '{1}';", MaHP, MaSV);
 
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public DataTable LayThongTinSinhVien(string MaSV)
+        {
+            string query = String.Format("SELECT * FROM SinhVien WHERE MaSV = '{0}'", MaSV);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public bool ChinhSuaThongTinSinhVien(string MaSV, string Lop, string Email, string SDT, DateTime NgaySinh, string DiaChi, string HoTen, string GioiTinh)
+        {
+            string query = string.Format("EXEC ChinhSuaThongTinSinhVien @MaSV = '{0}', @Lop = '{1}', @Email = '{2}', @SDT = '{3}', @NgaySinh = '{4}', @DiaChi = '{5}', @HoTen = N'{6}', @GioiTinh = N'{7}';", MaSV, Lop, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+
         }
     }
 }

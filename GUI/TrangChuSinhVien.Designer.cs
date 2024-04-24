@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrangChuSinhVien));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pnlMenu = new System.Windows.Forms.Panel();
@@ -53,9 +54,9 @@
             this.btnThongbaochung = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMSSV = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
@@ -114,7 +115,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(289, 768);
+            this.pnlMenu.Size = new System.Drawing.Size(356, 768);
             this.pnlMenu.TabIndex = 1;
             // 
             // panel9
@@ -143,7 +144,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox8.Image = global::GUI.Properties.Resources.gopy;
             this.pictureBox8.Location = new System.Drawing.Point(9, 5);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(58, 49);
@@ -177,7 +178,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox7.Image = global::GUI.Properties.Resources.calculator;
             this.pictureBox7.Location = new System.Drawing.Point(9, 5);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(58, 49);
@@ -212,7 +213,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox6.Image = global::GUI.Properties.Resources.archives;
             this.pictureBox6.Location = new System.Drawing.Point(9, 5);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(58, 49);
@@ -246,7 +247,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox5.Image = global::GUI.Properties.Resources.calendar;
             this.pictureBox5.Location = new System.Drawing.Point(9, 5);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(58, 49);
@@ -280,7 +281,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(9, 5);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 49);
@@ -311,10 +312,11 @@
             this.btnInfo.Text = "Thông tin cá nhân";
             this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox3.Image = global::GUI.Properties.Resources.id_card;
             this.pictureBox3.Location = new System.Drawing.Point(9, 5);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 49);
@@ -348,7 +350,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.bell;
             this.pictureBox2.Location = new System.Drawing.Point(9, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(58, 49);
@@ -359,44 +361,44 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
-            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.lblMSSV);
             this.panel2.Controls.Add(this.lblName);
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(3, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(283, 77);
+            this.panel2.Size = new System.Drawing.Size(353, 77);
             this.panel2.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.Screenshot_2023_11_18_090138;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 77);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // lblMSSV
             // 
             this.lblMSSV.AutoSize = true;
             this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV.Location = new System.Drawing.Point(131, 48);
+            this.lblMSSV.Location = new System.Drawing.Point(114, 47);
             this.lblMSSV.Name = "lblMSSV";
             this.lblMSSV.Size = new System.Drawing.Size(111, 20);
-            this.lblMSSV.TabIndex = 1;
+            this.lblMSSV.TabIndex = 3;
             this.lblMSSV.Text = "47.01.104.001";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(110, 15);
+            this.lblName.Location = new System.Drawing.Point(111, 17);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(146, 24);
-            this.lblName.TabIndex = 0;
+            this.lblName.TabIndex = 2;
             this.lblName.Text = "Nguyễn Văn A";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.graduate;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 77);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // btnDangXuat
             // 
@@ -420,6 +422,7 @@
             this.ClientSize = new System.Drawing.Size(1571, 768);
             this.Controls.Add(this.panel1);
             this.Name = "TrangChuSinhVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ Sinh Viên";
             this.panel1.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
@@ -473,8 +476,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lblMSSV;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Button btnDangXuat;
     }
 }
