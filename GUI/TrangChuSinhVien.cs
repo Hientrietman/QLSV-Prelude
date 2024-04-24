@@ -32,6 +32,10 @@ namespace GUI
             taiKhoan = TaiKhoan;
         }
 
+        public TrangChuSinhVien()
+        {
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             SinhVienXemDiemThi sinhVienXemDiemThi = new SinhVienXemDiemThi();
