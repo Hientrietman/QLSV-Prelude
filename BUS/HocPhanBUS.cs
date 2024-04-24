@@ -49,6 +49,10 @@ namespace BUS
         {
             return HocPhanDAO.Instance.LayDanhSachHocPhan();
         }
+        public DataTable LayDanhSachHocPhanTheoMSSV(string MaSinhVien, string NamHoc, string HocKy)
+        {
+            return HocPhanDAO.Instance.LayDanhSachHocPhanTheoMSSV(MaSinhVien, NamHoc, HocKy);
+        }
 
         public DataTable LayDanhSachHocPhanEdit()
         {
@@ -77,6 +81,7 @@ namespace BUS
             return HocPhanDAO.Instance.KiemTraTKB(MSSV, HocKy, NamHoc);
         }
 
+
         public DataTable ThemHocPhan(HocPhanDTO hocPhan)
         {
             string query = String.Format("INSERT INTO HocPhan (MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam,NgayMoDau,NgayKetThuc,TinChi,ThongTin ) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}','{7}','{8}')",
@@ -93,6 +98,16 @@ namespace BUS
                 hocPhan.MaHP, hocPhan.MaMH, hocPhan.TenHocPhan, hocPhan.MaGV, hocPhan.Nam, hocPhan.NgayMoDau, hocPhan.NgayKetThuc, hocPhan.TinChi, hocPhan.ThongTin);
 
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+        
+        public static List<string> GetDistinctYears()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static List<string> GetDistinctSemesters()
+        {
+            throw new NotImplementedException();
         }
 
         public bool KiemTraMaMonHoc(string mamh)
@@ -122,6 +137,16 @@ namespace BUS
         public string LayTenMonHoc(string text)
         {
             return HocPhanDAO.Instance.LayTenMonHoc(text);
+        }
+
+        public List<string> GetDistinctYears(string NamHoc)
+        {
+            return HocPhanDAO.Instance.GetDistinctYears(NamHoc);
+        }
+
+        public List<string> GetDistinctSemesters(string HocKy)
+        {
+            return HocPhanDAO.Instance.GetDistinctSemesters(HocKy);
         }
 
         public string LayTenMonHocEdit(string text)
@@ -199,6 +224,7 @@ namespace BUS
 
         }
 
+
         public DataTable LayDanhSachHocPhanCoDK(string MaSinhVien, string Nam)
         {
 
@@ -212,5 +238,6 @@ namespace BUS
 
 
         }
+
     }
 }

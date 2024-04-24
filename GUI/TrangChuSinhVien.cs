@@ -56,11 +56,22 @@ namespace GUI
             return maSV;
         }
 
+
+        private void btnSchedule_Click(object sender, EventArgs e)
+        {
+            //string MSSV = lblMSSV.Text;
+            //string HoTenSV = lblName.Text;
+            SinhVienXemThoiKhoaBieu sinhVienXemThoiKhoaBieu = new SinhVienXemThoiKhoaBieu(lblMSSV.Text, lblName.Text);
+            sinhVienXemThoiKhoaBieu.ShowDialog();
+         }
+
+
         private void btnInfo_Click(object sender, EventArgs e)
         {
             ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
             f.ShowDialog();
             this.Close();
+
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

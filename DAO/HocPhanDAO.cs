@@ -42,7 +42,11 @@ namespace DAO
             
             return DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER(ORDER BY MaHocPhan) AS STT, MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam, NgayMoDau, NgayKetThuc, TinChi, ThongTin FROM HocPhan;");
         }
-
+        public DataTable LayDanhSachHocPhanTheoMSSV(string MaSinhVien, string NamHoc, string HocKy)
+        {
+            string query = String.Format("EXEC GetHocPhanTheoSinhVien @MaSinhVien = '{0}', @NamHoc = '{1}', @HocKy = '{2}'", MaSinhVien, NamHoc, HocKy);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public DataTable TimKiemMaHP(string MaHP)
         {
 
@@ -157,6 +161,24 @@ namespace DAO
 
         }
 
+        public List<string> GetDistinctSemesters(string HocKy)
+        {
+            List<string> semesters = new List<string>();
+
+            string query = String.Format("SELECT DISTINCT HocKy FROM ThoiKhoaBieu");
+
+            return DataProvider.Instance.GetDistinctSemesters(query)   ;
+        }
+        public List<string> GetDistinctYears(string NamHoc)
+        {
+            List<string> semesters = new List<string>();
+
+            string query = String.Format("SELECT DISTINCT NamHoc FROM ThoiKhoaBieu");
+
+            return DataProvider.Instance.GetDistinctYear(query);
+
+        }
+
 
         public string LayTenMonHocEdit(string text)
         {
@@ -220,6 +242,7 @@ namespace DAO
         {
             string query = String.Format("select ThongTin from HocPhan where MaHocPhan = '{0}'", text);
             return DataProvider.Instance.ExecuteQuery(query).Rows[0]["ThongTin"].ToString();
+
 
         }
 

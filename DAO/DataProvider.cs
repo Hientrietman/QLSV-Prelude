@@ -112,6 +112,59 @@ namespace DAO
             }
             return data;
         }
+
+        public List<string> GetDistinctSemesters(string query)
+        {
+            List<string> semesters = new List<string>();
+         
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string semester = reader.GetString(0);
+                        if (!semesters.Contains(semester))
+                        {
+                            semesters.Add(semester);
+                        }
+                    }
+                }
+            }
+
+            return semesters;
+        }
+        public List<string> GetDistinctYear(string query)
+        {
+            List<string> years = new List<string>();
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            {
+                connection.Open();
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string year = reader.GetString(0);
+                        if (!years.Contains(year))
+                        {
+                            years.Add(year);
+                        }
+                        
+                    }
+                }
+            }
+
+            return years;
+        }
+
         
     }
 }
