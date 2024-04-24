@@ -99,6 +99,12 @@
     <Compile Include="DangKyHocPhan.Designer.cs">
       <DependentUpon>DangKyHocPhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="DanhSachSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachSinhVien.Designer.cs">
+      <DependentUpon>DanhSachSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhSachSinhVienCuaLopHP.cs">
       <SubType>Form</SubType>
     </Compile>
