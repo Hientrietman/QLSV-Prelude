@@ -33,8 +33,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
       <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
@@ -109,6 +127,12 @@
     <Compile Include="GvChonLopHocPhan.Designer.cs">
       <DependentUpon>GvChonLopHocPhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="InThoiKhoaBieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InThoiKhoaBieu.Designer.cs">
+      <DependentUpon>InThoiKhoaBieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +176,12 @@
     </Compile>
     <Compile Include="ThemDiemChoSinhVien.Designer.cs">
       <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemLHPVaoTKB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemLHPVaoTKB.Designer.cs">
+      <DependentUpon>ThemLHPVaoTKB.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinCaNhan.cs">
       <SubType>Form</SubType>
@@ -198,6 +228,9 @@
     <EmbeddedResource Include="GvChonLopHocPhan.resx">
       <DependentUpon>GvChonLopHocPhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InThoiKhoaBieu.resx">
+      <DependentUpon>InThoiKhoaBieu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemDiemChoSinhVien.resx">
       <DependentUpon>ThemDiemChoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemLHPVaoTKB.resx">
+      <DependentUpon>ThemLHPVaoTKB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaHocPhanSinhVien.resx">
       <DependentUpon>XoaHocPhanSinhVien.cs</DependentUpon>

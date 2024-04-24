@@ -23,6 +23,7 @@ namespace DAO
         private string connectionSTR = "Data Source=DESKTOP-4T5DSL3\\SQLEXPRESS;Initial Catalog=Quan_li_SV;Integrated Security=True;Encrypt=False";
 
 
+
         //trả về giá trị DataTable
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
