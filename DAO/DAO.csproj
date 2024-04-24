@@ -64,6 +64,7 @@
     <Compile Include="DoiMatKhauDAO.cs" />
     <Compile Include="GiangVienDAO.cs" />
     <Compile Include="HocPhanDAO.cs" />
+    <Compile Include="KhoaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyDAO.cs" />
     <Compile Include="QuenMatKhauDAO.cs" />

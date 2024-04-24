@@ -73,7 +73,6 @@
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -196,6 +195,12 @@
     <Compile Include="ThongTinCaNhan.Designer.cs">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinSV.Designer.cs">
+      <DependentUpon>ThongTinSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrangChuGiaoVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +276,9 @@
     </Compile>
     <EmbeddedResource Include="ThongTinCaNhan.resx">
       <DependentUpon>ThongTinCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinSV.resx">
+      <DependentUpon>ThongTinSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChuGiaoVien.resx">
       <DependentUpon>TrangChuGiaoVien.cs</DependentUpon>

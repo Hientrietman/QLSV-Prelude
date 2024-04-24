@@ -9,10 +9,10 @@ namespace DTO
 {
     public class SinhVienDTO
     {
-        public SinhVienDTO(string maSV, string tenDangNhap, string maKhoa, string hoTen, string lop, string email, string sdt, DateTime ngaySinh, string gioiTinh)
+        public SinhVienDTO(string maSV, string maTK, string maKhoa, string hoTen, string lop, string email, string sdt, string ngaySinh, string gioiTinh)
         {
             this.MaSV = maSV;
-            this.TenDangNhap = tenDangNhap;
+            this.MaTK = maTK;
             this.MaKhoa = maKhoa;
             this.HoTen = hoTen;
             this.Lop = lop;
@@ -25,13 +25,13 @@ namespace DTO
         public SinhVienDTO(DataRow row)
         {
             this.MaSV = row["MaSV"].ToString();
-            this.TenDangNhap = row["TenDangNhap"].ToString();
+            this.MaTK = row["MaTK"].ToString();
             this.MaKhoa = row["MaKhoa"].ToString();
             this.HoTen = row["HoTen"].ToString();
             this.Lop = row["Lop"].ToString();
             this.Email = row["Emai"].ToString();
             this.SDT = row["SDT"].ToString();
-            this.NgaySinh = (DateTime)row["NgaySinh"];
+            this.NgaySinh = row["NgaySinh"].ToString();
             this.GioiTinh = row["GioiTinh"].ToString();
         }
 
@@ -42,11 +42,11 @@ namespace DTO
             set { maSV = value; }
         }
 
-        private string tenDangNhap;
-        public string TenDangNhap
+        private string maTK;
+        public string MaTK
         {
-            get { return tenDangNhap; }
-            set { tenDangNhap = value; }
+            get { return maTK; }
+            set { maTK = value; }
         }
 
         private string maKhoa;
@@ -84,8 +84,8 @@ namespace DTO
             set { sdt = value; }
         }
 
-        private DateTime ngaySinh;
-        public DateTime NgaySinh
+        private string ngaySinh;
+        public string NgaySinh
         {
             get { return ngaySinh; }
             set { ngaySinh = value; }
