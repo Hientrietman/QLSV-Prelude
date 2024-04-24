@@ -110,5 +110,28 @@ namespace BUS
                 return false;
             }
         }
+
+        public bool XoaHocPhan(HocPhanDTO hocPhan)
+        {
+
+            /*string query = String.Format("DELETE FROM HocPhan WHERE MaHocPhan = '{0}'",hocPhan.MaHP);*/
+            string query = String.Format("DELETE FROM Diem WHERE MaHocPhan = '{0}'; DELETE FROM DangKy WHERE MaHocPhan = '{0}'; DELETE FROM HocPhan WHERE MaHocPhan = '{0}';", hocPhan.MaHP);
+            int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, new object[] { hocPhan.MaMH });
+            return rowsAffected > 0;
+
+            /*string query = "DELETE FROM HocPhan WHERE MaHocPhan = @MaHocPhan";
+
+            // Create a list of SqlParameter objects
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            // Add the parameter for MaHocPhan
+            parameters.Add(new SqlParameter("@MaHocPhan", SqlDbType.VarChar) { Value = hocPhanStr });
+
+            // Convert the list to an array
+            SqlParameter[] parametersArray = parameters.ToArray();
+
+            int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, parametersArray);
+            return rowsAffected > 0;*/
+        }
     }
 }
