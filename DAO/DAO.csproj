@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangKyDAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="DiemDAO.cs" />
     <Compile Include="DoiMatKhauDAO.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="SinhVienDAO.cs" />
     <Compile Include="TaiKhoanDAO.cs" />
     <Compile Include="TaoTaiKhoanDAO.cs" />
+    <Compile Include="ThoiKhoaBieuDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

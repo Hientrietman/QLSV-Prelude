@@ -90,11 +90,10 @@ namespace GUI
                 string tenSinhVien = dtgvDanhSachSVCuaLopHocPhan.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
 
                 // Mở form ThemDiemSinhVien và truyền dữ liệu
-                ThemDiemChoSinhVien formThemDiem = new ThemDiemChoSinhVien(maSinhVien, maHocPhan, tenSinhVien);
-                this.Hide();
-                formThemDiem.ShowDialog();
-                dtgvDanhSachSVCuaLopHocPhan.DataSource = SinhVienBUS.Instance.LayDanhSachSVCuaLopHocPhan(lblTenLopHocPhan.Text);
-                this.Show();
+                ThemDiemChoSinhVien formThemDiem = new ThemDiemChoSinhVien(maSinhVien, maHocPhan, tenSinhVien, dtgvDanhSachSVCuaLopHocPhan);
+                //this.Hide();
+                formThemDiem.Show();
+                //this.Show();
             }
             else if (e.RowIndex >= 0 && e.ColumnIndex == dtgvDanhSachSVCuaLopHocPhan.Columns["Sua"].Index)
             {
@@ -104,11 +103,10 @@ namespace GUI
                 string tenSinhVien = dtgvDanhSachSVCuaLopHocPhan.Rows[e.RowIndex].Cells["HoTen"].Value.ToString();
 
                 // Mở form SuaDiemSinhVien và truyền dữ liệu
-                SuaDiemChoSinhVien formSuaDiem = new SuaDiemChoSinhVien(maSinhVien, maHocPhan, tenSinhVien);
-                this.Hide();
-                formSuaDiem.ShowDialog();
-                dtgvDanhSachSVCuaLopHocPhan.DataSource = SinhVienBUS.Instance.LayDanhSachSVCuaLopHocPhan(lblTenLopHocPhan.Text);
-                this.Show();
+                SuaDiemChoSinhVien formSuaDiem = new SuaDiemChoSinhVien(maSinhVien, maHocPhan, tenSinhVien, dtgvDanhSachSVCuaLopHocPhan);
+                //this.Hide();
+                formSuaDiem.Show();
+                //this.Show();
             }
         }
     }

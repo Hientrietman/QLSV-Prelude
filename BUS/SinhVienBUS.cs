@@ -17,6 +17,7 @@ namespace BUS
             get { if (instance == null) instance = new SinhVienBUS(); return instance; }
             private set { instance = value; }
         }
+
         public DataTable LayDanhSachSVCuaLopHocPhan(string MaHocPhan)
         {
             return SinhVienDAO.Instance.LayDanhSachSVCuaLopHocPhan(MaHocPhan);

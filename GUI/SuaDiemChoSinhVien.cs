@@ -13,12 +13,14 @@ namespace GUI
 {
     public partial class SuaDiemChoSinhVien : Form
     {
-        public SuaDiemChoSinhVien(string maSinhVien, string maHocPhan, string tenSinhVien)
+        private DataGridView _dataGridView;
+        public SuaDiemChoSinhVien(string maSinhVien, string maHocPhan, string tenSinhVien, DataGridView dataGridView)
         {
             InitializeComponent();
             lblMaLopHPParam.Text = maHocPhan;
             lblMSSVParam.Text = maSinhVien;
             lblHoTenSVParam.Text = tenSinhVien;
+            _dataGridView = dataGridView; // Lưu tham chiếu của DataGridView
             LoadDiem();
         }
 
@@ -71,6 +73,7 @@ namespace GUI
                     {
                         MessageBox.Show("Sửa điểm thành công");
                         LoadDiem();
+                        _dataGridView.DataSource = SinhVienBUS.Instance.LayDanhSachSVCuaLopHocPhan(lblMaLopHPParam.Text);
                     }
                     else
                     {

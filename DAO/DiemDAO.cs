@@ -43,9 +43,9 @@ namespace DAO
         public bool CheckKhoaChinh(string maHocPhan, string maSV)
         {
             string query = String.Format("SELECT * FROM Diem WHERE MaSinhVien = '{0}' AND MaHocPhan = '{1}'", maSV, maHocPhan);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
 
-            return result > 0;
+            return result.Rows.Count > 0;
         }
 
         public bool SetKhoaChinh(string maHocPhan, string maSV)

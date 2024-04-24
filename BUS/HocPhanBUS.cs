@@ -23,6 +23,11 @@ namespace BUS
         {
             return HocPhanDAO.Instance.TimKiemMaHP(MaHP);
         }
+
+        public DataTable TimKiemMaHPCuaGV(string MaGV, string MaHP)
+        {
+            return HocPhanDAO.Instance.TimKiemMaHPCuaGV(MaGV, MaHP);
+        }
         public DataTable TimKiemLopHP(int NamHoc, string MaHP)
         {
             return HocPhanDAO.Instance.TimKiemLopHP(NamHoc,MaHP);
@@ -50,6 +55,10 @@ namespace BUS
             return HocPhanDAO.Instance.LayDanhSachHocPhanEdit();
         }
 
+        public DataTable LayDanhSachHocPhanCuaGV(string TenDangNhap)
+        {          
+            return HocPhanDAO.Instance.LayDanhSachHocPhanCuaGV(TenDangNhap);
+        }
 
         public DataTable LayDanhSachHocPhanCuaSV(string MSSV, int HocKy, string NamHoc)
         {
@@ -144,7 +153,7 @@ namespace BUS
             return HocPhanDAO.Instance.LayThongTinEdit(text);
 
 
-
+        }
         // lay danh sach thoi khoa bieu
         public DataTable LayThoiKhoaBieuSinhVien(string maSV, string HocKy, string NamHoc)
         {
@@ -187,6 +196,20 @@ namespace BUS
 
             int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, parametersArray);
             return rowsAffected > 0;*/
+
+        }
+
+        public DataTable LayDanhSachHocPhanCoDK(string MaSinhVien, string Nam)
+        {
+
+            return HocPhanDAO.Instance.LayDanhSachHocPhanCoDK(MaSinhVien, Nam);
+
+        }
+
+        public DataTable TimKiemMaHocPhanCoDK(string MaSinhVien, string Nam, string MaHocPhan)
+        {
+            return HocPhanDAO.Instance.TimKiemMaHocPhanCoDK(MaSinhVien, Nam, MaHocPhan);
+
 
         }
     }
