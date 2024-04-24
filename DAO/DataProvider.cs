@@ -20,7 +20,9 @@ namespace DAO
 
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=.\\SQLEXPRESS;Initial Catalog=Quan_li_SV;Integrated Security=True";
+        private string connectionSTR = "Data Source=.\\SQLEXPRESS;Initial Catalog=Quan_li_SV;Integrated Security=True;Encrypt=False";
+
+
 
 
         //trả về giá trị DataTable
@@ -50,6 +52,7 @@ namespace DAO
                 adapter.Fill(data);
                 connection.Close();
             }
+
 
             return data;
         }
@@ -162,5 +165,6 @@ namespace DAO
             return years;
         }
 
+        
     }
 }

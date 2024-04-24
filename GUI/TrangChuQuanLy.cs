@@ -22,11 +22,13 @@ namespace GUI
             get { return loginAccount; }
             set { loginAccount = value; }
         }
+        private TaiKhoanDTO taiKhoanHienTai;
         public TrangChuQuanLy(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
             lblName.Text = LayTenQuanLy(TaiKhoan.TenDangNhap); ;
             lblMSSV.Text = TaiKhoan.TenDangNhap;
+            taiKhoanHienTai = TaiKhoan;
         }
 
         private string LayTenQuanLy(string tenDangNhap)
@@ -47,6 +49,13 @@ namespace GUI
         {
             TaoTaiKhoan taoTaiKhoan = new TaoTaiKhoan();
             taoTaiKhoan.ShowDialog();
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan f = new ThongTinCaNhan(taiKhoanHienTai);
+            f.ShowDialog();
+            this.Close();
         }
     }
 }
