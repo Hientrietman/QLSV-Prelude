@@ -92,7 +92,7 @@ namespace GUI
        
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            InThoiKhoaBieu f = new InThoiKhoaBieu(mssv, cboHocKy.SelectedIndex.ToString(), cboNamHoc.SelectedIndex.ToString());
             MessageBox.Show("Phần này bạn Huy xử lý ");
         }
 

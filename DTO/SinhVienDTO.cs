@@ -9,7 +9,7 @@ namespace DTO
 {
     public class SinhVienDTO
     {
-        public SinhVienDTO(string maSV, string tenDangNhap, string maKhoa, string hoTen, string lop, string email, string sdt, string ngaySinh, string gioiTinh)
+        public SinhVienDTO(string maSV, string tenDangNhap, string maKhoa, string hoTen, string lop, string email, string sdt, DateTime ngaySinh, string gioiTinh)
         {
             this.MaSV = maSV;
             this.TenDangNhap = tenDangNhap;
@@ -31,7 +31,7 @@ namespace DTO
             this.Lop = row["Lop"].ToString();
             this.Email = row["Emai"].ToString();
             this.SDT = row["SDT"].ToString();
-            this.NgaySinh = row["NgaySinh"].ToString();
+            this.NgaySinh = (DateTime)row["NgaySinh"];
             this.GioiTinh = row["GioiTinh"].ToString();
         }
 
@@ -84,8 +84,8 @@ namespace DTO
             set { sdt = value; }
         }
 
-        private string ngaySinh;
-        public string NgaySinh
+        private DateTime ngaySinh;
+        public DateTime NgaySinh
         {
             get { return ngaySinh; }
             set { ngaySinh = value; }

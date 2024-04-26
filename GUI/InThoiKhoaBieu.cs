@@ -16,10 +16,19 @@ namespace GUI
 {
     public partial class InThoiKhoaBieu : Form
     {
-        public InThoiKhoaBieu()
+        string MSSV = "";
+        string HocKy = "";
+        string NamHoc = "";
+        public InThoiKhoaBieu(string mssv, string hocky, string namhoc)
         {
             InitializeComponent();
             loadThoiKhoaBieu();
+            MSSV=mssv;
+            HocKy=hocky;
+            NamHoc=namhoc;
+            lblMSSV.Text = MSSV;
+            lblHocKy.Text = HocKy;
+            lblNamHoc.Text = NamHoc;
         }
         private void loadThoiKhoaBieu()
         {

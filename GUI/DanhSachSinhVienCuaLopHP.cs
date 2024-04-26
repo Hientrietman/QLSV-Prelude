@@ -92,7 +92,7 @@ namespace GUI
                 // Mở form ThemDiemSinhVien và truyền dữ liệu
                 ThemDiemChoSinhVien formThemDiem = new ThemDiemChoSinhVien(maSinhVien, maHocPhan, tenSinhVien, dtgvDanhSachSVCuaLopHocPhan);
                 //this.Hide();
-                formThemDiem.Show();
+                formThemDiem.ShowDialog();
                 //this.Show();
             }
             else if (e.RowIndex >= 0 && e.ColumnIndex == dtgvDanhSachSVCuaLopHocPhan.Columns["Sua"].Index)
@@ -105,7 +105,7 @@ namespace GUI
                 // Mở form SuaDiemSinhVien và truyền dữ liệu
                 SuaDiemChoSinhVien formSuaDiem = new SuaDiemChoSinhVien(maSinhVien, maHocPhan, tenSinhVien, dtgvDanhSachSVCuaLopHocPhan);
                 //this.Hide();
-                formSuaDiem.Show();
+                formSuaDiem.ShowDialog();
                 //this.Show();
             }
         }

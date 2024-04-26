@@ -47,11 +47,11 @@ namespace BUS
         {
             return SinhVienDAO.Instance.timKiemSVTrongDSSV(maSV, khoa, lop);    
         }
-        public bool CapNhatSV(string MaSV, string Lop, string Email, string SDT, string NgaySinh, string DiaChi, string HoTen, string GioiTinh, string Khoa)
+        public bool CapNhatSV(string MaSV, string Lop, string Email, string SDT, DateTime NgaySinh, string DiaChi, string HoTen, string GioiTinh, string Khoa)
         {
             return SinhVienDAO.Instance.CapNhatSV(MaSV, Lop, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
         }
-        public bool ThemSV(string MaSV, string Lop, string Email, string SDT, string NgaySinh, string DiaChi, string HoTen, string GioiTinh, string Khoa)
+        public bool ThemSV(string MaSV, string Lop, string Email, string SDT, DateTime NgaySinh, string DiaChi, string HoTen, string GioiTinh, string Khoa)
         {
             return SinhVienDAO.Instance.ThemSV(MaSV, Lop, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
         }

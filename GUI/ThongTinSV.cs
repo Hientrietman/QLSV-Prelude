@@ -82,7 +82,7 @@ namespace GUI
         {
             string MaSV = this.txt_MSV.Text;
             string HoTen = this.txt_HoTen.Text;
-            string NgaySinh = DateTime.Parse(this.dtP_NgaySinh.Text).ToString("yyyy-MM-dd");
+            DateTime NgaySinh = this.dtP_NgaySinh.Value;
             string GioiTinh = this.txt_GioiTinh.Text;
             string DiaChi = this.txt_DiaChi.Text;
             string SoDienThoai = this.txt_SDT.Text;

@@ -34,10 +34,10 @@ namespace DAO
 
         }
 
-        public static bool KiemTraTrungLap(string matk)
+        public static bool KiemTraTrungLap(string tendangnhap)
         {
             // Viết truy vấn SQL để kiểm tra mã tài khoản trong cơ sở dữ liệu
-            string query = String.Format("SELECT COUNT(*) FROM TaiKhoan WHERE MaTK = '{0}'", matk);
+            string query = String.Format("SELECT COUNT(*) FROM TaiKhoan WHERE MaTK = '{0}'", tendangnhap);
 
             // Thực hiện truy vấn và trả về số lượng tài khoản có cùng mã với mã được truyền vào
             int count = (int)DataProvider.Instance.ExecuteScalar(query);

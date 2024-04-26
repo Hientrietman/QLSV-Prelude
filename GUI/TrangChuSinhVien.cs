@@ -70,13 +70,18 @@ namespace GUI
         {
             ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
             f.ShowDialog();
-            this.Close();
 
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDKHP_Click(object sender, EventArgs e)
+        {
+            SVDangKyHocPhan f = new SVDangKyHocPhan(taiKhoan);
+            f.ShowDialog();
         }
     }
 }

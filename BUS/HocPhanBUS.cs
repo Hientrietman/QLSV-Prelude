@@ -178,7 +178,6 @@ namespace BUS
             return HocPhanDAO.Instance.LayThongTinEdit(text);
         }
 
-        }
         // lay danh sach thoi khoa bieu
         public DataTable LayThoiKhoaBieuSinhVien(string maSV, string HocKy, string NamHoc)
         {
