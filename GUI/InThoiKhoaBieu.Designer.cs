@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDanhSachSVCuaLopHocPhan = new System.Windows.Forms.Label();
@@ -100,12 +100,11 @@
             this.lblNamHoc.AutoSize = true;
             this.lblNamHoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNamHoc.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblNamHoc.Location = new System.Drawing.Point(111, 155);
+            this.lblNamHoc.Location = new System.Drawing.Point(121, 155);
             this.lblNamHoc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNamHoc.Name = "lblNamHoc";
-            this.lblNamHoc.Size = new System.Drawing.Size(105, 23);
+            this.lblNamHoc.Size = new System.Drawing.Size(0, 23);
             this.lblNamHoc.TabIndex = 46;
-            this.lblNamHoc.Text = "2021-2022";
             // 
             // btnIn
             // 
@@ -184,9 +183,8 @@
             this.lblTenSV.Location = new System.Drawing.Point(121, 70);
             this.lblTenSV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTenSV.Name = "lblTenSV";
-            this.lblTenSV.Size = new System.Drawing.Size(127, 23);
+            this.lblTenSV.Size = new System.Drawing.Size(0, 23);
             this.lblTenSV.TabIndex = 50;
-            this.lblTenSV.Text = "Đỗ Quốc Huy";
             // 
             // lblMSSV
             // 
@@ -196,9 +194,8 @@
             this.lblMSSV.Location = new System.Drawing.Point(394, 70);
             this.lblMSSV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMSSV.Name = "lblMSSV";
-            this.lblMSSV.Size = new System.Drawing.Size(138, 23);
+            this.lblMSSV.Size = new System.Drawing.Size(0, 23);
             this.lblMSSV.TabIndex = 51;
-            this.lblMSSV.Text = "47.01.104.001";
             // 
             // label2
             // 
@@ -220,9 +217,8 @@
             this.lblLop.Location = new System.Drawing.Point(69, 106);
             this.lblLop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLop.Name = "lblLop";
-            this.lblLop.Size = new System.Drawing.Size(106, 23);
+            this.lblLop.Size = new System.Drawing.Size(0, 23);
             this.lblLop.TabIndex = 53;
-            this.lblLop.Text = "47.CNTT.B";
             // 
             // label6
             // 
@@ -244,28 +240,26 @@
             this.lblSDT.Location = new System.Drawing.Point(453, 106);
             this.lblSDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSDT.Name = "lblSDT";
-            this.lblSDT.Size = new System.Drawing.Size(120, 23);
+            this.lblSDT.Size = new System.Drawing.Size(0, 23);
             this.lblSDT.TabIndex = 55;
-            this.lblSDT.Text = "0912345678";
             // 
             // lblHocKy
             // 
             this.lblHocKy.AutoSize = true;
             this.lblHocKy.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHocKy.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblHocKy.Location = new System.Drawing.Point(79, 155);
+            this.lblHocKy.Location = new System.Drawing.Point(89, 155);
             this.lblHocKy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHocKy.Name = "lblHocKy";
-            this.lblHocKy.Size = new System.Drawing.Size(21, 23);
+            this.lblHocKy.Size = new System.Drawing.Size(0, 23);
             this.lblHocKy.TabIndex = 56;
-            this.lblHocKy.Text = "1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(97, 155);
+            this.label3.Location = new System.Drawing.Point(105, 155);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 23);
@@ -287,14 +281,14 @@
             // dtgvBangTKB
             // 
             this.dtgvBangTKB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvBangTKB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvBangTKB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvBangTKB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvBangTKB.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,

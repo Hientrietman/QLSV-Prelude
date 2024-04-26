@@ -112,7 +112,7 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public DataTable TimThoiKhoaBieu(string MSSV, int HocKy, string NamHoc)
+        public DataTable TimThoiKhoaBieu(string MSSV, string HocKy, string NamHoc)
         {
             string query = String.Format("EXEC LayThoiKhoaBieuSinhVien @MaSinhVien = '{0}',@HocKy = '{1}', @NamHoc = '{2}'", MSSV, HocKy, NamHoc);
             return DataProvider.Instance.ExecuteQuery(query);

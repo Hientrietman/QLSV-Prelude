@@ -11,25 +11,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI
 {
     public partial class InThoiKhoaBieu : Form
     {
-        string MSSV = "";
-        string HocKy = "";
-        string NamHoc = "";
-        public InThoiKhoaBieu(string mssv, string hocky, string namhoc)
+        //public string MSSV;
+        //public string HocKy;
+        //public string NamHoc;
+        public InThoiKhoaBieu()
         {
             InitializeComponent();
-            loadThoiKhoaBieu();
-            MSSV=mssv;
-            HocKy=hocky;
-            NamHoc=namhoc;
-            lblMSSV.Text = MSSV;
-            lblHocKy.Text = HocKy;
-            lblNamHoc.Text = NamHoc;
         }
+        public InThoiKhoaBieu(string mssv, string hocky, string namhoc) : this() 
+        {
+            //MSSV = mssv;
+            //HocKy = hocky;
+            //NamHoc = namhoc;
+
+            lblMSSV.Text = mssv;
+            lblHocKy.Text = hocky;
+            lblNamHoc.Text = namhoc;
+
+            System.Data.DataTable dt = SinhVienBUS.Instance.LayThongTinSinhVien(mssv);
+            lblTenSV.Text = dt.Rows[0]["HoTen"].ToString();
+            lblSDT.Text = dt.Rows[0]["SDT"].ToString();
+            lblLop.Text = dt.Rows[0]["Lop"].ToString();
+
+            loadThoiKhoaBieu();
+        }
+
         private void loadThoiKhoaBieu()
         {
             string HoTenSV = lblTenSV.Text;
@@ -37,7 +49,7 @@ namespace GUI
             string Lop = lblLop.Text;
             string SoDienThoai = lblSDT.Text;
 
-            int HocKy = int.Parse(lblHocKy.Text);
+            string HocKy =lblHocKy.Text;
             string NamHocSV = lblNamHoc.Text;
 
             dtgvBangTKB.DataSource = HocPhanBUS.Instance.TimThoiKhoaBieu(MSSV, HocKy, NamHocSV);
@@ -60,10 +72,17 @@ namespace GUI
 
         public void ExportDataToPDF(DataGridView dataGridView)
         {
+            string HoTenSV = lblTenSV.Text;
+            string MSSV = lblMSSV.Text;
+            string Lop = lblLop.Text;
+            string SoDienThoai = lblSDT.Text;
+
             int HocKy = int.Parse(lblHocKy.Text);
             string NamHocSV = lblNamHoc.Text;
 
-            string TKB = String.Format("HK: {0}, NH: {1}",HocKy,NamHocSV);
+            string TT1 = String.Format("Họ tên SV: {0}, MSSV: {1}", HoTenSV, MSSV);
+            string TT2 = String.Format("Lớp: {0}, SĐT: {1}",Lop, SoDienThoai);
+            string TKB = String.Format("Học Kỳ: {0}, Năm Học: {1}",HocKy,NamHocSV);
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "PDF (*.pdf)|*.pdf";
@@ -84,11 +103,21 @@ namespace GUI
                 document.Open();
 
                 // Thêm dòng chữ tiêu đề
-                Paragraph tieude = new Paragraph("Thoi Khoa Bieu", FontFactory.GetFont(font.ToString(), 14, iTextSharp.text.Font.BOLD));
+                Paragraph tieude = new Paragraph("Thời Khóa Biểu Sinh Viên", font);
+                //Paragraph tieude = new Paragraph("Thoi Khoa Bieu", FontFactory.GetFont(font.ToString(), 14, iTextSharp.text.Font.BOLD));
+
                 tieude.Alignment = Element.TITLE;
                 document.Add(tieude);
 
-                Paragraph tkb = new Paragraph(TKB, FontFactory.GetFont(font.ToString(), 12, iTextSharp.text.Font.ITALIC));
+                Paragraph ttsv1 = new Paragraph(TT1, font);
+                ttsv1.Alignment = Element.ALIGN_LEFT;
+                document.Add(ttsv1);
+
+                Paragraph ttsv2 = new Paragraph(TT2, font);
+                ttsv2.Alignment = Element.ALIGN_LEFT;
+                document.Add(ttsv2);
+
+                Paragraph tkb = new Paragraph(TKB, font);
                 tkb.Alignment = Element.ALIGN_CENTER;
                 document.Add(tkb);
 
@@ -100,7 +129,7 @@ namespace GUI
                 // Thêm tiêu đề cột vào bảng PDF
                 for (int i = 0; i < dataGridView.Columns.Count; i++)
                 {
-                    table.AddCell(new Phrase(dataGridView.Columns[i].HeaderText));
+                    table.AddCell(new Phrase(dataGridView.Columns[i].HeaderText,font));
                 }
 
                 // Thêm các hàng dữ liệu vào bảng PDF
