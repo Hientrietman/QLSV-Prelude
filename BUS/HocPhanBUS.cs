@@ -84,7 +84,7 @@ namespace BUS
 
         public DataTable ThemHocPhan(HocPhanDTO hocPhan)
         {
-            string query = String.Format("INSERT INTO HocPhan (MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam,NgayMoDau,NgayKetThuc,TinChi,ThongTin ) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}','{6}','{7}','{8}')",
+            string query = String.Format("INSERT INTO HocPhan (MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam,NgayMoDau,NgayKetThuc,TinChi,ThongTin ) VALUES ('{0}', '{1}', N'{2}', '{3}', '{4}', '{5}','{6}','{7}', N'{8}')",
                 hocPhan.MaHP, hocPhan.MaMH, hocPhan.TenHocPhan, hocPhan.MaGV, hocPhan.Nam, hocPhan.NgayMoDau, hocPhan.NgayKetThuc, hocPhan.TinChi, hocPhan.ThongTin);
 
             return DataProvider.Instance.ExecuteQuery(query);
@@ -94,7 +94,7 @@ namespace BUS
         public DataTable SuaHocPhan(HocPhanDTO hocPhan)
         {
 
-            string query = String.Format("UPDATE HocPhan SET MaMonHoc = '{1}', TenHocPhan = '{2}', MaGV = '{3}', Nam = '{4}', NgayMoDau = '{5}', NgayKetThuc = '{6}', TinChi = '{7}', ThongTin = '{8}' WHERE MaHocPhan = '{0}'",
+            string query = String.Format("UPDATE HocPhan SET MaMonHoc = '{1}', TenHocPhan = N'{2}', MaGV = '{3}', Nam = '{4}', NgayMoDau = '{5}', NgayKetThuc = '{6}', TinChi = '{7}', ThongTin = N'{8}' WHERE MaHocPhan = '{0}'",
                 hocPhan.MaHP, hocPhan.MaMH, hocPhan.TenHocPhan, hocPhan.MaGV, hocPhan.Nam, hocPhan.NgayMoDau, hocPhan.NgayKetThuc, hocPhan.TinChi, hocPhan.ThongTin);
 
             return DataProvider.Instance.ExecuteQuery(query);

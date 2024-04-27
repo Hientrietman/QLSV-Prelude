@@ -67,7 +67,7 @@ namespace DAO
 
         public bool CapNhatSV(string MaSV, string Lop, string Email, string SDT, DateTime NgaySinh, string DiaChi, string HoTen, string GioiTinh, string Khoa)
         {
-            string query = string.Format("EXEC CapNhatSV @MaSV = '{0}', @Lop = '{1}', @Email = '{2}', @SDT = '{3}', @NgaySinh = '{4}', @DiaChi = '{5}', @HoTen = N'{6}', @GioiTinh = N'{7}',@MaKhoa=N'{8}';", MaSV, Lop, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
+            string query = string.Format("EXEC CapNhatSV @MaSV = '{0}', @Lop = '{1}', @Email = '{2}', @SDT = '{3}', @NgaySinh = '{4}', @DiaChi = '{5}', @HoTen = N'{6}', @GioiTinh = N'{7}',@MaKhoa=N'{8}';", MaSV, Lop, Email, SDT, NgaySinh.ToString("yyyy-MM-dd"), DiaChi, HoTen, GioiTinh, Khoa);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -75,7 +75,7 @@ namespace DAO
         }
         public bool ThemSV(string MaSV, string Lop, string Email, string SDT, DateTime NgaySinh, string DiaChi, string HoTen, string GioiTinh, string Khoa)
         {
-            string query = string.Format("EXEC ThemSV @MaSV = '{0}', @Lop = '{1}', @Email = '{2}', @SDT = '{3}', @NgaySinh = '{4}', @DiaChi = '{5}', @HoTen = N'{6}', @GioiTinh = N'{7}',@MaKhoa=N'{8}';", MaSV, Lop, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
+            string query = string.Format("EXEC ThemSV @MaSV = '{0}', @Lop = '{1}', @Email = '{2}', @SDT = '{3}', @NgaySinh = '{4}', @DiaChi = '{5}', @HoTen = N'{6}', @GioiTinh = N'{7}',@MaKhoa=N'{8}';", MaSV, Lop, Email, SDT, NgaySinh.ToString("yyyy-MM-dd"), DiaChi, HoTen, GioiTinh, Khoa);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
