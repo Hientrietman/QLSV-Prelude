@@ -105,19 +105,6 @@ namespace GUI
 
         private void txt_mamh_Leave(object sender, EventArgs e)
         {
-            if (!KiemTraMaMonHoc(txt_mamh.Text))
-            {
-                lbl_Emamh.Text = "Mã môn học này không tồn tại!";
-                txt_tinchi.Clear();
-                txt_tenhp.Clear();
-            }
-            else if(KiemTraMaMonHoc(txt_mamh.Text))
-            {
-                txt_tinchi.Text = LayTinChiMonHoc(txt_mamh.Text);
-                lbl_Emamh.Text = " ";
-                txt_tenhp.Text=HocPhanBUS.Instance.LayTenMonHoc(txt_mamh.Text);
-            }
-
 
         }
         private void txt_mahp_Leave(object sender, EventArgs e)
@@ -138,33 +125,8 @@ namespace GUI
 
 
         }
-     private void txt_mahp_Edit(object sender, EventArgs e)
-    {
-            // Kiểm tra độ dài của mã học phần
-            if (txt_mahp.Text.Length != 10)
-            {
-                // Hiển thị thông báo lỗi trên label4
-                label4.Text = "Mã học phần phải có 10 ký tự!";
-            }
-            if (!KiemTraMaHocPhan(txt_mahp.Text))
-            {
-                lbl_Emamh.Text = "Mã học phần này không tồn tại!";
-               
-            }
-            else if (KiemTraMaHocPhan(txt_mahp.Text))
-            {
-                txt_tinchi.Text = LayTinChiEdit(txt_mahp.Text);
-                lbl_Emamh.Text = " ";
-                txt_tenhp.Text = HocPhanBUS.Instance.LayTenMonHocEdit(txt_mahp.Text);
-                txt_mamh.Text = HocPhanBUS.Instance.LayMaMonHocEdit(txt_mahp.Text);
-                txt_magv.Text = HocPhanBUS.Instance.LayMaGiangVienEdit(txt_mahp.Text);
-                txt_nam.Text = HocPhanBUS.Instance.LayNamEdit(txt_mahp.Text);
-                txt_ngaybatdau.Text = HocPhanBUS.Instance.LayNgayMoDauEdit(txt_mahp.Text);
-                txt_ngayketthuc.Text = HocPhanBUS.Instance.LayNgayKetThucEdit(txt_mahp.Text);
-                txt_thongtin.Text = HocPhanBUS.Instance.LayThongTinEdit(txt_mahp.Text);
-            }
-    }
-    private void txt_magv_Leave(object sender, EventArgs e)
+        
+        private void txt_magv_Leave(object sender, EventArgs e)
         {
             if (!KiemTraMaGiangVien(txt_magv.Text))
             {
@@ -297,5 +259,33 @@ namespace GUI
             }
         }
 
+        private void txt_mahp_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_mahp.Text.Length != 10)
+            {
+                // Hiển thị thông báo lỗi trên label4
+                label4.Text = "Mã học phần phải có 10 ký tự!";
+            }
+            else
+            {
+                label4.Text = "";
+            }
+        }
+
+        private void txt_mamh_TextChanged(object sender, EventArgs e)
+        {
+            if (!KiemTraMaMonHoc(txt_mamh.Text))
+            {
+                lbl_Emamh.Text = "Mã môn học này không tồn tại!";
+                txt_tinchi.Clear();
+                txt_tenhp.Clear();
+            }
+            else if (KiemTraMaMonHoc(txt_mamh.Text))
+            {
+                txt_tinchi.Text = LayTinChiMonHoc(txt_mamh.Text);
+                lbl_Emamh.Text = " ";
+                txt_tenhp.Text = HocPhanBUS.Instance.LayTenMonHoc(txt_mamh.Text);
+            }
+        }
     }
 }

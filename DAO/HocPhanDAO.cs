@@ -22,7 +22,7 @@ namespace DAO
 
         public DataTable LayDanhSachHocPhan()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER (ORDER BY MaHocPhan) AS STT, MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam, ThongTin FROM  HocPhan;");
+            return DataProvider.Instance.ExecuteQuery("SELECT ROW_NUMBER() OVER (ORDER BY MaHocPhan) AS STT, MaHocPhan, MaMonHoc, TenHocPhan, MaGV, Nam, NgayMoDau, NgayKetThuc, TinChi, ThongTin FROM  HocPhan;");
         }
 
         public DataTable LayDanhSachHocPhanCuaGV(string TenDangNhap)
