@@ -72,7 +72,7 @@ namespace BUS
         {
             return HocPhanDAO.Instance.ThemHocPhan(MSSV, HocKy, NamHoc,MaHP);
         }
-        public DataTable TimThoiKhoaBieu(string MSSV, int HocKy, string NamHoc)
+        public DataTable TimThoiKhoaBieu(string MSSV, string HocKy, string NamHoc)
         {
             return HocPhanDAO.Instance.TimThoiKhoaBieu(MSSV, HocKy, NamHoc);
         }
@@ -178,7 +178,6 @@ namespace BUS
             return HocPhanDAO.Instance.LayThongTinEdit(text);
         }
 
-        }
         // lay danh sach thoi khoa bieu
         public DataTable LayThoiKhoaBieuSinhVien(string maSV, string HocKy, string NamHoc)
         {

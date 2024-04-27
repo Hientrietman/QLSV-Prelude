@@ -55,12 +55,35 @@ namespace GUI
         {
             ThongTinCaNhan f = new ThongTinCaNhan(taiKhoanHienTai);
             f.ShowDialog();
-            this.Close();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnQLInfo_Click(object sender, EventArgs e)
+        {
+            DanhSachSinhVien f = new DanhSachSinhVien();
+            f.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            QuanLyHocPhan f = new QuanLyHocPhan();
+            f.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            XoaHocPhanSinhVien f = new XoaHocPhanSinhVien();
+            f.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ThemLHPVaoTKB f = new ThemLHPVaoTKB();
+            f.ShowDialog();
         }
     }
 }

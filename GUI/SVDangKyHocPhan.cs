@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,13 +17,16 @@ namespace GUI
 {
     public partial class SVDangKyHocPhan : Form
     {
+        private TaiKhoanDTO taiKhoan;
         string HocKy;
         string NamHoc;
         bool KTHanDKHP = true;
-        string MaSinhVien = "47.01.104.003";
-        public SVDangKyHocPhan()
+        string MaSinhVien;
+        public SVDangKyHocPhan(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
+            taiKhoan = TaiKhoan;
+            MaSinhVien = TaiKhoan.TenDangNhap;
             //LayThongTinHocKyNamHoc(DateTime.Now);
             DateTime ngayCanKiemTra = new DateTime(2023, 08, 11);
             LayThongTinHocKyNamHoc(ngayCanKiemTra);
@@ -92,7 +96,7 @@ namespace GUI
 
                 DataGridViewRow row = dtgvDanhSachLopHocPhan.Rows[e.RowIndex];
                 string maHocPhan = row.Cells["MaHocPhan"].Value.ToString();
-                string MaSinhVien = "47.01.104.003";
+            
 
                 if (!ThoiKhoaBieuDAO.Instance.KiemTraTKBTonTai(MaSinhVien, lblHocKyLoad.Text, lblNamHocLoad.Text))
                 {

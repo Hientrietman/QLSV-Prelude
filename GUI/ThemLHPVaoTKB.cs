@@ -26,7 +26,6 @@ namespace GUI
         {
             loadBangHocPhanSV();
             loadBangHocPhan();
-
         }
 
         private void btnTimLopHocPhan_Click(object sender, EventArgs e)
@@ -102,6 +101,7 @@ namespace GUI
                             dtgvBangHocPhan.DataSource = HocPhanDAO.Instance.ThemHocPhan(MaSV, HocKy, NamHoc, MaHocPhan);
                             MessageBox.Show("Thêm học phần thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             dtgvBangHocPhanSV.DataSource = HocPhanDAO.Instance.LayDanhSachHocPhanCuaSV(MaSV, HocKy, NamHoc);
+                            loadBangHocPhan();
                         }
                         else
                             MessageBox.Show("Môn học này tồn tại trong TKB của sinh viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -144,6 +144,7 @@ namespace GUI
                 dtgvBangHocPhan.DataSource = HocPhanBUS.Instance.TimKiemLopHP(kiemtraNamHoc, MaHP);
             }
 
+            this.dtgvBangHocPhan.AutoGenerateColumns = false;
             DataGridViewButtonColumn button = new DataGridViewButtonColumn();
             {
                 button.Name = "btnThem";
@@ -153,6 +154,10 @@ namespace GUI
                 if (this.dtgvBangHocPhan.Columns["btnThem"] == null)
                 {
                     this.dtgvBangHocPhan.Columns.Add(button);
+
+                    // Sau khi thêm cột, cố định vị trí của cột "btnThem"
+                    int lastColumnIndex = this.dtgvBangHocPhan.Columns.Count - 1;
+                    this.dtgvBangHocPhan.Columns["btnThem"].DisplayIndex = 10;
                 }
             }
         }

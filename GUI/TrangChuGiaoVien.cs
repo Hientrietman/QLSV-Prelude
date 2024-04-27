@@ -51,17 +51,18 @@ namespace GUI
             gvChonLopHocPhan.ShowDialog();
         }
 
-        private void btnInfo_Click(object sender, EventArgs e)
-        {
-            ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
-            f.ShowDialog();
-            this.Close();
-            
-        }
+      
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
+            f.ShowDialog();
+ 
         }
     }
 }

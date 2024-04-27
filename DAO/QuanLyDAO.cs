@@ -26,7 +26,7 @@ namespace DAO
         }
         public bool ChinhSuaThongTinQuanLy(string MaQL, string Email, string SDT, DateTime NgaySinh, string DiaChi, string HoTen, string GioiTinh)
         {
-            string query = string.Format("EXEC ChinhSuaThongTinQuanLy @MaQL = '{0}', @Email = '{1}', @SDT = '{2}', @NgaySinh = '{3}', @DiaChi = '{4}', @HoTen = N'{5}', @GioiTinh = N'{6}';", MaQL, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh);
+            string query = string.Format("EXEC ChinhSuaThongTinQuanLy @MaQL = '{0}', @Email = '{1}', @SDT = '{2}', @NgaySinh = '{3}', @DiaChi = '{4}', @HoTen = N'{5}', @GioiTinh = N'{6}';", MaQL, Email, SDT, NgaySinh.ToString("yyyy-MM-dd"), DiaChi, HoTen, GioiTinh);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

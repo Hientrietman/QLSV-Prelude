@@ -46,7 +46,7 @@ namespace GUI
 
                 DanhSachSinhVienCuaLopHP form = new DanhSachSinhVienCuaLopHP(maHocPhan);
                 //this.Hide();
-                form.Show();
+                form.ShowDialog();
                 //this.Show();
             }
         }

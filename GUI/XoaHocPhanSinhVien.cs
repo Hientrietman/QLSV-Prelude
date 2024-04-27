@@ -20,8 +20,8 @@ namespace GUI
         public XoaHocPhanSinhVien()
         {
             InitializeComponent();
-            /* DateTime hocKy_namHoc = DateTime.Now;*/
-            DateTime hocKy_namHoc = new DateTime(2023, 1, 12);
+            DateTime hocKy_namHoc = DateTime.Now;
+  
             LayThongTinhocKyNamHoc(hocKy_namHoc);
         }
 
