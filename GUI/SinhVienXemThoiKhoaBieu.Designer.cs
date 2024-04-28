@@ -48,11 +48,10 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(13, 129);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView.Location = new System.Drawing.Point(10, 105);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.Size = new System.Drawing.Size(1146, 388);
+            this.dataGridView.Size = new System.Drawing.Size(860, 315);
             this.dataGridView.TabIndex = 0;
             // 
             // lblMaSinhVien
@@ -71,14 +70,12 @@
             this.cboNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNamHoc.FormattingEnabled = true;
             this.cboNamHoc.Items.AddRange(new object[] {
-            
             "2021-2022",
             "2022-2023",
             "2023-2024"});
-            this.cboNamHoc.Location = new System.Drawing.Point(587, 41);
-            this.cboNamHoc.Margin = new System.Windows.Forms.Padding(4);
+            this.cboNamHoc.Location = new System.Drawing.Point(440, 33);
             this.cboNamHoc.Name = "cboNamHoc";
-            this.cboNamHoc.Size = new System.Drawing.Size(160, 32);
+            this.cboNamHoc.Size = new System.Drawing.Size(121, 26);
             this.cboNamHoc.TabIndex = 32;
             this.cboNamHoc.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
@@ -89,36 +86,34 @@
             this.cboHocKy.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.cboHocKy.Location = new System.Drawing.Point(766, 41);
-            this.cboHocKy.Margin = new System.Windows.Forms.Padding(4);
+            this.cboHocKy.Location = new System.Drawing.Point(574, 33);
             this.cboHocKy.Name = "cboHocKy";
-            this.cboHocKy.Size = new System.Drawing.Size(160, 32);
+            this.cboHocKy.Size = new System.Drawing.Size(121, 26);
             this.cboHocKy.TabIndex = 31;
             this.cboHocKy.SelectedIndexChanged += new System.EventHandler(this.cmbSemester_SelectedIndexChanged);
             // 
             // btnPrint
             // 
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrint.Location = new System.Drawing.Point(950, 34);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Location = new System.Drawing.Point(712, 28);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnPrint.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btnPrint.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnPrint.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnPrint.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnPrint.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnPrint.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnPrint.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnPrint.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrint.Size = new System.Drawing.Size(209, 39);
+            this.btnPrint.Size = new System.Drawing.Size(157, 32);
             this.btnPrint.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnPrint.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnPrint.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnPrint.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnPrint.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnPrint.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnPrint.StateCommon.Border.Rounding = 8;
             this.btnPrint.StateCommon.Border.Width = 2;
@@ -129,8 +124,8 @@
             this.btnPrint.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnPrint.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btnPrint.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnPrint.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnPrint.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnPrint.StateTracking.Border.Rounding = 8;
             this.btnPrint.StateTracking.Border.Width = 2;
@@ -147,20 +142,18 @@
             this.panel2.Controls.Add(this.lblMSSV);
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(13, 3);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(10, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(420, 95);
+            this.panel2.Size = new System.Drawing.Size(315, 77);
             this.panel2.TabIndex = 37;
             // 
             // lblMSSV
             // 
             this.lblMSSV.AutoSize = true;
             this.lblMSSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMSSV.Location = new System.Drawing.Point(141, 59);
-            this.lblMSSV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMSSV.Location = new System.Drawing.Point(106, 48);
             this.lblMSSV.Name = "lblMSSV";
-            this.lblMSSV.Size = new System.Drawing.Size(137, 25);
+            this.lblMSSV.Size = new System.Drawing.Size(111, 20);
             this.lblMSSV.TabIndex = 39;
             this.lblMSSV.Text = "47.01.104.001";
             // 
@@ -168,10 +161,9 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(117, 6);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(88, 5);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(176, 29);
+            this.lblName.Size = new System.Drawing.Size(146, 24);
             this.lblName.TabIndex = 38;
             this.lblName.Text = "Nguyễn Văn A";
             // 
@@ -180,9 +172,8 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::GUI.Properties.Resources.graduate;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(109, 95);
+            this.pictureBox1.Size = new System.Drawing.Size(82, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -203,16 +194,16 @@
             // 
             // SinhVienXemThoiKhoaBieu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 554);
+            this.ClientSize = new System.Drawing.Size(881, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.cboNamHoc);
             this.Controls.Add(this.cboHocKy);
             this.Controls.Add(this.dataGridView);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SinhVienXemThoiKhoaBieu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thời khóa biểu";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel2.ResumeLayout(false);

@@ -63,9 +63,6 @@ namespace GUI
                     ThongTinSV thongTinSVForm = new ThongTinSV(MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoDienThoai, Lop, Khoa, Email);
                     thongTinSVForm.ShowDialog();
 
-
-
-
                 }
             }
         }
