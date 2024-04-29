@@ -97,12 +97,6 @@
     <Compile Include="ChinhSuaThongTinCaNhan.Designer.cs">
       <DependentUpon>ChinhSuaThongTinCaNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="DangKyHocPhan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DangKyHocPhan.Designer.cs">
-      <DependentUpon>DangKyHocPhan.cs</DependentUpon>
-    </Compile>
     <Compile Include="DanhSachSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>

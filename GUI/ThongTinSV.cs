@@ -50,7 +50,7 @@ namespace GUI
 
                 this.txt_MSV.Text = MaSV;
                 this.txt_HoTen.Text = HoTen;
-                this.dtP_NgaySinh.Text = NgaySinh;
+                this.dtP_NgaySinh.Value = DateTime.Parse(NgaySinh);
                 this.txt_Email.Text = Email;
                 this.txt_DiaChi.Text = DiaChi;
                 this.cb_Khoa.SelectedValue = Khoa;

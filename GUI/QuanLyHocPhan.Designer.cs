@@ -332,6 +332,7 @@
             this.Controls.Add(this.txt_mahp);
             this.Controls.Add(this.dtgv_hocphan);
             this.Name = "QuanLyHocPhan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLyHocPhan";
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_hocphan)).EndInit();
             this.ResumeLayout(false);

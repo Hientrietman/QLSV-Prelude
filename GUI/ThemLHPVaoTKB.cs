@@ -18,6 +18,7 @@ namespace GUI
     {
         //Lấy tháng hiện tại
         int thangHienTai = DateTime.Now.Month;
+        //int thangHienTai = 7;
         public ThemLHPVaoTKB()
         {
             InitializeComponent();

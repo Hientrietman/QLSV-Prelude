@@ -21,7 +21,8 @@ namespace GUI
         {
             InitializeComponent();
             DateTime hocKy_namHoc = DateTime.Now;
-  
+            /* DateTime ngayCanKiemTra = new DateTime(2023, 08, 10);
+            LayThongTinhocKyNamHoc(ngayCanKiemTra);*/
             LayThongTinhocKyNamHoc(hocKy_namHoc);
         }
 
