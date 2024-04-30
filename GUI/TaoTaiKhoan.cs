@@ -68,9 +68,9 @@ namespace GUI
         }
 
 
-        private bool KiemTraTenDangNhapTrungLap(string matk)
+        private bool KiemTraTenDangNhapTrungLap(string tendangnhap)
         {
-            return TaoTaiKhoanBUS.KiemTraTrungLap(matk);
+            return TaoTaiKhoanBUS.KiemTraTrungLap(tendangnhap);
         }
 
         private bool KiemTraMatKhauHopLe(string matKhau)

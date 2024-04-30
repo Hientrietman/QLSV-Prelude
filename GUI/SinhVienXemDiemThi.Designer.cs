@@ -246,7 +246,7 @@
             // btnLoc
             // 
             this.btnLoc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLoc.Location = new System.Drawing.Point(795, 65);
+            this.btnLoc.Location = new System.Drawing.Point(795, 62);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnLoc.OverrideDefault.Back.Color2 = System.Drawing.Color.White;

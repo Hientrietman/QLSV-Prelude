@@ -24,9 +24,9 @@ namespace BUS
            return TaoTaiKhoanDAO.Instance.TaoTaiKhoan(taikhoan);
         }
 
-        public static bool KiemTraTrungLap(string matk)
+        public static bool KiemTraTrungLap(string tendangnhap)
         {
-            return TaoTaiKhoanDAO.KiemTraTrungLap(matk);
+            return TaoTaiKhoanDAO.KiemTraTrungLap(tendangnhap);
         }
 
         public bool KiemTraThucThe(TaiKhoanDTO taiKhoan)

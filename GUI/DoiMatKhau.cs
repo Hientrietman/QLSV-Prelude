@@ -126,11 +126,11 @@ namespace GUI
                 DoiMatKhauBUS.Instance.DoiMatKhau(email, txtNewPass.Text);
                 // Hiển thị thông báo cho người dùng
                 MessageBox.Show("Đổi mật khẩu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
+                /*this.Hide();
                 DoiMatKhauMoi doiMatKhauMoi = new DoiMatKhauMoi();
                 doiMatKhauMoi.email = email;
                 doiMatKhauMoi.oldPass = txtNewPass.Text;
-                doiMatKhauMoi.ShowDialog();
+                doiMatKhauMoi.ShowDialog();*/
                 this.Close();
             }
         }

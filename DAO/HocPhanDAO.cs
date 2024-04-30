@@ -189,7 +189,7 @@ namespace DAO
         // lay thoi khoa bieu sinh vien
         public DataTable LayThoiKhoaBieuSinhVien(string maSV, string HocKy, string NamHoc)
         {
-            string query = String.Format("EXEC LayThoiKhoaBieuSinhVien @MaSV = '{0}', @HocKy = '{1}', @NamHoc = '{2}';", maSV, HocKy, NamHoc);
+            string query = String.Format("EXEC LayThoiKhoaBieuSinhVien2 @MaSV = '{0}', @HocKy = '{1}', @NamHoc = '{2}';", maSV, HocKy, NamHoc);
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public bool XoaHocPhanTrongThoiKhoaBieuSinhVien(string maHocPhan)
