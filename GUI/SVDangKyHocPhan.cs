@@ -28,7 +28,7 @@ namespace GUI
             taiKhoan = TaiKhoan;
             MaSinhVien = TaiKhoan.TenDangNhap;
             LayThongTinHocKyNamHoc(DateTime.Now);
-            /* DateTime ngayCanKiemTra = new DateTime(2024, 01, 11);
+            /* DateTime ngayCanKiemTra = new DateTime(2023, 08, 11);
              LayThongTinHocKyNamHoc(ngayCanKiemTra);*/
             dtgvDanhSachLopHocPhan.DataSource = HocPhanBUS.Instance.LayDanhSachHocPhanCoDK(MaSinhVien, NamHoc);
         }
