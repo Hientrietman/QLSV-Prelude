@@ -50,5 +50,20 @@ namespace GUI
 
             themThongBao.ShowDialog();
         }
+
+        private void dtgvBangThongBao_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = e.RowIndex;
+            string MaThongBao = dtgvBangThongBao.Rows[r].Cells["MaThongBao"].Value.ToString();
+            string TieuDe = dtgvBangThongBao.Rows[r].Cells["TieuDe"].Value.ToString();
+            string NoiDung = dtgvBangThongBao.Rows[r].Cells["NoiDung"].Value.ToString();
+
+            if (e.ColumnIndex == dtgvBangThongBao.Columns["SuaThongBao"].Index)
+            {
+                SuaThongBao suaThongBao = new SuaThongBao(MaThongBao, TieuDe, NoiDung);
+
+                suaThongBao.ShowDialog();
+            }
+        }
     }
 }

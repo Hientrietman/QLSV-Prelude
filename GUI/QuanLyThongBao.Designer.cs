@@ -113,6 +113,7 @@
             this.dtgvBangThongBao.RowHeadersWidth = 51;
             this.dtgvBangThongBao.Size = new System.Drawing.Size(1181, 593);
             this.dtgvBangThongBao.TabIndex = 60;
+            this.dtgvBangThongBao.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvBangThongBao_CellContentClick);
             // 
             // btnTimKiem
             // 

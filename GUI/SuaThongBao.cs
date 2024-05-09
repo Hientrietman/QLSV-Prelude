@@ -16,5 +16,18 @@ namespace GUI
         {
             InitializeComponent();
         }
+        public string maThongBao;
+        public SuaThongBao(string matb, string tieude, string noidung) : this()
+        {
+            maThongBao = matb;
+            txtTieuDe.Text = tieude;
+            txtNoiDung.Text = noidung;
+        }
+
+        private void txtNoiDung_TextChanged(object sender, EventArgs e)
+        {
+            txtNoiDung.SelectionStart = txtNoiDung.Text.Length;
+            txtNoiDung.ScrollToCaret();
+        }
     }
 }
