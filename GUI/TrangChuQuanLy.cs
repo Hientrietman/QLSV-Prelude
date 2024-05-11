@@ -85,5 +85,11 @@ namespace GUI
             ThemLHPVaoTKB f = new ThemLHPVaoTKB();
             f.ShowDialog();
         }
+
+        private void btnUpdateMes_Click(object sender, EventArgs e)
+        {
+            QuanLyThongBao f = new QuanLyThongBao();
+            f.ShowDialog();
+        }
     }
 }
