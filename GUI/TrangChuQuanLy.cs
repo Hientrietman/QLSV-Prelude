@@ -85,5 +85,11 @@ namespace GUI
             ThemLHPVaoTKB f = new ThemLHPVaoTKB();
             f.ShowDialog();
         }
+
+        private void btnThongbaochung_Click(object sender, EventArgs e)
+        {
+            ThongBao f = new ThongBao(taiKhoanHienTai);
+            f.ShowDialog();
+        }
     }
 }
