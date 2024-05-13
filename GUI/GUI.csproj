@@ -237,6 +237,12 @@
     <Compile Include="TrangChuSinhVien.Designer.cs">
       <DependentUpon>TrangChuSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemHocPhi.Designer.cs">
+      <DependentUpon>XemHocPhi.cs</DependentUpon>
+    </Compile>
     <Compile Include="XoaHocPhanSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemLHPVaoTKB.resx">
       <DependentUpon>ThemLHPVaoTKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemHocPhi.resx">
+      <DependentUpon>XemHocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaHocPhanSinhVien.resx">
       <DependentUpon>XoaHocPhanSinhVien.cs</DependentUpon>
