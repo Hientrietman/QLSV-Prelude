@@ -62,7 +62,9 @@ namespace GUI
         {
             ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
             f.ShowDialog();
- 
+            lblName.Text = LayTenGiangVien(taiKhoan.TenDangNhap);
+
+
         }
 
         private void btnThongbaochung_Click(object sender, EventArgs e)

@@ -90,12 +90,65 @@ namespace GUI
        
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            InThoiKhoaBieu inThoiKhoaBieu = new InThoiKhoaBieu(lblMSSV.Text, cboHocKy.SelectedItem.ToString(), string.Format("{0}", cboNamHoc.SelectedItem));
+            // Kiểm tra nếu đã chọn giá trị cho cả hai ComboBox
+            if (KiemTraGiaTriDaChon() && KiemTraTKB())
+            {
+                // Nếu đã đủ giá trị, mở form in thời khóa biểu
+                InThoiKhoaBieu inThoiKhoaBieu = new InThoiKhoaBieu(lblMSSV.Text, cboHocKy.SelectedItem.ToString(), string.Format("{0}", cboNamHoc.SelectedItem));
+                inThoiKhoaBieu.ShowDialog();
+            }
 
-            inThoiKhoaBieu.ShowDialog();
+            else
+            {
+                // Nếu chưa đủ giá trị, hiển thị thông báo
+                MessageBox.Show("Vui lòng chọn giá trị cho cả học kỳ và năm học hoặc không có thời khóa biểu cho niên học này.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private bool KiemTraGiaTriDaChon()
+        {
+
+            // Kiểm tra xem ComboBox Học kỳ và Năm học đã chọn giá trị nào chưa
+            if (cboHocKy.SelectedItem != null && cboNamHoc.SelectedItem != null)
+            {
+                return true; // Trả về true nếu đã chọn đủ giá trị cho cả hai ComboBox
+            }
+            else
+            {
+                return false; // Trả về false nếu có ít nhất một ComboBox chưa được chọn giá trị
+            }
+        }
+        private bool KiemTraTKB()
+        {
+
+            bool dataGridViewHasNull = false;
+            for (int i = 1; i < dataGridView.Rows.Count; i++)
+            {
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.Value == null || cell.Value == DBNull.Value)
+                        {
+                            dataGridViewHasNull = true;
+                            // Bạn có thể dừng việc kiểm tra ở đây nếu bạn chỉ quan tâm đến việc có tồn tại giá trị null hay không
+                            // break;
+                        }
+                    }
+                }
+            }
+            if (dataGridViewHasNull)
+            {
+                // DataGridView chứa ít nhất một giá trị null
+                return true;
+            }
+            else
+            {
+                // DataGridView không chứa giá trị null
+                return false;
+            }
         }
 
-       
+
 
     }
 }

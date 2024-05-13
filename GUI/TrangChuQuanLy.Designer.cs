@@ -378,6 +378,18 @@
             this.btnUpdateMes.Text = "Cập nhật thông báo";
             this.btnUpdateMes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateMes.UseVisualStyleBackColor = false;
+            this.btnUpdateMes.Click += new System.EventHandler(this.btnUpdateMes_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::GUI.Properties.Resources.paper_plane;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 6);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(77, 60);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -492,6 +504,17 @@
             this.btnThongbaochung.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThongbaochung.UseVisualStyleBackColor = false;
             this.btnThongbaochung.Click += new System.EventHandler(this.btnThongbaochung_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUI.Properties.Resources.bell;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 60);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox2
             // 

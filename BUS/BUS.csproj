@@ -63,11 +63,13 @@
     <Compile Include="DoiMatKhauBUS.cs" />
     <Compile Include="GiangVienBUS.cs" />
     <Compile Include="HocPhanBUS.cs" />
+    <Compile Include="HocPhiBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanLyBUS.cs" />
     <Compile Include="QuenMatKhauBUS.cs" />
     <Compile Include="SinhVienBUS.cs" />
     <Compile Include="TaoTaiKhoanBUS.cs" />
+    <Compile Include="ThoiKhoaBieuBUS.cs" />
     <Compile Include="ThongBaoBUS.cs" />
   </ItemGroup>
   <ItemGroup>
