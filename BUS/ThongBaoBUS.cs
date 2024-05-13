@@ -35,5 +35,13 @@ namespace BUS
             return ThongBaoDAO.Instance.LayTenNguoiTaoThongBao(MaThongBao);
 
         }
+        public DataTable LayThongBaoTheoMa(string maThongBao)
+        {
+            return ThongBaoDAO.Instance.LayThongBaoTheoMa(maThongBao);
+        }
+        public void CapNhatThongBao(string maThongBao, string tieuDe, string noiDung)
+        {
+            ThongBaoDAO.Instance.CapNhatThongBao(maThongBao, tieuDe, noiDung);
+        }
     }
 }
