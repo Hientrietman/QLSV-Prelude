@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,22 +15,15 @@ namespace GUI
 {
     public partial class QuanLyThongBao : Form
     {
-        private TaiKhoanDAO loginAccount;
-        public string maNQL;
-        public TaiKhoanDAO LoginAccount
-        {
-            get { return loginAccount; }
-            set { loginAccount = value; }
-        }
-        public QuanLyThongBao(string manql) : this()
-        {
-            maNQL = manql;
-        }
-        public QuanLyThongBao()
+        private TaiKhoanDTO taiKhoan;
+
+        public QuanLyThongBao(TaiKhoanDTO manql)
         {
             InitializeComponent();
+            taiKhoan = manql;
             loadBangThongBao();
         }
+
         private void loadBangThongBao()
         {
             string TieuDe = txtTimKiem.Text;
@@ -46,7 +40,7 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ThemThongBao themThongBao = new ThemThongBao(maNQL);
+            ThemThongBao themThongBao = new ThemThongBao(taiKhoan.TenDangNhap);
 
             themThongBao.ShowDialog();
         }

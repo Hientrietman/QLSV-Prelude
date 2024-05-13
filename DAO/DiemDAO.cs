@@ -62,9 +62,9 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public DataTable LayDiemSinhVienBangMssvVaNamHoc(string MaSinhVien, string NamHoc)
+        public DataTable LayDiemSinhVienTheoTKB(string MaSinhVien, string HocKy, string NamHoc)
         {
-            string query = String.Format("EXEC LoadDiemByMaSVAndNamHoc @MaSV = '{0}', @NamHoc = '{1}'", MaSinhVien, NamHoc);
+            string query = String.Format("EXEC LayDiemSinhVienTheoThoiKhoaBieu '{0}', '{1}', '{2}'", MaSinhVien, HocKy, NamHoc);
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

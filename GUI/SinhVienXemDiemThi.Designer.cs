@@ -39,17 +39,20 @@
             this.cboHocKy = new System.Windows.Forms.ComboBox();
             this.cboNamHoc = new System.Windows.Forms.ComboBox();
             this.dtgvBangDiemSinhVien = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaHocPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenHocPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemQuaTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemGiuaKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemCuoiKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLoc = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.lblDiemTrungBinh = new System.Windows.Forms.Label();
             this.lblXepLoai = new System.Windows.Forms.Label();
-            this.lvlDiemTBDaTinh = new System.Windows.Forms.Label();
+            this.lblDiemTBDaTinh = new System.Windows.Forms.Label();
             this.lblXepLoaiDaTinh = new System.Windows.Forms.Label();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHocPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHocPhan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TinChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemQuaTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemGiuaKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemCuoiKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemTrungBinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTatCa = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBangDiemSinhVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,8 +137,7 @@
             this.cboHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHocKy.FormattingEnabled = true;
             this.cboHocKy.Items.AddRange(new object[] {
-            "1",
-            "2"});
+            "All"});
             this.cboHocKy.Location = new System.Drawing.Point(175, 64);
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Size = new System.Drawing.Size(121, 26);
@@ -146,37 +148,7 @@
             this.cboNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNamHoc.FormattingEnabled = true;
             this.cboNamHoc.Items.AddRange(new object[] {
-            "2010",
-            "2011",
-            "2012",
-            "2013",
-            "2014",
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "2024",
-            "2025",
-            "2026",
-            "2027",
-            "2028",
-            "2029",
-            "2030",
-            "2031",
-            "2032",
-            "2033",
-            "2034",
-            "2035",
-            "2036",
-            "2037",
-            "2038",
-            "2039",
-            "2040"});
+            "All"});
             this.cboNamHoc.Location = new System.Drawing.Point(569, 64);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Size = new System.Drawing.Size(121, 26);
@@ -198,55 +170,20 @@
             this.STT,
             this.MaHocPhan,
             this.TenHocPhan,
+            this.TinChi,
             this.DiemQuaTrinh,
             this.DiemGiuaKy,
-            this.DiemCuoiKy});
+            this.DiemCuoiKy,
+            this.DiemTrungBinh});
             this.dtgvBangDiemSinhVien.Location = new System.Drawing.Point(-1, 117);
             this.dtgvBangDiemSinhVien.Name = "dtgvBangDiemSinhVien";
-            this.dtgvBangDiemSinhVien.Size = new System.Drawing.Size(913, 334);
+            this.dtgvBangDiemSinhVien.Size = new System.Drawing.Size(1079, 334);
             this.dtgvBangDiemSinhVien.TabIndex = 23;
-            // 
-            // STT
-            // 
-            this.STT.DataPropertyName = "STT";
-            this.STT.FillWeight = 50F;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MaHocPhan
-            // 
-            this.MaHocPhan.DataPropertyName = "MaHocPhan";
-            this.MaHocPhan.HeaderText = "Mã Học Phần";
-            this.MaHocPhan.Name = "MaHocPhan";
-            // 
-            // TenHocPhan
-            // 
-            this.TenHocPhan.DataPropertyName = "TenHocPhan";
-            this.TenHocPhan.HeaderText = "Tên Học Phần";
-            this.TenHocPhan.Name = "TenHocPhan";
-            // 
-            // DiemQuaTrinh
-            // 
-            this.DiemQuaTrinh.DataPropertyName = "DiemQuaTrinh";
-            this.DiemQuaTrinh.HeaderText = "Điểm Quá Trình";
-            this.DiemQuaTrinh.Name = "DiemQuaTrinh";
-            // 
-            // DiemGiuaKy
-            // 
-            this.DiemGiuaKy.DataPropertyName = "DiemGiuaKy";
-            this.DiemGiuaKy.HeaderText = "Điểm Giữa Kỳ";
-            this.DiemGiuaKy.Name = "DiemGiuaKy";
-            // 
-            // DiemCuoiKy
-            // 
-            this.DiemCuoiKy.DataPropertyName = "DiemCuoiKy";
-            this.DiemCuoiKy.HeaderText = "Điểm Cuối Kỳ";
-            this.DiemCuoiKy.Name = "DiemCuoiKy";
             // 
             // btnLoc
             // 
             this.btnLoc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLoc.Location = new System.Drawing.Point(795, 62);
+            this.btnLoc.Location = new System.Drawing.Point(767, 61);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnLoc.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
@@ -292,7 +229,7 @@
             this.lblDiemTrungBinh.AutoSize = true;
             this.lblDiemTrungBinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiemTrungBinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblDiemTrungBinh.Location = new System.Drawing.Point(108, 478);
+            this.lblDiemTrungBinh.Location = new System.Drawing.Point(171, 477);
             this.lblDiemTrungBinh.Name = "lblDiemTrungBinh";
             this.lblDiemTrungBinh.Size = new System.Drawing.Size(165, 24);
             this.lblDiemTrungBinh.TabIndex = 25;
@@ -303,41 +240,141 @@
             this.lblXepLoai.AutoSize = true;
             this.lblXepLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXepLoai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblXepLoai.Location = new System.Drawing.Point(596, 478);
+            this.lblXepLoai.Location = new System.Drawing.Point(678, 477);
             this.lblXepLoai.Name = "lblXepLoai";
             this.lblXepLoai.Size = new System.Drawing.Size(94, 24);
             this.lblXepLoai.TabIndex = 26;
             this.lblXepLoai.Text = "Xếp loại:";
             // 
-            // lvlDiemTBDaTinh
+            // lblDiemTBDaTinh
             // 
-            this.lvlDiemTBDaTinh.AutoSize = true;
-            this.lvlDiemTBDaTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvlDiemTBDaTinh.ForeColor = System.Drawing.Color.Black;
-            this.lvlDiemTBDaTinh.Location = new System.Drawing.Point(295, 478);
-            this.lvlDiemTBDaTinh.Name = "lvlDiemTBDaTinh";
-            this.lvlDiemTBDaTinh.Size = new System.Drawing.Size(24, 24);
-            this.lvlDiemTBDaTinh.TabIndex = 27;
-            this.lvlDiemTBDaTinh.Text = "A";
+            this.lblDiemTBDaTinh.AutoSize = true;
+            this.lblDiemTBDaTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiemTBDaTinh.ForeColor = System.Drawing.Color.Black;
+            this.lblDiemTBDaTinh.Location = new System.Drawing.Point(358, 477);
+            this.lblDiemTBDaTinh.Name = "lblDiemTBDaTinh";
+            this.lblDiemTBDaTinh.Size = new System.Drawing.Size(24, 24);
+            this.lblDiemTBDaTinh.TabIndex = 27;
+            this.lblDiemTBDaTinh.Text = "A";
             // 
             // lblXepLoaiDaTinh
             // 
             this.lblXepLoaiDaTinh.AutoSize = true;
             this.lblXepLoaiDaTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblXepLoaiDaTinh.ForeColor = System.Drawing.Color.Black;
-            this.lblXepLoaiDaTinh.Location = new System.Drawing.Point(707, 478);
+            this.lblXepLoaiDaTinh.Location = new System.Drawing.Point(789, 477);
             this.lblXepLoaiDaTinh.Name = "lblXepLoaiDaTinh";
             this.lblXepLoaiDaTinh.Size = new System.Drawing.Size(24, 24);
             this.lblXepLoaiDaTinh.TabIndex = 28;
             this.lblXepLoaiDaTinh.Text = "A";
             // 
+            // STT
+            // 
+            this.STT.DataPropertyName = "STT";
+            this.STT.FillWeight = 50F;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MaHocPhan
+            // 
+            this.MaHocPhan.DataPropertyName = "MaHocPhan";
+            this.MaHocPhan.FillWeight = 70F;
+            this.MaHocPhan.HeaderText = "Mã Học Phần";
+            this.MaHocPhan.Name = "MaHocPhan";
+            // 
+            // TenHocPhan
+            // 
+            this.TenHocPhan.DataPropertyName = "TenHocPhan";
+            this.TenHocPhan.HeaderText = "Tên Học Phần";
+            this.TenHocPhan.Name = "TenHocPhan";
+            // 
+            // TinChi
+            // 
+            this.TinChi.DataPropertyName = "TinChi";
+            this.TinChi.FillWeight = 50F;
+            this.TinChi.HeaderText = "Tín Chỉ";
+            this.TinChi.Name = "TinChi";
+            // 
+            // DiemQuaTrinh
+            // 
+            this.DiemQuaTrinh.DataPropertyName = "DiemQuaTrinh";
+            this.DiemQuaTrinh.FillWeight = 50F;
+            this.DiemQuaTrinh.HeaderText = "Điểm Quá Trình";
+            this.DiemQuaTrinh.Name = "DiemQuaTrinh";
+            // 
+            // DiemGiuaKy
+            // 
+            this.DiemGiuaKy.DataPropertyName = "DiemGiuaKy";
+            this.DiemGiuaKy.FillWeight = 50F;
+            this.DiemGiuaKy.HeaderText = "Điểm Giữa Kỳ";
+            this.DiemGiuaKy.Name = "DiemGiuaKy";
+            // 
+            // DiemCuoiKy
+            // 
+            this.DiemCuoiKy.DataPropertyName = "DiemCuoiKy";
+            this.DiemCuoiKy.FillWeight = 50F;
+            this.DiemCuoiKy.HeaderText = "Điểm Cuối Kỳ";
+            this.DiemCuoiKy.Name = "DiemCuoiKy";
+            // 
+            // DiemTrungBinh
+            // 
+            this.DiemTrungBinh.DataPropertyName = "DiemTrungBinh";
+            this.DiemTrungBinh.FillWeight = 50F;
+            this.DiemTrungBinh.HeaderText = "Điểm Trung Bình";
+            this.DiemTrungBinh.Name = "DiemTrungBinh";
+            // 
+            // btnTatCa
+            // 
+            this.btnTatCa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTatCa.Location = new System.Drawing.Point(927, 61);
+            this.btnTatCa.Name = "btnTatCa";
+            this.btnTatCa.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.btnTatCa.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.btnTatCa.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnTatCa.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTatCa.Size = new System.Drawing.Size(96, 32);
+            this.btnTatCa.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnTatCa.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnTatCa.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnTatCa.StateCommon.Border.Rounding = 8;
+            this.btnTatCa.StateCommon.Border.Width = 2;
+            this.btnTatCa.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTatCa.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTatCa.StateTracking.Border.Color1 = System.Drawing.Color.White;
+            this.btnTatCa.StateTracking.Border.Color2 = System.Drawing.Color.White;
+            this.btnTatCa.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnTatCa.StateTracking.Border.Rounding = 8;
+            this.btnTatCa.StateTracking.Border.Width = 2;
+            this.btnTatCa.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnTatCa.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnTatCa.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTatCa.TabIndex = 29;
+            this.btnTatCa.Values.Text = "Tất cả";
+            this.btnTatCa.Click += new System.EventHandler(this.btnTatCa_Click);
+            // 
             // SinhVienXemDiemThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(912, 524);
+            this.ClientSize = new System.Drawing.Size(1078, 524);
+            this.Controls.Add(this.btnTatCa);
             this.Controls.Add(this.lblXepLoaiDaTinh);
-            this.Controls.Add(this.lvlDiemTBDaTinh);
+            this.Controls.Add(this.lblDiemTBDaTinh);
             this.Controls.Add(this.lblXepLoai);
             this.Controls.Add(this.lblDiemTrungBinh);
             this.Controls.Add(this.btnLoc);
@@ -353,7 +390,7 @@
             this.Controls.Add(this.lblMaSinhVien);
             this.Location = new System.Drawing.Point(679, 268);
             this.Name = "SinhVienXemDiemThi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SinhVienXemDiemThi";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvBangDiemSinhVien)).EndInit();
             this.ResumeLayout(false);
@@ -373,16 +410,19 @@
         private System.Windows.Forms.ComboBox cboHocKy;
         private System.Windows.Forms.ComboBox cboNamHoc;
         private System.Windows.Forms.DataGridView dtgvBangDiemSinhVien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaHocPhan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenHocPhan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemQuaTrinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemGiuaKy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemCuoiKy;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnLoc;
         private System.Windows.Forms.Label lblDiemTrungBinh;
         private System.Windows.Forms.Label lblXepLoai;
-        private System.Windows.Forms.Label lvlDiemTBDaTinh;
+        private System.Windows.Forms.Label lblDiemTBDaTinh;
         private System.Windows.Forms.Label lblXepLoaiDaTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHocPhan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHocPhan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TinChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemQuaTrinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemGiuaKy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemCuoiKy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemTrungBinh;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnTatCa;
     }
 }
