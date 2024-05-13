@@ -86,6 +86,11 @@ namespace GUI
             f.ShowDialog();
         }
 
+        private void btnThongbaochung_Click(object sender, EventArgs e)
+        {
+            ThongBao f = new ThongBao(taiKhoan);
+        }
+        
         private void btnHocPhi_Click(object sender, EventArgs e)
         {
             XemHocPhi f = new XemHocPhi(taiKhoan);

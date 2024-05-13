@@ -21,5 +21,19 @@ namespace BUS
         {
             return ThongBaoDAO.Instance.LayDanhSachThongBao(TieuDe);
         }
+        public DataTable LayDanhSachThongBaoV2(string TieuDe)
+        {
+            return ThongBaoDAO.Instance.LayDanhSachThongBaoV2(TieuDe);
+        }
+        public string LayNoiDungThongBao(string MaThongBao)
+        {
+            return ThongBaoDAO.Instance.LayNoiDungThongBao(MaThongBao);
+
+        }
+        public string LayTenNguoiTaoThongBao(string MaThongBao)
+        {
+            return ThongBaoDAO.Instance.LayTenNguoiTaoThongBao(MaThongBao);
+
+        }
     }
 }
