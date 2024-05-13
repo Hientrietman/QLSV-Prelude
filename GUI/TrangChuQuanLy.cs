@@ -55,6 +55,8 @@ namespace GUI
         {
             ThongTinCaNhan f = new ThongTinCaNhan(taiKhoanHienTai);
             f.ShowDialog();
+            lblName.Text = LayTenQuanLy(taiKhoanHienTai.TenDangNhap);
+
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

@@ -70,6 +70,8 @@ namespace GUI
         {
             ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
             f.ShowDialog();
+            lblName.Text = LayTenSinhVien(taiKhoan.TenDangNhap);
+
 
         }
 
