@@ -7,8 +7,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
+
     public partial class ThongTinSV : Form
     {
+        // Định nghĩa một delegate cho sự kiện cập nhật dữ liệu
+
         private string MaSV;
         private string HoTen;
         private string NgaySinh;
@@ -33,6 +36,10 @@ namespace GUI
             this.Email = Email;
 
             InitializeComponent();
+        }
+
+        public ThongTinSV()
+        {
         }
 
         // Load form
@@ -70,7 +77,7 @@ namespace GUI
         }
 
         // Button Enter Click Event
-      
+
 
         // Button Exit Click Event
         private void btn_Exit_Click(object sender, EventArgs e)
@@ -80,34 +87,62 @@ namespace GUI
 
         private void btn_Enter_Click(object sender, EventArgs e)
         {
-            string MaSV = this.txt_MSV.Text;
-            string HoTen = this.txt_HoTen.Text;
-            DateTime NgaySinh = this.dtP_NgaySinh.Value;
-            string GioiTinh = this.txt_GioiTinh.Text;
-            string DiaChi = this.txt_DiaChi.Text;
-            string SoDienThoai = this.txt_SDT.Text;
-            string Lop = this.txt_Lop.Text;
-            string Khoa = cb_Khoa.SelectedValue.ToString();
-            string Email = this.txt_Email.Text;
-
-            if (this.Text == "Thêm mới sinh viên")
+            if (AreDetailsFilled())
             {
-                /*SinhVienDTO sinhVien = new SinhVienDTO(MaSV, null, Khoa, HoTen, Lop, Email, SoDienThoai, NgaySinh, GioiTinh);
-                SinhVienBUS.Instance.ThemSV(sinhVien);
-                this.Close();*/
-                SinhVienDTO sinhVien = new SinhVienDTO(MaSV, null, Khoa, HoTen, Lop, Email, SoDienThoai, NgaySinh, GioiTinh);
-                SinhVienBUS.Instance.ThemSV(MaSV, Lop, Email, SoDienThoai, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
-                MessageBox.Show("Thêm mới thành công");
-                this.Close();
+                string MaSV = this.txt_MSV.Text;
+                string HoTen = this.txt_HoTen.Text;
+                DateTime NgaySinh = this.dtP_NgaySinh.Value;
+                string GioiTinh = this.txt_GioiTinh.Text;
+                string DiaChi = this.txt_DiaChi.Text;
+                string SoDienThoai = this.txt_SDT.Text;
+                string Lop = this.txt_Lop.Text;
+                string Khoa = cb_Khoa.SelectedValue.ToString();
+                string Email = this.txt_Email.Text;
 
+                if (this.Text == "Thêm mới sinh viên")
+                {
+                    SinhVienDTO sinhVien = new SinhVienDTO(MaSV, null, Khoa, HoTen, Lop, Email, SoDienThoai, NgaySinh, GioiTinh);
+                    SinhVienBUS.Instance.ThemSV(MaSV, Lop, Email, SoDienThoai, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
+                    MessageBox.Show("Thêm mới thành công");
+                    DanhSachSinhVien.Instance.LoadLaiDuLieu();
+                    this.Close();
+                }
+                else if (this.Text == "Cập nhật thông tin sinh viên")
+                {
+                    SinhVienDTO sinhVien = new SinhVienDTO(MaSV, null, Khoa, HoTen, Lop, Email, SoDienThoai, NgaySinh, GioiTinh);
+                    SinhVienBUS.Instance.CapNhatSV(MaSV, Lop, Email, SoDienThoai, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
+                    MessageBox.Show("Cập nhật thành công");
+                    DanhSachSinhVien.Instance.LoadLaiDuLieu();
+                    this.Close();
+                }
             }
-            else if (this.Text == "Cập nhật thông tin sinh viên")
+            else
             {
-                SinhVienDTO sinhVien = new SinhVienDTO(MaSV, null, Khoa, HoTen, Lop, Email, SoDienThoai, NgaySinh, GioiTinh);
-                SinhVienBUS.Instance.CapNhatSV(MaSV, Lop, Email, SoDienThoai, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
-                MessageBox.Show("Cập nhật thành công");
-                this.Close();
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin.");
             }
+
+
+
+
+            // Tạo một delegate để định nghĩa sự kiện cập nhật dữ liệu
+
+
+            // Hàm cập nhật dữ liệu khi thực hiện xong
+
+
+        }
+        private bool AreDetailsFilled()
+        {
+            return !string.IsNullOrEmpty(txt_MSV.Text) &&
+                   !string.IsNullOrEmpty(txt_HoTen.Text) &&
+                   !string.IsNullOrEmpty(txt_GioiTinh.Text) &&
+                   !string.IsNullOrEmpty(txt_DiaChi.Text) &&
+                   !string.IsNullOrEmpty(txt_SDT.Text) &&
+                   !string.IsNullOrEmpty(txt_Lop.Text) &&
+                   cb_Khoa.SelectedIndex != -1 &&
+                   !string.IsNullOrEmpty(txt_Email.Text);
         }
     }
+
 }
+

@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblDanhSachSinhVien = new System.Windows.Forms.Label();
             this.dtgvDanhSachSinhVien = new System.Windows.Forms.DataGridView();
-            this.btnTimKiem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.txtMaSinhVien = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.lblMaSinhVien = new System.Windows.Forms.Label();
-            this.grpDanhSachSinhVien = new System.Windows.Forms.GroupBox();
-            this.cboLop = new System.Windows.Forms.ComboBox();
-            this.lblLop = new System.Windows.Forms.Label();
-            this.cboKhoa = new System.Windows.Forms.ComboBox();
-            this.lblKhoa = new System.Windows.Forms.Label();
-            this.btnThemmoi = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.txt_Load = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +44,16 @@
             this.TenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnTimKiem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtMaSinhVien = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.lblMaSinhVien = new System.Windows.Forms.Label();
+            this.grpDanhSachSinhVien = new System.Windows.Forms.GroupBox();
+            this.cboLop = new System.Windows.Forms.ComboBox();
+            this.lblLop = new System.Windows.Forms.Label();
+            this.cboKhoa = new System.Windows.Forms.ComboBox();
+            this.lblKhoa = new System.Windows.Forms.Label();
+            this.btnThemmoi = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txt_Load = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDanhSachSinhVien)).BeginInit();
@@ -96,14 +96,14 @@
             // dtgvDanhSachSinhVien
             // 
             this.dtgvDanhSachSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDanhSachSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDanhSachSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvDanhSachSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDanhSachSinhVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -123,232 +123,6 @@
             this.dtgvDanhSachSinhVien.TabIndex = 27;
             this.dtgvDanhSachSinhVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachSinhVien_CellContentClick);
             this.dtgvDanhSachSinhVien.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDanhSachSinhVien_CellDoubleClick);
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimKiem.Location = new System.Drawing.Point(667, 183);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
-            this.btnTimKiem.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
-            this.btnTimKiem.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnTimKiem.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Size = new System.Drawing.Size(115, 32);
-            this.btnTimKiem.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnTimKiem.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnTimKiem.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnTimKiem.StateCommon.Border.Rounding = 8;
-            this.btnTimKiem.StateCommon.Border.Width = 2;
-            this.btnTimKiem.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTimKiem.StateTracking.Border.Color1 = System.Drawing.Color.White;
-            this.btnTimKiem.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnTimKiem.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnTimKiem.StateTracking.Border.Rounding = 8;
-            this.btnTimKiem.StateTracking.Border.Width = 2;
-            this.btnTimKiem.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnTimKiem.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnTimKiem.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.TabIndex = 26;
-            this.btnTimKiem.Values.Text = "Tìm kiếm";
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
-            // 
-            // txtMaSinhVien
-            // 
-            this.txtMaSinhVien.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMaSinhVien.Location = new System.Drawing.Point(129, 19);
-            this.txtMaSinhVien.Name = "txtMaSinhVien";
-            this.txtMaSinhVien.Size = new System.Drawing.Size(144, 28);
-            this.txtMaSinhVien.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txtMaSinhVien.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txtMaSinhVien.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txtMaSinhVien.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txtMaSinhVien.StateCommon.Border.Rounding = 10;
-            this.txtMaSinhVien.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.txtMaSinhVien.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSinhVien.TabIndex = 25;
-            // 
-            // lblMaSinhVien
-            // 
-            this.lblMaSinhVien.AutoSize = true;
-            this.lblMaSinhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaSinhVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblMaSinhVien.Location = new System.Drawing.Point(6, 25);
-            this.lblMaSinhVien.Name = "lblMaSinhVien";
-            this.lblMaSinhVien.Size = new System.Drawing.Size(113, 20);
-            this.lblMaSinhVien.TabIndex = 24;
-            this.lblMaSinhVien.Text = "Mã sinh viên:";
-            // 
-            // grpDanhSachSinhVien
-            // 
-            this.grpDanhSachSinhVien.Controls.Add(this.cboLop);
-            this.grpDanhSachSinhVien.Controls.Add(this.lblLop);
-            this.grpDanhSachSinhVien.Controls.Add(this.cboKhoa);
-            this.grpDanhSachSinhVien.Controls.Add(this.lblKhoa);
-            this.grpDanhSachSinhVien.Controls.Add(this.lblMaSinhVien);
-            this.grpDanhSachSinhVien.Controls.Add(this.txtMaSinhVien);
-            this.grpDanhSachSinhVien.Location = new System.Drawing.Point(12, 94);
-            this.grpDanhSachSinhVien.Name = "grpDanhSachSinhVien";
-            this.grpDanhSachSinhVien.Size = new System.Drawing.Size(932, 73);
-            this.grpDanhSachSinhVien.TabIndex = 28;
-            this.grpDanhSachSinhVien.TabStop = false;
-            this.grpDanhSachSinhVien.Text = "Danh sách sinh viên";
-            // 
-            // cboLop
-            // 
-            this.cboLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboLop.FormattingEnabled = true;
-            this.cboLop.Items.AddRange(new object[] {
-            "47.01.CNNT.A",
-            "47.01.CNNT.B",
-            "47.01.CNNT.C",
-            "47.01.CNNT.D"});
-            this.cboLop.Location = new System.Drawing.Point(750, 21);
-            this.cboLop.Name = "cboLop";
-            this.cboLop.Size = new System.Drawing.Size(121, 26);
-            this.cboLop.TabIndex = 32;
-            // 
-            // lblLop
-            // 
-            this.lblLop.AutoSize = true;
-            this.lblLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblLop.Location = new System.Drawing.Point(698, 27);
-            this.lblLop.Name = "lblLop";
-            this.lblLop.Size = new System.Drawing.Size(44, 20);
-            this.lblLop.TabIndex = 30;
-            this.lblLop.Text = "Lớp:";
-            // 
-            // cboKhoa
-            // 
-            this.cboKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboKhoa.FormattingEnabled = true;
-            this.cboKhoa.Items.AddRange(new object[] {
-            "CNTT",
-            "GDCT",
-            "NV",
-            "TT"});
-            this.cboKhoa.Location = new System.Drawing.Point(444, 21);
-            this.cboKhoa.Name = "cboKhoa";
-            this.cboKhoa.Size = new System.Drawing.Size(121, 26);
-            this.cboKhoa.TabIndex = 29;
-            // 
-            // lblKhoa
-            // 
-            this.lblKhoa.AutoSize = true;
-            this.lblKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKhoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblKhoa.Location = new System.Drawing.Point(380, 27);
-            this.lblKhoa.Name = "lblKhoa";
-            this.lblKhoa.Size = new System.Drawing.Size(55, 20);
-            this.lblKhoa.TabIndex = 28;
-            this.lblKhoa.Text = "Khoa:";
-            // 
-            // btnThemmoi
-            // 
-            this.btnThemmoi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThemmoi.Location = new System.Drawing.Point(809, 183);
-            this.btnThemmoi.Name = "btnThemmoi";
-            this.btnThemmoi.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
-            this.btnThemmoi.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
-            this.btnThemmoi.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnThemmoi.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemmoi.Size = new System.Drawing.Size(115, 32);
-            this.btnThemmoi.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.btnThemmoi.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.btnThemmoi.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnThemmoi.StateCommon.Border.Rounding = 8;
-            this.btnThemmoi.StateCommon.Border.Width = 2;
-            this.btnThemmoi.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemmoi.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnThemmoi.StateTracking.Border.Color1 = System.Drawing.Color.White;
-            this.btnThemmoi.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnThemmoi.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.btnThemmoi.StateTracking.Border.Rounding = 8;
-            this.btnThemmoi.StateTracking.Border.Width = 2;
-            this.btnThemmoi.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btnThemmoi.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btnThemmoi.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemmoi.TabIndex = 29;
-            this.btnThemmoi.Values.Text = "Thêm mới";
-            this.btnThemmoi.Click += new System.EventHandler(this.btnThemmoi_Click);
-            // 
-            // txt_Load
-            // 
-            this.txt_Load.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Load.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txt_Load.Location = new System.Drawing.Point(518, 183);
-            this.txt_Load.Name = "txt_Load";
-            this.txt_Load.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
-            this.txt_Load.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
-            this.txt_Load.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txt_Load.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Load.Size = new System.Drawing.Size(115, 32);
-            this.txt_Load.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.txt_Load.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.txt_Load.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txt_Load.StateCommon.Border.Rounding = 8;
-            this.txt_Load.StateCommon.Border.Width = 2;
-            this.txt_Load.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Load.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.txt_Load.StateTracking.Border.Color1 = System.Drawing.Color.White;
-            this.txt_Load.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.txt_Load.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.txt_Load.StateTracking.Border.Rounding = 8;
-            this.txt_Load.StateTracking.Border.Width = 2;
-            this.txt_Load.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.txt_Load.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.txt_Load.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Load.TabIndex = 30;
-            this.txt_Load.Values.Text = "Tải lại";
-            this.txt_Load.Click += new System.EventHandler(this.txt_Load_Click);
             // 
             // STT
             // 
@@ -420,6 +194,222 @@
             this.Xoa.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Xoa.Text = "Xóa";
             this.Xoa.UseColumnTextForButtonValue = true;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTimKiem.Location = new System.Drawing.Point(667, 183);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.btnTimKiem.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.btnTimKiem.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnTimKiem.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.Size = new System.Drawing.Size(115, 32);
+            this.btnTimKiem.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnTimKiem.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnTimKiem.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnTimKiem.StateCommon.Border.Rounding = 8;
+            this.btnTimKiem.StateCommon.Border.Width = 2;
+            this.btnTimKiem.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnTimKiem.StateTracking.Border.Color1 = System.Drawing.Color.White;
+            this.btnTimKiem.StateTracking.Border.Color2 = System.Drawing.Color.White;
+            this.btnTimKiem.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnTimKiem.StateTracking.Border.Rounding = 8;
+            this.btnTimKiem.StateTracking.Border.Width = 2;
+            this.btnTimKiem.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnTimKiem.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnTimKiem.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.TabIndex = 26;
+            this.btnTimKiem.Values.Text = "Tìm kiếm";
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
+            // txtMaSinhVien
+            // 
+            this.txtMaSinhVien.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMaSinhVien.Location = new System.Drawing.Point(129, 19);
+            this.txtMaSinhVien.Name = "txtMaSinhVien";
+            this.txtMaSinhVien.Size = new System.Drawing.Size(144, 28);
+            this.txtMaSinhVien.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txtMaSinhVien.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txtMaSinhVien.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txtMaSinhVien.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txtMaSinhVien.StateCommon.Border.Rounding = 10;
+            this.txtMaSinhVien.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.txtMaSinhVien.StateCommon.Content.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSinhVien.TabIndex = 25;
+            // 
+            // lblMaSinhVien
+            // 
+            this.lblMaSinhVien.AutoSize = true;
+            this.lblMaSinhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaSinhVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.lblMaSinhVien.Location = new System.Drawing.Point(6, 25);
+            this.lblMaSinhVien.Name = "lblMaSinhVien";
+            this.lblMaSinhVien.Size = new System.Drawing.Size(113, 20);
+            this.lblMaSinhVien.TabIndex = 24;
+            this.lblMaSinhVien.Text = "Mã sinh viên:";
+            // 
+            // grpDanhSachSinhVien
+            // 
+            this.grpDanhSachSinhVien.Controls.Add(this.cboLop);
+            this.grpDanhSachSinhVien.Controls.Add(this.lblLop);
+            this.grpDanhSachSinhVien.Controls.Add(this.cboKhoa);
+            this.grpDanhSachSinhVien.Controls.Add(this.lblKhoa);
+            this.grpDanhSachSinhVien.Controls.Add(this.lblMaSinhVien);
+            this.grpDanhSachSinhVien.Controls.Add(this.txtMaSinhVien);
+            this.grpDanhSachSinhVien.Location = new System.Drawing.Point(12, 94);
+            this.grpDanhSachSinhVien.Name = "grpDanhSachSinhVien";
+            this.grpDanhSachSinhVien.Size = new System.Drawing.Size(932, 73);
+            this.grpDanhSachSinhVien.TabIndex = 28;
+            this.grpDanhSachSinhVien.TabStop = false;
+            this.grpDanhSachSinhVien.Text = "Danh sách sinh viên";
+            // 
+            // cboLop
+            // 
+            this.cboLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboLop.FormattingEnabled = true;
+            this.cboLop.Location = new System.Drawing.Point(750, 21);
+            this.cboLop.Name = "cboLop";
+            this.cboLop.Size = new System.Drawing.Size(121, 26);
+            this.cboLop.TabIndex = 32;
+            // 
+            // lblLop
+            // 
+            this.lblLop.AutoSize = true;
+            this.lblLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.lblLop.Location = new System.Drawing.Point(698, 27);
+            this.lblLop.Name = "lblLop";
+            this.lblLop.Size = new System.Drawing.Size(44, 20);
+            this.lblLop.TabIndex = 30;
+            this.lblLop.Text = "Lớp:";
+            // 
+            // cboKhoa
+            // 
+            this.cboKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboKhoa.FormattingEnabled = true;
+            this.cboKhoa.Location = new System.Drawing.Point(444, 21);
+            this.cboKhoa.Name = "cboKhoa";
+            this.cboKhoa.Size = new System.Drawing.Size(121, 26);
+            this.cboKhoa.TabIndex = 29;
+            // 
+            // lblKhoa
+            // 
+            this.lblKhoa.AutoSize = true;
+            this.lblKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKhoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.lblKhoa.Location = new System.Drawing.Point(380, 27);
+            this.lblKhoa.Name = "lblKhoa";
+            this.lblKhoa.Size = new System.Drawing.Size(55, 20);
+            this.lblKhoa.TabIndex = 28;
+            this.lblKhoa.Text = "Khoa:";
+            // 
+            // btnThemmoi
+            // 
+            this.btnThemmoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThemmoi.Location = new System.Drawing.Point(809, 183);
+            this.btnThemmoi.Name = "btnThemmoi";
+            this.btnThemmoi.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.btnThemmoi.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.btnThemmoi.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnThemmoi.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemmoi.Size = new System.Drawing.Size(115, 32);
+            this.btnThemmoi.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.btnThemmoi.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.btnThemmoi.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnThemmoi.StateCommon.Border.Rounding = 8;
+            this.btnThemmoi.StateCommon.Border.Width = 2;
+            this.btnThemmoi.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemmoi.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnThemmoi.StateTracking.Border.Color1 = System.Drawing.Color.White;
+            this.btnThemmoi.StateTracking.Border.Color2 = System.Drawing.Color.White;
+            this.btnThemmoi.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.btnThemmoi.StateTracking.Border.Rounding = 8;
+            this.btnThemmoi.StateTracking.Border.Width = 2;
+            this.btnThemmoi.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btnThemmoi.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btnThemmoi.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemmoi.TabIndex = 29;
+            this.btnThemmoi.Values.Text = "Thêm mới";
+            this.btnThemmoi.Click += new System.EventHandler(this.btnThemmoi_Click);
+            // 
+            // txt_Load
+            // 
+            this.txt_Load.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Load.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txt_Load.Location = new System.Drawing.Point(518, 183);
+            this.txt_Load.Name = "txt_Load";
+            this.txt_Load.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.txt_Load.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.txt_Load.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txt_Load.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Load.Size = new System.Drawing.Size(115, 32);
+            this.txt_Load.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.txt_Load.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.txt_Load.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txt_Load.StateCommon.Border.Rounding = 8;
+            this.txt_Load.StateCommon.Border.Width = 2;
+            this.txt_Load.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Load.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.txt_Load.StateTracking.Border.Color1 = System.Drawing.Color.White;
+            this.txt_Load.StateTracking.Border.Color2 = System.Drawing.Color.White;
+            this.txt_Load.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.txt_Load.StateTracking.Border.Rounding = 8;
+            this.txt_Load.StateTracking.Border.Width = 2;
+            this.txt_Load.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.txt_Load.StateTracking.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.txt_Load.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Load.TabIndex = 30;
+            this.txt_Load.Values.Text = "Tải lại";
+            this.txt_Load.Click += new System.EventHandler(this.txt_Load_Click);
             // 
             // DanhSachSinhVien
             // 

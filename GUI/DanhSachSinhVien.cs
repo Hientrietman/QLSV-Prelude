@@ -14,21 +14,61 @@ namespace GUI
 {
     public partial class DanhSachSinhVien : Form
     {
+    
+        private static DanhSachSinhVien instance;
+
+        public static DanhSachSinhVien Instance
+        {
+            get { if (instance == null) instance = new DanhSachSinhVien(); return instance; }
+            private set { instance = value; }
+        }
         public DanhSachSinhVien()
         {
             InitializeComponent();
-        }
+            ThongTinSV thongTinSV = new ThongTinSV();
+         
 
+        }
+    
         private void DanhSachSinhVien_Load(object sender, EventArgs e)
         {
+
             dtgvDanhSachSinhVien.DataSource = SinhVienBUS.Instance.LayToanBoSinhVien();
+            // Load danh sách khoa vào ComboBox
+            DataTable dtKhoa = KhoaBUS.Instance.LayKhoa();
+            if (dtKhoa != null && dtKhoa.Rows.Count > 0)
+            {
+                // Thiết lập DataSource cho ComboBox Khoa
+                cboKhoa.DataSource = dtKhoa;
+                cboKhoa.ValueMember = "MaKhoa";
+                // Thiết lập trường cần hiển thị lên ComboBox (ở đây là trường "MaKhoa")
+                cboKhoa.DisplayMember = "TenKhoa";
+            }
+            else
+            {
+                // Xử lý trường hợp không có dữ liệu hoặc lỗi khi truy vấn
+                // Ví dụ: MessageBox.Show("Không có dữ liệu khoa.");
+            }
+
+            DataTable dtLop = SinhVienBUS.Instance.LayLop();
+            if (dtLop != null && dtLop.Rows.Count > 0)
+            {
+                // Thiết lập DataSource cho ComboBox Khoa
+                cboLop.DataSource = dtLop;
+                cboLop.ValueMember = "Lop";
+            }
+            else
+            {
+                // Xử lý trường hợp không có dữ liệu hoặc lỗi khi truy vấn
+                // Ví dụ: MessageBox.Show("Không có dữ liệu khoa.");
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string MaSV = txtMaSinhVien.Text;
-            string Khoa = cboKhoa.SelectedItem?.ToString() ?? "";
-            string Lop = cboLop.SelectedItem?.ToString() ?? "";
+            string Khoa = cboKhoa.SelectedValue?.ToString() ?? "";
+            string Lop = cboLop.SelectedValue?.ToString() ?? "";
 
             dtgvDanhSachSinhVien.DataSource = SinhVienBUS.Instance.timKiemSVTrongDSSV(MaSV, Khoa, Lop);
         }
@@ -84,10 +124,15 @@ namespace GUI
 
             }
         }
+        public void LoadLaiDuLieu()
+        {
+            dtgvDanhSachSinhVien.DataSource = SinhVienDAO.Instance.LayToanBoSinhVien();
 
+        }
         private void txt_Load_Click(object sender, EventArgs e)
         {
             dtgvDanhSachSinhVien.DataSource = SinhVienDAO.Instance.LayToanBoSinhVien();
         }
+        
     }
 }

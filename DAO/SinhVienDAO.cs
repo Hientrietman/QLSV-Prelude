@@ -88,6 +88,10 @@ namespace DAO
             return result > 0;
         }
 
-
+        public DataTable LayLop()
+        {
+            string query = string.Format("Select Lop from SinhVien");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
