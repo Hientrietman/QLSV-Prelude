@@ -37,31 +37,19 @@
       <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking">
-      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+      <HintPath>Z:\filetai\copy\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+      <HintPath>Z:\filetai\copy\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+      <HintPath>Z:\filetai\copy\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>Z:\filetai\copy\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>..\..\Krypton\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
-    </Reference>
-    <Reference Include="ComponentFactory.Krypton.Navigator">
-      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
-    </Reference>
-    <Reference Include="ComponentFactory.Krypton.Ribbon">
-      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
-    </Reference>
-    <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="ComponentFactory.Krypton.Workspace">
-      <HintPath>Z:\copy\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+      <HintPath>Z:\filetai\copy\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
@@ -120,6 +108,12 @@
     </Compile>
     <Compile Include="DoiMatKhauMoi.Designer.cs">
       <DependentUpon>DoiMatKhauMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GopYVaHoiDap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GopYVaHoiDap.Designer.cs">
+      <DependentUpon>GopYVaHoiDap.cs</DependentUpon>
     </Compile>
     <Compile Include="GvChonLopHocPhan.cs">
       <SubType>Form</SubType>
@@ -243,6 +237,12 @@
     <Compile Include="TrangChuSinhVien.Designer.cs">
       <DependentUpon>TrangChuSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="XemHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XemHocPhi.Designer.cs">
+      <DependentUpon>XemHocPhi.cs</DependentUpon>
+    </Compile>
     <Compile Include="XoaHocPhanSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -330,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemLHPVaoTKB.resx">
       <DependentUpon>ThemLHPVaoTKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XemHocPhi.resx">
+      <DependentUpon>XemHocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XoaHocPhanSinhVien.resx">
       <DependentUpon>XoaHocPhanSinhVien.cs</DependentUpon>
@@ -465,6 +468,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-delete-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

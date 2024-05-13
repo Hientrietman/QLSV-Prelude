@@ -20,8 +20,8 @@ namespace DAO
 
         private DataProvider() { }
 
-        //private string connectionSTR = "Data Source=DOHUY\\MSSQLSERVER06;Initial Catalog=Quan_li_SV;Integrated Security=True;Encrypt=False";
         private string connectionSTR = "Data Source=.\\SQLEXPRESS;Initial Catalog=Quan_li_SV;Integrated Security=True;Encrypt=False";
+
 
 
 

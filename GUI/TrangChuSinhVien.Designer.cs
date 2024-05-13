@@ -39,7 +39,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnHocPhi = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
@@ -195,27 +195,28 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button5);
+            this.panel8.Controls.Add(this.btnHocPhi);
             this.panel8.Controls.Add(this.pictureBox7);
             this.panel8.Location = new System.Drawing.Point(0, 489);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(285, 61);
             this.panel8.TabIndex = 8;
             // 
-            // button5
+            // btnHocPhi
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(67, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(215, 55);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Học phí";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnHocPhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
+            this.btnHocPhi.FlatAppearance.BorderSize = 0;
+            this.btnHocPhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHocPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHocPhi.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHocPhi.Location = new System.Drawing.Point(67, 3);
+            this.btnHocPhi.Name = "btnHocPhi";
+            this.btnHocPhi.Size = new System.Drawing.Size(215, 55);
+            this.btnHocPhi.TabIndex = 1;
+            this.btnHocPhi.Text = "Học phí";
+            this.btnHocPhi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHocPhi.UseVisualStyleBackColor = false;
+            this.btnHocPhi.Click += new System.EventHandler(this.btnHocPhi_Click);
             // 
             // pictureBox7
             // 
@@ -502,7 +503,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnHocPhi;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button4;

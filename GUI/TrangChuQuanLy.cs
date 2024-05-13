@@ -26,7 +26,7 @@ namespace GUI
         public TrangChuQuanLy(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
-            lblName.Text = LayTenQuanLy(TaiKhoan.TenDangNhap); ;
+            lblName.Text = LayTenQuanLy(TaiKhoan.TenDangNhap);
             lblMSSV.Text = TaiKhoan.TenDangNhap;
             taiKhoanHienTai = TaiKhoan;
         }
@@ -88,7 +88,7 @@ namespace GUI
 
         private void btnUpdateMes_Click(object sender, EventArgs e)
         {
-            QuanLyThongBao f = new QuanLyThongBao();
+            QuanLyThongBao f = new QuanLyThongBao(taiKhoanHienTai);
             f.ShowDialog();
         }
     }
