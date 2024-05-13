@@ -83,5 +83,11 @@ namespace GUI
             SVDangKyHocPhan f = new SVDangKyHocPhan(taiKhoan);
             f.ShowDialog();
         }
+
+        private void btnHocPhi_Click(object sender, EventArgs e)
+        {
+            XemHocPhi f = new XemHocPhi(taiKhoan);
+            f.ShowDialog();
+        }
     }
 }
