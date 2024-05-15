@@ -27,15 +27,25 @@ namespace GUI
         public TrangChuSinhVien(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
-            lblName.Text = LayTenSinhVien(TaiKhoan.TenDangNhap); ;
+            lblName.Text = LayTenSinhVien(TaiKhoan.TenDangNhap); 
             lblMSSV.Text = TaiKhoan.TenDangNhap;
             taiKhoan = TaiKhoan;
         }
 
+
         public TrangChuSinhVien()
         {
         }
-
+        public string LayMaSinhVien()
+        {
+            return lblMSSV.Text;
+        }
+        public string LayTenSinhVien()
+        {
+            return lblName.Text;
+        }
+        
+        
         private void button4_Click(object sender, EventArgs e)
         {
             SinhVienXemDiemThi sinhVienXemDiemThi = new SinhVienXemDiemThi(taiKhoan);
@@ -81,6 +91,12 @@ namespace GUI
         private void btnDKHP_Click(object sender, EventArgs e)
         {
             SVDangKyHocPhan f = new SVDangKyHocPhan(taiKhoan);
+            f.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            GopYVaHoiDap f = new GopYVaHoiDap(taiKhoan);
             f.ShowDialog();
         }
     }

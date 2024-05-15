@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -24,5 +25,49 @@ namespace DAO
             string query = String.Format("SELECT ROW_NUMBER() OVER (ORDER BY MaThongBao) AS STT, MaThongBao, TieuDe, NoiDung, NgayTao, NguoiTao FROM  ThongBao WHERE dbo.fuConvertToUnsign1(TieuDe) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%';", TieuDe);
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable LayDanhSachThongBaoV2(string TieuDe)
+        {
+            string query = String.Format("SELECT ROW_NUMBER() OVER (ORDER BY NgayTao DESC) AS STT, MaThongBao, TieuDe, NgayTao FROM  ThongBao WHERE dbo.fuConvertToUnsign1(TieuDe) LIKE N'%' + dbo.fuConvertToUnsign1(N'{0}') + '%' ORDER BY NgayTao DESC;", TieuDe);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public string LayNoiDungThongBao(string MaThongBao)
+        {
+            string query = String.Format("select NoiDung from ThongBao where MaThongBao = '{0}'", MaThongBao);
+            return DataProvider.Instance.ExecuteQuery(query).Rows[0]["NoiDung"].ToString();
+        }
+        public string LayTenNguoiTaoThongBao(string MaThongBao)
+        {
+            string query = String.Format("select HoTen from QuanLy where QuanLy.MaNQL = (select NguoiTao from  ThongBao where MaThongBao = '{0}')", MaThongBao);
+            return DataProvider.Instance.ExecuteQuery(query).Rows[0]["HoTen"].ToString();
+        }
+        public DataTable LayThongBaoTheoMa(string maThongBao)
+        {
+            string query = string.Format("SELECT * FROM ThongBao WHERE MaThongBao = '{0}'", maThongBao);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public void CapNhatThongBao(string maThongBao, string tieuDe, string noiDung)
+        {
+            /*
+            string ngayCapNhat = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = string.Format("UPDATE ThongBao SET TieuDe = N'{0}', NoiDung = N'{1}', NgayTao = '{2}' WHERE MaThongBao = '{3}'", tieuDe, noiDung, ngayCapNhat, maThongBao);
+            */
+            string query = string.Format("UPDATE ThongBao SET TieuDe = N'{0}', NoiDung = N'{1}' WHERE MaThongBao = '{2}'", tieuDe, noiDung, maThongBao);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        /* public void ThemThongBao(string maThongBao, string tieuDe, string noiDung)
+        {
+            string query = string.Format("INSERT INTO ThongBao (MaThongBao, TieuDe, NoiDung) VALUES ('{0}', N'{1}', N'{2}')", maThongBao, tieuDe, noiDung);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }*/
+        public void ThemThongBao(string tieuDe, string noiDung, string nguoiTao)
+        {
+            string query = string.Format("EXEC ThemThongBao @TieuDe = N'{0}', @NoiDung = N'{1}' ,@nguoiTao = '{2}'", tieuDe, noiDung,nguoiTao);
+            
+            DataProvider.Instance.ExecuteNonQuery(query);
+
+            
+        }
+        
     }
+
 }

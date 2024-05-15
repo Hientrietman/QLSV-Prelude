@@ -121,6 +121,12 @@
     <Compile Include="DoiMatKhauMoi.Designer.cs">
       <DependentUpon>DoiMatKhauMoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GopYVaHoiDap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GopYVaHoiDap.Designer.cs">
+      <DependentUpon>GopYVaHoiDap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GvChonLopHocPhan.cs">
       <SubType>Form</SubType>
     </Compile>
