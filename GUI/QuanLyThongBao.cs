@@ -58,6 +58,24 @@ namespace GUI
                 suaThongBao.FormClosed += SuaThongBao_FormClosed; // Đăng ký sự kiện FormClosed
                 suaThongBao.ShowDialog();
             }
+
+            if (e.ColumnIndex == dtgvBangThongBao.Columns["XoaThongBao"].Index)
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn xóa thông báo này?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    bool success = ThongBaoDAO.Instance.XoaThongBao(MaThongBao);
+                    if (success)
+                    {
+                        MessageBox.Show("Xóa thông báo thành công!");
+                        loadBangThongBao();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thông báo thất bại!");
+                    }
+                }
+            }
         }
         private void SuaThongBao_FormClosed(object sender, FormClosedEventArgs e)
         {

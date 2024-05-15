@@ -39,11 +39,20 @@ namespace DAO
             string query = String.Format("select HoTen from QuanLy where QuanLy.MaNQL = (select NguoiTao from  ThongBao where MaThongBao = '{0}')", MaThongBao);
             return DataProvider.Instance.ExecuteQuery(query).Rows[0]["HoTen"].ToString();
         }
+
+        public bool XoaThongBao(string MaThongBao)
+        {
+            string query = "DELETE FROM ThongBao WHERE MaThongBao = @MaThongBao";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { MaThongBao });
+            return result > 0;
+        }
+      
         public DataTable LayThongBaoTheoMa(string maThongBao)
         {
             string query = string.Format("SELECT * FROM ThongBao WHERE MaThongBao = '{0}'", maThongBao);
             return DataProvider.Instance.ExecuteQuery(query);
         }
+      
         public void CapNhatThongBao(string maThongBao, string tieuDe, string noiDung)
         {
             /*
@@ -51,7 +60,7 @@ namespace DAO
             string query = string.Format("UPDATE ThongBao SET TieuDe = N'{0}', NoiDung = N'{1}', NgayTao = '{2}' WHERE MaThongBao = '{3}'", tieuDe, noiDung, ngayCapNhat, maThongBao);
             */
             string query = string.Format("UPDATE ThongBao SET TieuDe = N'{0}', NoiDung = N'{1}' WHERE MaThongBao = '{2}'", tieuDe, noiDung, maThongBao);
-            DataProvider.Instance.ExecuteNonQuery(query);
+            return DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }
