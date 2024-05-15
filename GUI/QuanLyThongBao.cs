@@ -46,9 +46,10 @@ namespace GUI
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ThemThongBao themThongBao = new ThemThongBao(maNQL);
 
+            ThemThongBao themThongBao = new ThemThongBao();
             themThongBao.ShowDialog();
+            loadBangThongBao();
         }
 
         private void dtgvBangThongBao_CellContentClick(object sender, DataGridViewCellEventArgs e)

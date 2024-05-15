@@ -31,6 +31,10 @@ namespace GUI
             taiKhoanHienTai = TaiKhoan;
         }
 
+        public string LayMaQuanLy()
+        {
+            return lblMSSV.Text;
+        }
         private string LayTenQuanLy(string tenDangNhap)
         {
             string maNQL = "";

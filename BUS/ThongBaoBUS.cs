@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace BUS
 {
     public class ThongBaoBUS
@@ -20,6 +21,37 @@ namespace BUS
         public DataTable LayDanhSachThongBao(string TieuDe)
         {
             return ThongBaoDAO.Instance.LayDanhSachThongBao(TieuDe);
+        }
+
+        public DataTable LayDanhSachThongBaoV2(string TieuDe)
+        {
+            return ThongBaoDAO.Instance.LayDanhSachThongBaoV2(TieuDe);
+        }
+        public string LayNoiDungThongBao(string MaThongBao)
+        {
+            return ThongBaoDAO.Instance.LayNoiDungThongBao(MaThongBao);
+
+        }
+        public string LayTenNguoiTaoThongBao(string MaThongBao)
+        {
+            return ThongBaoDAO.Instance.LayTenNguoiTaoThongBao(MaThongBao);
+
+        }
+        public DataTable LayThongBaoTheoMa(string maThongBao)
+        {
+            return ThongBaoDAO.Instance.LayThongBaoTheoMa(maThongBao);
+        }
+        public void CapNhatThongBao(string maThongBao, string tieuDe, string noiDung)
+        {
+            ThongBaoDAO.Instance.CapNhatThongBao(maThongBao, tieuDe, noiDung);
+        }
+        /*public void ThemThongBao(string maThongBao, string tieuDe, string noiDung)
+        {
+            ThongBaoDAO.Instance.ThemThongBao(maThongBao, tieuDe, noiDung);
+        }*/
+        public void ThemThongBao(string tieuDe, string noiDung, string nguoiTao)
+        {
+            ThongBaoDAO.Instance.ThemThongBao(tieuDe, noiDung, nguoiTao);
         }
     }
 }
