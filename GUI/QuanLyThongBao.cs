@@ -55,7 +55,7 @@ namespace GUI
             if (e.ColumnIndex == dtgvBangThongBao.Columns["SuaThongBao"].Index)
             {
                 SuaThongBao suaThongBao = new SuaThongBao(MaThongBao, TieuDe, NoiDung);
-
+                suaThongBao.FormClosed += SuaThongBao_FormClosed; // Đăng ký sự kiện FormClosed
                 suaThongBao.ShowDialog();
             }
 
@@ -76,6 +76,11 @@ namespace GUI
                     }
                 }
             }
+        }
+        private void SuaThongBao_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Cập nhật lại dữ liệu sau khi form SuaThongBao đóng
+            loadBangThongBao();
         }
     }
 }
