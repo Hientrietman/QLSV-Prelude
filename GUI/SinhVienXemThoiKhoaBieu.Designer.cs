@@ -70,28 +70,24 @@
             this.cboNamHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNamHoc.FormattingEnabled = true;
             this.cboNamHoc.Items.AddRange(new object[] {
-            "2020-2021",
-            "2021-2022",
-            "2022-2023",
-            "2023-2024"});
+            "All"});
             this.cboNamHoc.Location = new System.Drawing.Point(440, 33);
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Size = new System.Drawing.Size(121, 26);
             this.cboNamHoc.TabIndex = 32;
-            this.cboNamHoc.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
+            //this.cboNamHoc.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
             // 
             // cboHocKy
             // 
             this.cboHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHocKy.FormattingEnabled = true;
             this.cboHocKy.Items.AddRange(new object[] {
-            "1",
-            "2"});
+            "All"});
             this.cboHocKy.Location = new System.Drawing.Point(574, 33);
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Size = new System.Drawing.Size(121, 26);
             this.cboHocKy.TabIndex = 31;
-            this.cboHocKy.SelectedIndexChanged += new System.EventHandler(this.cmbSemester_SelectedIndexChanged);
+            // this.cboHocKy.SelectedIndexChanged += new System.EventHandler(this.cmbSemester_SelectedIndexChanged);
             // 
             // btnPrint
             // 
