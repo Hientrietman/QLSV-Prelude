@@ -39,5 +39,19 @@ namespace DAO
             string query = String.Format("select HoTen from QuanLy where QuanLy.MaNQL = (select NguoiTao from  ThongBao where MaThongBao = '{0}')", MaThongBao);
             return DataProvider.Instance.ExecuteQuery(query).Rows[0]["HoTen"].ToString();
         }
+        public DataTable LayThongBaoTheoMa(string maThongBao)
+        {
+            string query = string.Format("SELECT * FROM ThongBao WHERE MaThongBao = '{0}'", maThongBao);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public void CapNhatThongBao(string maThongBao, string tieuDe, string noiDung)
+        {
+            /*
+            string ngayCapNhat = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = string.Format("UPDATE ThongBao SET TieuDe = N'{0}', NoiDung = N'{1}', NgayTao = '{2}' WHERE MaThongBao = '{3}'", tieuDe, noiDung, ngayCapNhat, maThongBao);
+            */
+            string query = string.Format("UPDATE ThongBao SET TieuDe = N'{0}', NoiDung = N'{1}' WHERE MaThongBao = '{2}'", tieuDe, noiDung, maThongBao);
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
     }
 }
