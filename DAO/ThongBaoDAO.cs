@@ -39,5 +39,12 @@ namespace DAO
             string query = String.Format("select HoTen from QuanLy where QuanLy.MaNQL = (select NguoiTao from  ThongBao where MaThongBao = '{0}')", MaThongBao);
             return DataProvider.Instance.ExecuteQuery(query).Rows[0]["HoTen"].ToString();
         }
+
+        public bool XoaThongBao(string MaThongBao)
+        {
+            string query = "DELETE FROM ThongBao WHERE MaThongBao = @MaThongBao";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { MaThongBao });
+            return result > 0;
+        }
     }
 }
