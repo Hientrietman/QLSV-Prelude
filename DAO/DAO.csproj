@@ -66,6 +66,7 @@
     <Compile Include="DiemDAO.cs" />
     <Compile Include="DoiMatKhauDAO.cs" />
     <Compile Include="GiangVienDAO.cs" />
+    <Compile Include="GopYVaHoiDapDAO.cs" />
     <Compile Include="HocPhanDAO.cs" />
     <Compile Include="HocPhiDAO.cs" />
     <Compile Include="KhoaDAO.cs" />

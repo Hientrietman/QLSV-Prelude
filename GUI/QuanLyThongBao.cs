@@ -43,6 +43,7 @@ namespace GUI
             ThemThongBao themThongBao = new ThemThongBao(taiKhoan.TenDangNhap);
 
             themThongBao.ShowDialog();
+            loadBangThongBao();
         }
 
         private void dtgvBangThongBao_CellContentClick(object sender, DataGridViewCellEventArgs e)
