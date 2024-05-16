@@ -60,7 +60,7 @@ namespace DAO
             string query = string.Format("UPDATE ThongBao SET TieuDe = N'{0}', NoiDung = N'{1}', NgayTao = '{2}' WHERE MaThongBao = '{3}'", tieuDe, noiDung, ngayCapNhat, maThongBao);
             */
             string query = string.Format("UPDATE ThongBao SET TieuDe = N'{0}', NoiDung = N'{1}' WHERE MaThongBao = '{2}'", tieuDe, noiDung, maThongBao);
-            return DataProvider.Instance.ExecuteNonQuery(query);
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }
