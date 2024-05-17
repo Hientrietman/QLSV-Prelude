@@ -26,7 +26,7 @@ namespace GUI
         public TrangChuQuanLy(TaiKhoanDTO TaiKhoan)
         {
             InitializeComponent();
-            lblName.Text = LayTenQuanLy(TaiKhoan.TenDangNhap); ;
+            lblName.Text = LayTenQuanLy(TaiKhoan.TenDangNhap);
             lblMSSV.Text = TaiKhoan.TenDangNhap;
             taiKhoanHienTai = TaiKhoan;
         }
@@ -55,6 +55,8 @@ namespace GUI
         {
             ThongTinCaNhan f = new ThongTinCaNhan(taiKhoanHienTai);
             f.ShowDialog();
+            lblName.Text = LayTenQuanLy(taiKhoanHienTai.TenDangNhap);
+
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -83,6 +85,16 @@ namespace GUI
         private void button3_Click(object sender, EventArgs e)
         {
             ThemLHPVaoTKB f = new ThemLHPVaoTKB();
+            f.ShowDialog();
+        }
+
+        private void btnThongbaochung_Click(object sender, EventArgs e)
+        {
+            ThongBao f = new ThongBao(taiKhoanHienTai);
+        }
+        private void btnUpdateMes_Click(object sender, EventArgs e)
+        {
+            QuanLyThongBao f = new QuanLyThongBao(taiKhoanHienTai);
             f.ShowDialog();
         }
     }

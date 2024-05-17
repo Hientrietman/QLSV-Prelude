@@ -30,6 +30,5 @@ namespace BUS
 
             return DiemDAO.Instance.UpdateDiemSinhVien(maHocPhan, maSV, diemQuaTrinh, diemGiuaKy, diemCuoiKy);
         }
-        
     }
 }

@@ -40,5 +40,17 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
+        public List<string> LayDanhSachHocKy(string mssv)
+        {
+            string query = String.Format("SELECT DISTINCT HocKy FROM ThoiKhoaBieu WHERE MaSinhVien = '{0}'", mssv);
+            return DataProvider.Instance.GetDistinctSemesters(query);
+        }
+
+        public List<string> LayDanhSachNamHoc(string mssv)
+        {
+            string query = String.Format("SELECT DISTINCT NamHoc FROM ThoiKhoaBieu WHERE MaSinhVien = '{0}'", mssv);
+            return DataProvider.Instance.GetDistinctYear(query);
+        }
+
     }
 }

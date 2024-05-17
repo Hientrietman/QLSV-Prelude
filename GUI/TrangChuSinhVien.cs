@@ -70,6 +70,8 @@ namespace GUI
         {
             ThongTinCaNhan f = new ThongTinCaNhan(taiKhoan);
             f.ShowDialog();
+            lblName.Text = LayTenSinhVien(taiKhoan.TenDangNhap);
+
 
         }
 
@@ -81,6 +83,17 @@ namespace GUI
         private void btnDKHP_Click(object sender, EventArgs e)
         {
             SVDangKyHocPhan f = new SVDangKyHocPhan(taiKhoan);
+            f.ShowDialog();
+        }
+
+        private void btnThongbaochung_Click(object sender, EventArgs e)
+        {
+            ThongBao f = new ThongBao(taiKhoan);
+        }
+        
+        private void btnHocPhi_Click(object sender, EventArgs e)
+        {
+            XemHocPhi f = new XemHocPhi(taiKhoan);
             f.ShowDialog();
         }
     }
