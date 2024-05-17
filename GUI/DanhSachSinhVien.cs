@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,8 @@ namespace GUI
 {
     public partial class DanhSachSinhVien : Form
     {
-    
+        public event EventHandler DataUpdated;
+
         private static DanhSachSinhVien instance;
 
         public static DanhSachSinhVien Instance
@@ -26,42 +28,33 @@ namespace GUI
         {
             InitializeComponent();
             ThongTinSV thongTinSV = new ThongTinSV();
-         
+
 
         }
-    
+
         private void DanhSachSinhVien_Load(object sender, EventArgs e)
         {
-
-            dtgvDanhSachSinhVien.DataSource = SinhVienBUS.Instance.LayToanBoSinhVien();
-            // Load danh sách khoa vào ComboBox
+            LoadLaiDuLieu();
             DataTable dtKhoa = KhoaBUS.Instance.LayKhoa();
             if (dtKhoa != null && dtKhoa.Rows.Count > 0)
             {
-                // Thiết lập DataSource cho ComboBox Khoa
                 cboKhoa.DataSource = dtKhoa;
                 cboKhoa.ValueMember = "MaKhoa";
-                // Thiết lập trường cần hiển thị lên ComboBox (ở đây là trường "MaKhoa")
                 cboKhoa.DisplayMember = "TenKhoa";
-            }
-            else
-            {
-                // Xử lý trường hợp không có dữ liệu hoặc lỗi khi truy vấn
-                // Ví dụ: MessageBox.Show("Không có dữ liệu khoa.");
-            }
+                cboKhoa.SelectedIndex = -1;
 
+
+            }
             DataTable dtLop = SinhVienBUS.Instance.LayLop();
             if (dtLop != null && dtLop.Rows.Count > 0)
             {
                 // Thiết lập DataSource cho ComboBox Khoa
                 cboLop.DataSource = dtLop;
                 cboLop.ValueMember = "Lop";
+                cboLop.SelectedIndex = -1;
+
             }
-            else
-            {
-                // Xử lý trường hợp không có dữ liệu hoặc lỗi khi truy vấn
-                // Ví dụ: MessageBox.Show("Không có dữ liệu khoa.");
-            }
+
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -75,8 +68,10 @@ namespace GUI
 
         private void btnThemmoi_Click(object sender, EventArgs e)
         {
-            new ThongTinSV(null, null, null, null, null, null, null, null, null).ShowDialog();
-
+            //new ThongTinSV(null, null, null, null, null, null, null, null, null).ShowDialog();
+            ThongTinSV thongTinSVForm = new ThongTinSV(null, null, null, null, null, null, null, null, null);
+            thongTinSVForm.DataUpdated += F_DataUpdated;
+            thongTinSVForm.ShowDialog();
         }
 
         private void dtgvDanhSachSinhVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -100,8 +95,12 @@ namespace GUI
                     string Lop = dtgvDanhSachSinhVien.CurrentRow.Cells["Lop"].Value.ToString();
                     string Khoa = dtgvDanhSachSinhVien.CurrentRow.Cells["TenKhoa"].Value.ToString();
                     string Email = dtgvDanhSachSinhVien.CurrentRow.Cells["Email"].Value.ToString();
+
+
                     ThongTinSV thongTinSVForm = new ThongTinSV(MaSV, HoTen, NgaySinh, GioiTinh, DiaChi, SoDienThoai, Lop, Khoa, Email);
+                    thongTinSVForm.DataUpdated += F_DataUpdated;
                     thongTinSVForm.ShowDialog();
+
 
                 }
             }
@@ -111,7 +110,7 @@ namespace GUI
             if (e.ColumnIndex == dtgvDanhSachSinhVien.Columns["Xoa"].Index && e.RowIndex >= 0)
             {
                 string MaSV = dtgvDanhSachSinhVien.Rows[e.RowIndex].Cells["MaSV"].Value.ToString();
-                bool result = SinhVienBUS.Instance.XoaSV(MaSV);
+                bool result = SinhVienBUS.Instance.XoaSinhVien(MaSV);
 
                 // Kiểm tra kết quả và cập nhật DataGridView nếu cần thiết
                 if (result)
@@ -121,6 +120,9 @@ namespace GUI
 
                 }
                 MessageBox.Show("Xóa thành công ");
+                LoadLaiDuLieu();
+                //OnDataUpdated();
+                //this.Close();
 
             }
         }
@@ -129,10 +131,36 @@ namespace GUI
             dtgvDanhSachSinhVien.DataSource = SinhVienDAO.Instance.LayToanBoSinhVien();
 
         }
-        private void txt_Load_Click(object sender, EventArgs e)
+
+        private void F_DataUpdated(object sender, EventArgs e)
         {
-            dtgvDanhSachSinhVien.DataSource = SinhVienDAO.Instance.LayToanBoSinhVien();
+            LoadLaiDuLieu();
         }
-        
+        protected virtual void OnDataUpdated()
+        {
+            EventHandler handler = DataUpdated;
+            if (handler != null)
+            {
+                handler(this, EventArgs.Empty);
+            }
+        }
+
+      
+        public bool IsStudentIdExists(string maSV)
+        {
+            foreach (DataGridViewRow row in dtgvDanhSachSinhVien.Rows)
+            {
+                if (row.Cells["MaSV"].Value != null && row.Cells["MaSV"].Value.ToString() == maSV)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void btnTatCa_Click(object sender, EventArgs e)
+        {
+            LoadLaiDuLieu();
+        }
     }
 }

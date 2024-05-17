@@ -26,5 +26,10 @@ namespace DAO
             string query = String.Format("SELECT * FROM Khoa ");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable LayDanhSachLop()
+        {
+            string query = "SELECT DISTINCT Lop FROM SinhVien";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

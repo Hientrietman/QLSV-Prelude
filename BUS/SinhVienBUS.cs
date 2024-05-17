@@ -59,9 +59,18 @@ namespace BUS
             return SinhVienDAO.Instance.ThemSV(MaSV, Lop, Email, SDT, NgaySinh, DiaChi, HoTen, GioiTinh, Khoa);
         }
 
-        public bool XoaSV(string MaSV)
+       
+        public bool XoaSinhVien(string MaSV)
         {
-            return SinhVienDAO.Instance.XoaSV(MaSV);
+            return SinhVienDAO.Instance.XoaSinhVien(MaSV);
+        }
+        public bool IsStudentIdExists(string maSV)
+        {
+            return SinhVienDAO.Instance.IsStudentIdExists(maSV);
+        }
+        public bool IsStudentEmailExists(string email)
+        {
+            return SinhVienDAO.Instance.IsStudentEmailExists(email);
         }
     }
 }
