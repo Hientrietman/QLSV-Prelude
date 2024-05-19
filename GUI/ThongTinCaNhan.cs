@@ -15,7 +15,7 @@ namespace GUI
     public partial class ThongTinCaNhan : Form
     {
         TaiKhoanDTO taiKhoanDTO = null;
-
+        public string EmailSinhVien { get; set; }
 
         public ThongTinCaNhan(DTO.TaiKhoanDTO taiKhoan)
         {
@@ -27,7 +27,7 @@ namespace GUI
         {
             LoadData();
         }
-        private void LoadData()
+        public void LoadData()
         {
             if (taiKhoanDTO.VaiTro == 0)
             {
@@ -78,6 +78,7 @@ namespace GUI
                 txtNamSinh.Text = ngaySinhFormatted;
                 txtSoDienThoai.Text = dt.Rows[0]["SDT"].ToString();
             }
+            EmailSinhVien = LayEmailSinhVien();
         }
 
         private void btnXacNhan_Click(object sender, EventArgs e)
@@ -89,6 +90,10 @@ namespace GUI
         private void F_DataUpdated(object sender, EventArgs e)
         {
             LoadData();
+        }
+        public string LayEmailSinhVien()
+        {
+            return txtEmail.Text;
         }
     }
 }

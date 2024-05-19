@@ -35,7 +35,14 @@ namespace GUI
         public TrangChuSinhVien()
         {
         }
-
+        public string LayMaSinhVien()
+        {
+            return lblMSSV.Text;
+        }
+        public string LayTenSinhVien()
+        {
+            return lblName.Text;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             SinhVienXemDiemThi sinhVienXemDiemThi = new SinhVienXemDiemThi(taiKhoan);
@@ -94,6 +101,12 @@ namespace GUI
         private void btnHocPhi_Click(object sender, EventArgs e)
         {
             XemHocPhi f = new XemHocPhi(taiKhoan);
+            f.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            GopYVaHoiDap f = new GopYVaHoiDap(taiKhoan);
             f.ShowDialog();
         }
     }

@@ -44,7 +44,7 @@
             // 
             this.txtNoiDung.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoiDung.Location = new System.Drawing.Point(10, 136);
-            this.txtNoiDung.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNoiDung.Margin = new System.Windows.Forms.Padding(2);
             this.txtNoiDung.Multiline = true;
             this.txtNoiDung.Name = "txtNoiDung";
             this.txtNoiDung.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -56,7 +56,7 @@
             // 
             this.txtTieuDe.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTieuDe.Location = new System.Drawing.Point(10, 85);
-            this.txtTieuDe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTieuDe.Margin = new System.Windows.Forms.Padding(2);
             this.txtTieuDe.Name = "txtTieuDe";
             this.txtTieuDe.Size = new System.Drawing.Size(613, 23);
             this.txtTieuDe.TabIndex = 1;
@@ -158,6 +158,7 @@
             this.btnThem.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.TabIndex = 52;
             this.btnThem.Values.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // ThemThongBao
             // 
@@ -170,7 +171,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtTieuDe);
             this.Controls.Add(this.txtNoiDung);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ThemThongBao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Thông Báo";

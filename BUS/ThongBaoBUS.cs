@@ -43,5 +43,9 @@ namespace BUS
         {
             ThongBaoDAO.Instance.CapNhatThongBao(maThongBao, tieuDe, noiDung);
         }
+        public void ThemThongBao(string tieuDe, string noiDung, string nguoiTao)
+        {
+            ThongBaoDAO.Instance.ThemThongBao(tieuDe, noiDung, nguoiTao);
+        }
     }
 }
