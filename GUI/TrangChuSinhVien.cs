@@ -96,6 +96,7 @@ namespace GUI
         private void btnThongbaochung_Click(object sender, EventArgs e)
         {
             ThongBao f = new ThongBao(taiKhoan);
+            f.ShowDialog();
         }
         
         private void btnHocPhi_Click(object sender, EventArgs e)
@@ -108,6 +109,11 @@ namespace GUI
         {
             GopYVaHoiDap f = new GopYVaHoiDap(taiKhoan);
             f.ShowDialog();
+        }
+
+        private void btnTimeSchedule_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

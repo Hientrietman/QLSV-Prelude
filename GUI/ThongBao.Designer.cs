@@ -58,19 +58,17 @@
             this.panel1.Controls.Add(this.lblThongBao);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(983, 45);
+            this.panel1.Size = new System.Drawing.Size(737, 37);
             this.panel1.TabIndex = 18;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GUI.Properties.Resources.sach;
-            this.pictureBox1.Location = new System.Drawing.Point(637, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(478, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 41);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 33);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
@@ -81,10 +79,9 @@
             this.lblThongBao.BackColor = System.Drawing.Color.Transparent;
             this.lblThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(50)))), ((int)(((byte)(65)))));
-            this.lblThongBao.Location = new System.Drawing.Point(265, 9);
-            this.lblThongBao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblThongBao.Location = new System.Drawing.Point(199, 7);
             this.lblThongBao.Name = "lblThongBao";
-            this.lblThongBao.Size = new System.Drawing.Size(364, 31);
+            this.lblThongBao.Size = new System.Drawing.Size(285, 25);
             this.lblThongBao.TabIndex = 1;
             this.lblThongBao.Text = "DANH SÁCH THÔNG BÁO";
             // 
@@ -105,11 +102,10 @@
             this.MaThongBao,
             this.TieuDe,
             this.NgayTao});
-            this.dtgvBangThongBao.Location = new System.Drawing.Point(0, 117);
-            this.dtgvBangThongBao.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgvBangThongBao.Location = new System.Drawing.Point(0, 95);
             this.dtgvBangThongBao.Name = "dtgvBangThongBao";
             this.dtgvBangThongBao.RowHeadersWidth = 51;
-            this.dtgvBangThongBao.Size = new System.Drawing.Size(983, 573);
+            this.dtgvBangThongBao.Size = new System.Drawing.Size(737, 466);
             this.dtgvBangThongBao.TabIndex = 43;
             this.dtgvBangThongBao.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvBangThongBao_CellClick);
             // 
@@ -155,36 +151,34 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.label1.Location = new System.Drawing.Point(13, 60);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(10, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 25);
+            this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 47;
             this.label1.Text = "Nhập tiêu đề:";
             // 
             // btnDauTrang
             // 
             this.btnDauTrang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDauTrang.Location = new System.Drawing.Point(345, 698);
-            this.btnDauTrang.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDauTrang.Location = new System.Drawing.Point(259, 567);
             this.btnDauTrang.Name = "btnDauTrang";
             this.btnDauTrang.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnDauTrang.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btnDauTrang.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnDauTrang.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnDauTrang.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnDauTrang.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnDauTrang.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnDauTrang.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnDauTrang.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDauTrang.Size = new System.Drawing.Size(43, 32);
+            this.btnDauTrang.Size = new System.Drawing.Size(32, 26);
             this.btnDauTrang.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnDauTrang.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnDauTrang.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnDauTrang.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnDauTrang.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnDauTrang.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnDauTrang.StateCommon.Border.Rounding = 8;
             this.btnDauTrang.StateCommon.Border.Width = 2;
@@ -195,8 +189,8 @@
             this.btnDauTrang.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnDauTrang.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btnDauTrang.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnDauTrang.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnDauTrang.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnDauTrang.StateTracking.Border.Rounding = 8;
             this.btnDauTrang.StateTracking.Border.Width = 2;
@@ -210,26 +204,25 @@
             // btnCuoiTrang
             // 
             this.btnCuoiTrang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCuoiTrang.Location = new System.Drawing.Point(571, 698);
-            this.btnCuoiTrang.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCuoiTrang.Location = new System.Drawing.Point(428, 567);
             this.btnCuoiTrang.Name = "btnCuoiTrang";
             this.btnCuoiTrang.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnCuoiTrang.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btnCuoiTrang.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCuoiTrang.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnCuoiTrang.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnCuoiTrang.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCuoiTrang.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCuoiTrang.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCuoiTrang.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCuoiTrang.Size = new System.Drawing.Size(43, 32);
+            this.btnCuoiTrang.Size = new System.Drawing.Size(32, 26);
             this.btnCuoiTrang.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnCuoiTrang.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnCuoiTrang.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCuoiTrang.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnCuoiTrang.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnCuoiTrang.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCuoiTrang.StateCommon.Border.Rounding = 8;
             this.btnCuoiTrang.StateCommon.Border.Width = 2;
@@ -240,8 +233,8 @@
             this.btnCuoiTrang.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnCuoiTrang.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btnCuoiTrang.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnCuoiTrang.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnCuoiTrang.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnCuoiTrang.StateTracking.Border.Rounding = 8;
             this.btnCuoiTrang.StateTracking.Border.Width = 2;
@@ -255,26 +248,25 @@
             // btnTrangTruoc
             // 
             this.btnTrangTruoc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTrangTruoc.Location = new System.Drawing.Point(396, 698);
-            this.btnTrangTruoc.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTrangTruoc.Location = new System.Drawing.Point(297, 567);
             this.btnTrangTruoc.Name = "btnTrangTruoc";
             this.btnTrangTruoc.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnTrangTruoc.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btnTrangTruoc.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangTruoc.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTrangTruoc.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnTrangTruoc.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnTrangTruoc.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangTruoc.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangTruoc.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangTruoc.Size = new System.Drawing.Size(37, 32);
+            this.btnTrangTruoc.Size = new System.Drawing.Size(28, 26);
             this.btnTrangTruoc.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnTrangTruoc.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnTrangTruoc.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangTruoc.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTrangTruoc.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnTrangTruoc.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnTrangTruoc.StateCommon.Border.Rounding = 8;
             this.btnTrangTruoc.StateCommon.Border.Width = 2;
@@ -285,8 +277,8 @@
             this.btnTrangTruoc.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangTruoc.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btnTrangTruoc.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnTrangTruoc.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnTrangTruoc.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnTrangTruoc.StateTracking.Border.Rounding = 8;
             this.btnTrangTruoc.StateTracking.Border.Width = 2;
@@ -300,26 +292,25 @@
             // btnTrangSau
             // 
             this.btnTrangSau.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTrangSau.Location = new System.Drawing.Point(526, 698);
-            this.btnTrangSau.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTrangSau.Location = new System.Drawing.Point(394, 567);
             this.btnTrangSau.Name = "btnTrangSau";
             this.btnTrangSau.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
             this.btnTrangSau.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btnTrangSau.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangSau.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTrangSau.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnTrangSau.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnTrangSau.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangSau.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangSau.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangSau.Size = new System.Drawing.Size(37, 32);
+            this.btnTrangSau.Size = new System.Drawing.Size(28, 26);
             this.btnTrangSau.StateCommon.Back.Color1 = System.Drawing.Color.White;
             this.btnTrangSau.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btnTrangSau.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangSau.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btnTrangSau.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnTrangSau.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnTrangSau.StateCommon.Border.Rounding = 8;
             this.btnTrangSau.StateCommon.Border.Width = 2;
@@ -330,8 +321,8 @@
             this.btnTrangSau.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btnTrangSau.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btnTrangSau.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btnTrangSau.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            this.btnTrangSau.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btnTrangSau.StateTracking.Border.Rounding = 8;
             this.btnTrangSau.StateTracking.Border.Width = 2;
@@ -347,18 +338,18 @@
             this.lblSoTrang.AutoSize = true;
             this.lblSoTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoTrang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.lblSoTrang.Location = new System.Drawing.Point(456, 698);
-            this.lblSoTrang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSoTrang.Location = new System.Drawing.Point(341, 571);
             this.lblSoTrang.Name = "lblSoTrang";
-            this.lblSoTrang.Size = new System.Drawing.Size(43, 25);
+            this.lblSoTrang.Size = new System.Drawing.Size(34, 20);
             this.lblSoTrang.TabIndex = 52;
             this.lblSoTrang.Text = "1/n";
             // 
             // btnTimKiemTB
             // 
-            this.btnTimKiemTB.Location = new System.Drawing.Point(554, 54);
+            this.btnTimKiemTB.Location = new System.Drawing.Point(416, 44);
+            this.btnTimKiemTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTimKiemTB.Name = "btnTimKiemTB";
-            this.btnTimKiemTB.Size = new System.Drawing.Size(98, 32);
+            this.btnTimKiemTB.Size = new System.Drawing.Size(74, 26);
             this.btnTimKiemTB.TabIndex = 53;
             this.btnTimKiemTB.Text = "Tìm Kiếm";
             this.btnTimKiemTB.UseVisualStyleBackColor = true;
@@ -367,10 +358,11 @@
             // txtTimKiem
             // 
             this.txtTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(178, 54);
+            this.txtTimKiem.Location = new System.Drawing.Point(134, 44);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(370, 31);
+            this.txtTimKiem.Size = new System.Drawing.Size(278, 26);
             this.txtTimKiem.TabIndex = 54;
             // 
             // lblCanhBao
@@ -378,16 +370,17 @@
             this.lblCanhBao.AutoSize = true;
             this.lblCanhBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCanhBao.ForeColor = System.Drawing.Color.Red;
-            this.lblCanhBao.Location = new System.Drawing.Point(175, 97);
+            this.lblCanhBao.Location = new System.Drawing.Point(131, 79);
+            this.lblCanhBao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCanhBao.Name = "lblCanhBao";
-            this.lblCanhBao.Size = new System.Drawing.Size(0, 16);
+            this.lblCanhBao.Size = new System.Drawing.Size(0, 13);
             this.lblCanhBao.TabIndex = 55;
             // 
             // ThongBao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 739);
+            this.ClientSize = new System.Drawing.Size(737, 600);
             this.Controls.Add(this.lblCanhBao);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnTimKiemTB);
@@ -399,6 +392,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgvBangThongBao);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ThongBao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Báo";

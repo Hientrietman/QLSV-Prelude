@@ -91,6 +91,7 @@ namespace GUI
         private void btnThongbaochung_Click(object sender, EventArgs e)
         {
             ThongBao f = new ThongBao(taiKhoanHienTai);
+            f.ShowDialog();
         }
         private void btnUpdateMes_Click(object sender, EventArgs e)
         {

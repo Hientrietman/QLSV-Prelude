@@ -26,7 +26,7 @@ namespace BUS
 
         public DataTable LayKhoa()
         {
-          return KhoaDAO.Instance.LayDanhSachKhoa();
+            return KhoaDAO.Instance.LayDanhSachKhoa();
         }
     }
 }

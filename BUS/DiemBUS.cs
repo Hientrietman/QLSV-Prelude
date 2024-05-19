@@ -30,5 +30,15 @@ namespace BUS
 
             return DiemDAO.Instance.UpdateDiemSinhVien(maHocPhan, maSV, diemQuaTrinh, diemGiuaKy, diemCuoiKy);
         }
+
+        public DataTable LayDiemSinhVienBangMSSV(string MaSinhVien)
+        {
+            return DiemDAO.Instance.LayDiemSinhVienBangMSSV(MaSinhVien);
+        }
+
+        public DataTable LayDiemSinhVienTheoTKB(string MaSinhVien, string HocKy, string NamHoc)
+        {
+            return DiemDAO.Instance.LayDiemSinhVienTheoTKB(MaSinhVien, HocKy, NamHoc);
+        }
     }
 }

@@ -210,8 +210,8 @@
             this.btnHocPhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHocPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHocPhi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHocPhi.Location = new System.Drawing.Point(50, 2);
-            this.btnHocPhi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHocPhi.Location = new System.Drawing.Point(67, 5);
+            this.btnHocPhi.Margin = new System.Windows.Forms.Padding(2);
             this.btnHocPhi.Name = "btnHocPhi";
             this.btnHocPhi.Size = new System.Drawing.Size(161, 45);
             this.btnHocPhi.TabIndex = 1;
@@ -285,9 +285,10 @@
             this.btnTimeSchedule.Name = "btnTimeSchedule";
             this.btnTimeSchedule.Size = new System.Drawing.Size(215, 55);
             this.btnTimeSchedule.TabIndex = 1;
-            this.btnTimeSchedule.Text = "Lịch  thi";
+            this.btnTimeSchedule.Text = "Lịch thi";
             this.btnTimeSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTimeSchedule.UseVisualStyleBackColor = false;
+            this.btnTimeSchedule.Click += new System.EventHandler(this.btnTimeSchedule_Click);
             // 
             // pictureBox5
             // 
@@ -453,7 +454,7 @@
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDangXuat.Location = new System.Drawing.Point(1392, 17);
+            this.btnDangXuat.Location = new System.Drawing.Point(1275, 17);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(156, 60);
             this.btnDangXuat.TabIndex = 0;
