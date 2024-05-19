@@ -88,6 +88,31 @@ namespace DAO
             return result > 0;
         }
 
+        public DataTable LayLop()
+        {
+            string query = string.Format("Select Lop from SinhVien");
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public bool XoaSinhVien(string MaSV)
+        {
+            string query = string.Format("EXEC XoaSinhVien @MaSV = '{0}';", MaSV);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool IsStudentIdExists(string maSV)
+        {
+            string query = "SELECT COUNT(*) FROM SinhVien WHERE MaSV = @MaSV";
+            object[] parameter = { maSV };
+            int count = (int)DataProvider.Instance.ExecuteScalar(query, parameter);
+            return count > 0;
+        }
 
+        public bool IsStudentEmailExists(string email)
+        {
+            string query = "SELECT COUNT(*) FROM SinhVien WHERE Email = @Email";
+            object[] parameter = { email };
+            int count = (int)DataProvider.Instance.ExecuteScalar(query, parameter);
+            return count > 0;
+        }
     }
 }

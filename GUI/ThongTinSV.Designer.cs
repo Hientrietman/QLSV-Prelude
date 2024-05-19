@@ -47,12 +47,12 @@ namespace GUI
             this.btn_Exit = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnKhoa = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btn_Lop = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txt_Lop = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txt_SDT = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.btn_SDT = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txt_GioiTinh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.cb_Khoa = new System.Windows.Forms.ComboBox();
             this.dtP_NgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.cb_Lop = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,8 +179,8 @@ namespace GUI
             this.btn_Enter.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btn_Enter.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btn_Enter.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btn_Enter.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Enter.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Enter.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btn_Enter.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -190,8 +190,8 @@ namespace GUI
             this.btn_Enter.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btn_Enter.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btn_Enter.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btn_Enter.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Enter.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Enter.StateCommon.Border.Rounding = 8;
             this.btn_Enter.StateCommon.Border.Width = 2;
@@ -202,8 +202,8 @@ namespace GUI
             this.btn_Enter.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btn_Enter.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btn_Enter.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btn_Enter.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Enter.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Enter.StateTracking.Border.Rounding = 8;
             this.btn_Enter.StateTracking.Border.Width = 2;
@@ -223,8 +223,8 @@ namespace GUI
             this.btn_Exit.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
             this.btn_Exit.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btn_Exit.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btn_Exit.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Exit.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Exit.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btn_Exit.OverrideDefault.Content.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
@@ -234,8 +234,8 @@ namespace GUI
             this.btn_Exit.StateCommon.Back.Color2 = System.Drawing.Color.White;
             this.btn_Exit.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btn_Exit.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
-            this.btn_Exit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Exit.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Exit.StateCommon.Border.Rounding = 8;
             this.btn_Exit.StateCommon.Border.Width = 2;
@@ -246,8 +246,8 @@ namespace GUI
             this.btn_Exit.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(171)))), ((int)(((byte)(150)))));
             this.btn_Exit.StateTracking.Border.Color1 = System.Drawing.Color.White;
             this.btn_Exit.StateTracking.Border.Color2 = System.Drawing.Color.White;
-            this.btn_Exit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom)
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left)
+            this.btn_Exit.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.btn_Exit.StateTracking.Border.Rounding = 8;
             this.btn_Exit.StateTracking.Border.Width = 2;
@@ -274,13 +274,6 @@ namespace GUI
             this.btn_Lop.Size = new System.Drawing.Size(32, 20);
             this.btn_Lop.TabIndex = 26;
             this.btn_Lop.Values.Text = "Lớp";
-            // 
-            // txt_Lop
-            // 
-            this.txt_Lop.Location = new System.Drawing.Point(200, 145);
-            this.txt_Lop.Name = "txt_Lop";
-            this.txt_Lop.Size = new System.Drawing.Size(200, 23);
-            this.txt_Lop.TabIndex = 25;
             // 
             // txt_SDT
             // 
@@ -326,11 +319,20 @@ namespace GUI
             this.dtP_NgaySinh.TabIndex = 35;
             this.dtP_NgaySinh.ValueNullable = new System.DateTime(1800, 1, 1, 0, 0, 0, 0);
             // 
+            // cb_Lop
+            // 
+            this.cb_Lop.FormattingEnabled = true;
+            this.cb_Lop.Location = new System.Drawing.Point(200, 145);
+            this.cb_Lop.Name = "cb_Lop";
+            this.cb_Lop.Size = new System.Drawing.Size(200, 21);
+            this.cb_Lop.TabIndex = 36;
+            // 
             // ThongTinSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 527);
+            this.Controls.Add(this.cb_Lop);
             this.Controls.Add(this.dtP_NgaySinh);
             this.Controls.Add(this.cb_Khoa);
             this.Controls.Add(this.txt_GioiTinh);
@@ -338,7 +340,6 @@ namespace GUI
             this.Controls.Add(this.txt_SDT);
             this.Controls.Add(this.btnKhoa);
             this.Controls.Add(this.btn_Lop);
-            this.Controls.Add(this.txt_Lop);
             this.Controls.Add(this.btn_Exit);
             this.Controls.Add(this.btn_Enter);
             this.Controls.Add(this.panel1);
@@ -383,11 +384,11 @@ namespace GUI
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_Exit;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel btnKhoa;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel btn_Lop;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txt_Lop;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txt_SDT;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel btn_SDT;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txt_GioiTinh;
         private System.Windows.Forms.ComboBox cb_Khoa;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtP_NgaySinh;
+        private System.Windows.Forms.ComboBox cb_Lop;
     }
 }
