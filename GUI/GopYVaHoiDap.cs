@@ -56,7 +56,7 @@ namespace GUI
                     // Tạo đối tượng MailMessage
                     MailMessage mail = new MailMessage();
                     mail.From = new MailAddress("minhhoang0121@gmail.com"); // Email của bạn
-                    mail.To.Add("doquochuy19102003@gmail.com"); // Email nhận
+                    mail.To.Add("minhhoang0121@gmail.com"); // Email nhận
                     mail.Subject = "Góp ý từ sinh viên"; // Tiêu đề email
                     mail.Body = $"Mã sinh viên: {gopYVaHoiDap.MaSinhVien}\nHọ tên: {gopYVaHoiDap.HoTen}\nEmail: {gopYVaHoiDap.Email}\nNội dung: {gopYVaHoiDap.NoiDung}"; // Nội dung email
 

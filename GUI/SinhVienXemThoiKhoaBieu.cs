@@ -81,5 +81,15 @@ namespace GUI
             }
         }
 
+        private void cboNamHoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void cboHocKy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
     }
 }

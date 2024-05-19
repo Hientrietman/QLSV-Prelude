@@ -75,7 +75,7 @@
             this.cboNamHoc.Name = "cboNamHoc";
             this.cboNamHoc.Size = new System.Drawing.Size(121, 26);
             this.cboNamHoc.TabIndex = 32;
-            //this.cboNamHoc.SelectedIndexChanged += new System.EventHandler(this.cmbYear_SelectedIndexChanged);
+            this.cboNamHoc.SelectedIndexChanged += new System.EventHandler(this.cboNamHoc_SelectedIndexChanged);
             // 
             // cboHocKy
             // 
@@ -87,7 +87,7 @@
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Size = new System.Drawing.Size(121, 26);
             this.cboHocKy.TabIndex = 31;
-            // this.cboHocKy.SelectedIndexChanged += new System.EventHandler(this.cmbSemester_SelectedIndexChanged);
+            this.cboHocKy.SelectedIndexChanged += new System.EventHandler(this.cboHocKy_SelectedIndexChanged);
             // 
             // btnPrint
             // 
