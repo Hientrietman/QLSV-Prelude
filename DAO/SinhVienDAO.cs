@@ -93,6 +93,11 @@ namespace DAO
             string query = string.Format("Select Lop from SinhVien");
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable LayLopTheoKhoa(string maKhoa)
+        {
+            string query = string.Format("EXEC LayLopTheoKhoa @MaKhoa = '{0}';", maKhoa);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
         public bool XoaSinhVien(string MaSV)
         {
             string query = string.Format("EXEC XoaSinhVien @MaSV = '{0}';", MaSV);

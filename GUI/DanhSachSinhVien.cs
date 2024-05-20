@@ -34,7 +34,7 @@ namespace GUI
 
         private void DanhSachSinhVien_Load(object sender, EventArgs e)
         {
-            LoadLaiDuLieu();
+           /* LoadLaiDuLieu();*/
             DataTable dtKhoa = KhoaBUS.Instance.LayKhoa();
             if (dtKhoa != null && dtKhoa.Rows.Count > 0)
             {
@@ -45,16 +45,33 @@ namespace GUI
 
 
             }
-            DataTable dtLop = SinhVienBUS.Instance.LayLop();
+            // Thêm sự kiện SelectedIndexChanged cho cboKhoa
+            cboKhoa.SelectedIndexChanged += cboKhoa_SelectedIndexChanged;
+            
+
+        }
+        private void cboKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboKhoa.SelectedValue != null)
+            {
+                string maKhoa = cboKhoa.SelectedValue.ToString();
+                LoadLopTheoKhoa(maKhoa);
+            }
+        }
+        private void LoadLopTheoKhoa(string maKhoa)
+        {
+            DataTable dtLop = SinhVienBUS.Instance.LayLopTheoKhoa(maKhoa);
             if (dtLop != null && dtLop.Rows.Count > 0)
             {
-                // Thiết lập DataSource cho ComboBox Khoa
                 cboLop.DataSource = dtLop;
                 cboLop.ValueMember = "Lop";
+                cboLop.DisplayMember = "Lop";
                 cboLop.SelectedIndex = -1;
-
             }
-
+            else
+            {
+                cboLop.DataSource = null;
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -62,7 +79,11 @@ namespace GUI
             string MaSV = txtMaSinhVien.Text;
             string Khoa = cboKhoa.SelectedValue?.ToString() ?? "";
             string Lop = cboLop.SelectedValue?.ToString() ?? "";
-
+            if (string.IsNullOrEmpty(MaSV) && string.IsNullOrEmpty(Khoa) && string.IsNullOrEmpty(Lop))
+            {
+                MessageBox.Show("Vui lòng nhập mã sinh viên hoặc chọn một khoa hoặc lớp để tìm kiếm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             dtgvDanhSachSinhVien.DataSource = SinhVienBUS.Instance.timKiemSVTrongDSSV(MaSV, Khoa, Lop);
         }
 
