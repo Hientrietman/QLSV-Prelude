@@ -52,7 +52,7 @@ namespace GUI
             this.txt_GioiTinh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.cb_Khoa = new System.Windows.Forms.ComboBox();
             this.dtP_NgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.cb_Lop = new System.Windows.Forms.ComboBox();
+            this.txtLop = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,11 +256,12 @@ namespace GUI
             this.btn_Exit.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Exit.TabIndex = 24;
             this.btn_Exit.Values.Text = "Hủy";
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             // 
             // btnKhoa
             // 
             this.btnKhoa.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.btnKhoa.Location = new System.Drawing.Point(475, 145);
+            this.btnKhoa.Location = new System.Drawing.Point(101, 145);
             this.btnKhoa.Name = "btnKhoa";
             this.btnKhoa.Size = new System.Drawing.Size(40, 20);
             this.btnKhoa.TabIndex = 28;
@@ -269,7 +270,7 @@ namespace GUI
             // btn_Lop
             // 
             this.btn_Lop.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.btn_Lop.Location = new System.Drawing.Point(91, 148);
+            this.btn_Lop.Location = new System.Drawing.Point(475, 145);
             this.btn_Lop.Name = "btn_Lop";
             this.btn_Lop.Size = new System.Drawing.Size(32, 20);
             this.btn_Lop.TabIndex = 26;
@@ -301,7 +302,7 @@ namespace GUI
             // cb_Khoa
             // 
             this.cb_Khoa.FormattingEnabled = true;
-            this.cb_Khoa.Location = new System.Drawing.Point(584, 148);
+            this.cb_Khoa.Location = new System.Drawing.Point(200, 145);
             this.cb_Khoa.Name = "cb_Khoa";
             this.cb_Khoa.Size = new System.Drawing.Size(200, 21);
             this.cb_Khoa.TabIndex = 34;
@@ -319,20 +320,19 @@ namespace GUI
             this.dtP_NgaySinh.TabIndex = 35;
             this.dtP_NgaySinh.ValueNullable = new System.DateTime(1800, 1, 1, 0, 0, 0, 0);
             // 
-            // cb_Lop
+            // txtLop
             // 
-            this.cb_Lop.FormattingEnabled = true;
-            this.cb_Lop.Location = new System.Drawing.Point(200, 145);
-            this.cb_Lop.Name = "cb_Lop";
-            this.cb_Lop.Size = new System.Drawing.Size(200, 21);
-            this.cb_Lop.TabIndex = 36;
+            this.txtLop.Location = new System.Drawing.Point(584, 142);
+            this.txtLop.Name = "txtLop";
+            this.txtLop.Size = new System.Drawing.Size(200, 23);
+            this.txtLop.TabIndex = 36;
             // 
             // ThongTinSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 527);
-            this.Controls.Add(this.cb_Lop);
+            this.Controls.Add(this.txtLop);
             this.Controls.Add(this.dtP_NgaySinh);
             this.Controls.Add(this.cb_Khoa);
             this.Controls.Add(this.txt_GioiTinh);
@@ -389,6 +389,6 @@ namespace GUI
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txt_GioiTinh;
         private System.Windows.Forms.ComboBox cb_Khoa;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtP_NgaySinh;
-        private System.Windows.Forms.ComboBox cb_Lop;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLop;
     }
 }

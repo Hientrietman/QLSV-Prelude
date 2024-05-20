@@ -27,7 +27,7 @@ namespace DAO
 
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable HienThiHocPhiSinhVien(string maSinhVien, string hocKy, string namHoc)
+       /* public DataTable HienThiHocPhiSinhVien(string maSinhVien, string hocKy, string namHoc)
         {
             string query = $@"
         SELECT hp.MaHocPhan, hp.TenHocPhan, ISNULL(hocphi.HocPhi, 0) AS HocPhi,
@@ -39,7 +39,25 @@ namespace DAO
         WHERE tkb.MaSinhVien = '{maSinhVien}' AND tkb.HocKy = '{hocKy}' AND tkb.NamHoc = '{namHoc}'
         ORDER BY hp.MaHocPhan";
             return DataProvider.Instance.ExecuteQuery(query);
+        }*/
+
+        public DataTable HienThiHocPhiSinhVien(string maSinhVien, string hocKy, string namHoc)
+        {
+            string query = $@"
+        SELECT hp.MaHocPhan, hp.TenHocPhan, 365000 * hp.TinChi AS HocPhi,
+               CASE WHEN ISNULL(hocphi.TrangThai, 0) = 1 THEN N'Đã đóng' ELSE N'Chưa đóng' END AS TrangThaiText
+        FROM ThoiKhoaBieu tkb
+        JOIN DangKy dk ON tkb.MaTKB = dk.MaTKB
+        JOIN HocPhan hp ON dk.MaHocPhan = hp.MaHocPhan
+        LEFT JOIN HocPhi hocphi ON tkb.MaTKB = hocphi.MaTKB
+        WHERE tkb.MaSinhVien = '{maSinhVien}' AND tkb.HocKy = '{hocKy}' AND tkb.NamHoc = '{namHoc}'
+        ORDER BY hp.MaHocPhan";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
+
+
+
+
 
     }
 }

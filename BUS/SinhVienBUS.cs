@@ -46,6 +46,10 @@ namespace BUS
         {
             return SinhVienDAO.Instance.LayLop();
         }
+        public DataTable LayLopTheoKhoa(string maKhoa)
+        {
+            return SinhVienDAO.Instance.LayLopTheoKhoa(maKhoa);
+        }
         public DataTable timKiemSVTrongDSSV(string maSV, string khoa, string lop)
         {
             return SinhVienDAO.Instance.timKiemSVTrongDSSV(maSV, khoa, lop);    

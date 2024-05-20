@@ -45,7 +45,7 @@ namespace GUI
 
         private void ThongTinSV_Load(object sender, EventArgs e)
         {
-            cb_Lop_Load();
+          
             cb_Khoa_Load();
 
             if (string.IsNullOrEmpty(MaSV))
@@ -63,15 +63,9 @@ namespace GUI
                 this.txt_DiaChi.Text = DiaChi;
                 this.txt_SDT.Text = SoDienThoai;
                 this.txt_GioiTinh.Text = GioiTinh;
+                this.txtLop.Text = Lop;
 
-                foreach (DataRowView item in cb_Lop.Items)
-                {
-                    if (item.Row["Lop"].ToString() == Lop)
-                    {
-                        cb_Lop.SelectedItem = item;
-                        break;
-                    }
-                }
+               
 
                 foreach (DataRowView item in cb_Khoa.Items)
                 {
@@ -86,7 +80,7 @@ namespace GUI
 
         private void cb_Khoa_Load()
         {
-            cb_Khoa.DisplayMember = "TenKhoa";
+            /*cb_Khoa.DisplayMember = "TenKhoa";
             cb_Khoa.ValueMember = "MaKhoa";
             DataTable data = KhoaDAO.Instance.LayDanhSachKhoa();
             cb_Khoa.DataSource = data;
@@ -101,31 +95,19 @@ namespace GUI
                         break;
                     }
                 }
-            }
-        }
+            }*/
 
-        private void cb_Lop_Load()
-        {
-            cb_Lop.DisplayMember = "Lop";
-            cb_Lop.ValueMember = "Lop";
-            DataTable data = KhoaDAO.Instance.LayDanhSachLop();
-            cb_Lop.DataSource = data;
-
-            if (!string.IsNullOrEmpty(Lop))
+            DataTable dtKhoa = KhoaBUS.Instance.LayKhoa();
+            if (dtKhoa != null && dtKhoa.Rows.Count > 0)
             {
-                foreach (DataRowView item in cb_Lop.Items)
-                {
-                    if (item.Row["Lop"].ToString() == Lop)
-                    {
-                        cb_Lop.SelectedItem = item;
-                        break;
-                    }
-                }
+                cb_Khoa.DataSource = dtKhoa;
+                cb_Khoa.ValueMember = "MaKhoa";
+                cb_Khoa.DisplayMember = "TenKhoa";
+                cb_Khoa.SelectedIndex = -1;
             }
+           
         }
-
-
-
+      
         private void btn_Enter_Click(object sender, EventArgs e)
         {
             if (AreDetailsFilled())
@@ -136,9 +118,13 @@ namespace GUI
                 string GioiTinh = this.txt_GioiTinh.Text;
                 string DiaChi = this.txt_DiaChi.Text;
                 string SoDienThoai = this.txt_SDT.Text;
-                string Lop = cb_Lop.SelectedValue.ToString();
+                string Lop = this.txtLop.Text;
                 string Khoa = cb_Khoa.SelectedValue.ToString();
                 string Email = this.txt_Email.Text;
+                if (!IsValidStudentId(MaSV))
+                {
+                    return;
+                }
 
                 if (!IsValidGender(GioiTinh))
                     return;
@@ -236,7 +222,7 @@ namespace GUI
                    !string.IsNullOrEmpty(txt_GioiTinh.Text) &&
                    !string.IsNullOrEmpty(txt_DiaChi.Text) &&
                    !string.IsNullOrEmpty(txt_SDT.Text) &&
-                   cb_Lop.SelectedIndex != -1 &&
+                   !string.IsNullOrEmpty(txtLop.Text) &&
                    cb_Khoa.SelectedIndex != -1 &&
                    !string.IsNullOrEmpty(txt_Email.Text);
         }
@@ -248,6 +234,18 @@ namespace GUI
                 handler(this, EventArgs.Empty);
             }
         }
+        private bool IsValidStudentId(string studentId)
+        {
+            string pattern = @"^\d{2}\.\d{2}\.\d{3}\.\d{3}$";
+            if (!Regex.IsMatch(studentId, pattern))
+            {
+                MessageBox.Show("Định dạng không hợp lệ mời bạn nhập lại!.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {

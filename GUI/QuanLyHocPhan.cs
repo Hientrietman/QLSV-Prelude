@@ -58,26 +58,30 @@ namespace GUI
             if (txt_mahp.Text != "" && txt_mahp.Text.Length == 10)
             {
                 HocPhanDTO hocPhan = new HocPhanDTO(txt_mahp.Text, txt_mamh.Text, txt_tenhp.Text, txt_magv.Text, txt_nam.Text, txt_ngaybatdau.Text, txt_ngayketthuc.Text, txt_tinchi.Text, txt_thongtin.Text);
-
-                if (KiemTraMaHocPhan(txt_mahp.Text))
+                DateTime ngayBatDau, ngayKetThuc;
+                if (DateTime.TryParseExact(txt_ngaybatdau.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngayBatDau) &&
+     DateTime.TryParseExact(txt_ngayketthuc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ngayKetThuc) && ngayBatDau < ngayKetThuc)
                 {
-                    //txt_mahp_Edit();
+                    if (KiemTraMaHocPhan(txt_mahp.Text))
+                    {
+                        HocPhanBUS.Instance.SuaHocPhan(hocPhan);
+                        MessageBox.Show("Sửa thành công");
+                        dtgv_hocphan.DataSource = HocPhanBUS.Instance.LayDanhSachHocPhanEdit();
 
-                    HocPhanBUS.Instance.SuaHocPhan(hocPhan);
-                    MessageBox.Show("Sửa thành công");
-                    dtgv_hocphan.DataSource = HocPhanBUS.Instance.LayDanhSachHocPhanEdit();
-
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã học phần không tồn tại!");
+                    }
                 }
                 else
                 {
                     // Hiển thị thông báo lỗi nếu định dạng ngày không hợp lệ
-                    MessageBox.Show("Mã học phần không tồn tại!");
-
+                    MessageBox.Show("Định dạng ngày tháng năm không hợp lệ! ");
                 }
             }
-            else 
+            else
             {
-                // Nếu không đáp ứng các điều kiện, hiển thị thông báo lỗi hoặc thực hiện hành động phù hợp khác
                 MessageBox.Show("Vui lòng điền đúng mã học phần!");
             }
         }
