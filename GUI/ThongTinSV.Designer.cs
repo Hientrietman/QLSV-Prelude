@@ -52,7 +52,7 @@ namespace GUI
             this.txt_GioiTinh = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.cb_Khoa = new System.Windows.Forms.ComboBox();
             this.dtP_NgaySinh = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.cb_Lop = new System.Windows.Forms.ComboBox();
+            this.txtLop = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -320,20 +320,19 @@ namespace GUI
             this.dtP_NgaySinh.TabIndex = 35;
             this.dtP_NgaySinh.ValueNullable = new System.DateTime(1800, 1, 1, 0, 0, 0, 0);
             // 
-            // cb_Lop
+            // txtLop
             // 
-            this.cb_Lop.FormattingEnabled = true;
-            this.cb_Lop.Location = new System.Drawing.Point(584, 144);
-            this.cb_Lop.Name = "cb_Lop";
-            this.cb_Lop.Size = new System.Drawing.Size(200, 21);
-            this.cb_Lop.TabIndex = 36;
+            this.txtLop.Location = new System.Drawing.Point(584, 142);
+            this.txtLop.Name = "txtLop";
+            this.txtLop.Size = new System.Drawing.Size(200, 23);
+            this.txtLop.TabIndex = 36;
             // 
             // ThongTinSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(932, 527);
-            this.Controls.Add(this.cb_Lop);
+            this.Controls.Add(this.txtLop);
             this.Controls.Add(this.dtP_NgaySinh);
             this.Controls.Add(this.cb_Khoa);
             this.Controls.Add(this.txt_GioiTinh);
@@ -390,6 +389,6 @@ namespace GUI
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txt_GioiTinh;
         private System.Windows.Forms.ComboBox cb_Khoa;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dtP_NgaySinh;
-        private System.Windows.Forms.ComboBox cb_Lop;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLop;
     }
 }

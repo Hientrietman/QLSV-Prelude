@@ -63,15 +63,9 @@ namespace GUI
                 this.txt_DiaChi.Text = DiaChi;
                 this.txt_SDT.Text = SoDienThoai;
                 this.txt_GioiTinh.Text = GioiTinh;
+                this.txtLop.Text = Lop;
 
-                foreach (DataRowView item in cb_Lop.Items)
-                {
-                    if (item.Row["Lop"].ToString() == Lop)
-                    {
-                        cb_Lop.SelectedItem = item;
-                        break;
-                    }
-                }
+               
 
                 foreach (DataRowView item in cb_Khoa.Items)
                 {
@@ -111,37 +105,9 @@ namespace GUI
                 cb_Khoa.DisplayMember = "TenKhoa";
                 cb_Khoa.SelectedIndex = -1;
             }
-            // Thêm sự kiện SelectedIndexChanged cho cboKhoa
-            cb_Khoa.SelectedIndexChanged += cb_Khoa_SelectedIndexChanged;
+           
         }
-        private void cb_Khoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cb_Khoa.SelectedValue != null)
-            {
-                string maKhoa = cb_Khoa.SelectedValue.ToString();
-                LoadLopTheoKhoa(maKhoa);
-            }
-        }
-        private void LoadLopTheoKhoa(string maKhoa)
-        {
-            DataTable dtLop = SinhVienBUS.Instance.LayLopTheoKhoa(maKhoa);
-            if (dtLop != null && dtLop.Rows.Count > 0)
-            {
-                cb_Lop.DataSource = dtLop;
-                cb_Lop.ValueMember = "Lop";
-                cb_Lop.DisplayMember = "Lop";
-                cb_Lop.SelectedIndex = -1;
-            }
-            else
-            {
-                cb_Lop.DataSource = null;
-            }
-        }
-
-        
-
-
-
+      
         private void btn_Enter_Click(object sender, EventArgs e)
         {
             if (AreDetailsFilled())
@@ -152,7 +118,7 @@ namespace GUI
                 string GioiTinh = this.txt_GioiTinh.Text;
                 string DiaChi = this.txt_DiaChi.Text;
                 string SoDienThoai = this.txt_SDT.Text;
-                string Lop = cb_Lop.SelectedValue.ToString();
+                string Lop = this.txtLop.Text;
                 string Khoa = cb_Khoa.SelectedValue.ToString();
                 string Email = this.txt_Email.Text;
                 if (!IsValidStudentId(MaSV))
@@ -256,7 +222,7 @@ namespace GUI
                    !string.IsNullOrEmpty(txt_GioiTinh.Text) &&
                    !string.IsNullOrEmpty(txt_DiaChi.Text) &&
                    !string.IsNullOrEmpty(txt_SDT.Text) &&
-                   cb_Lop.SelectedIndex != -1 &&
+                   !string.IsNullOrEmpty(txtLop.Text) &&
                    cb_Khoa.SelectedIndex != -1 &&
                    !string.IsNullOrEmpty(txt_Email.Text);
         }
