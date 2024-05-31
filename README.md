@@ -1,10 +1,22 @@
-B1: chạy file "Quan_Li_SV.sql" để tạo csdl
-B2: giải nén file "Krypton-master.zip"
-B3: trong GUI ở phần References chọn Add References
-B4: chọn Browse và thêm 5 file .dll bao gồm 
-"ComponentFactory.Krypton.Docking.dll"
-"ComponentFactory.Krypton.Navigator.dll"
-"ComponentFactory.Krypton.Ribbon.dll"
-"ComponentFactory.Krypton.Toolkit.dll"
-"ComponentFactory.Krypton.Workspace.dll"
-B5: chạy chương trình
+# Project Title
+Student management systen with Krupton for GUI
+
+## Steps to Setup the Project
+
+### Step 1: Setup Database
+- Run the "Quan_Li_SV.sql" file to create the database.
+
+### Step 2: Extract Krypton Library
+- Extract the "Krypton-master.zip" file.
+
+### Step 3: Add Krypton References
+- In the GUI, go to the References section and select Add References.
+- Browse and add the following 5 DLL files:
+  - ComponentFactory.Krypton.Docking.dll
+  - ComponentFactory.Krypton.Navigator.dll
+  - ComponentFactory.Krypton.Ribbon.dll
+  - ComponentFactory.Krypton.Toolkit.dll
+  - ComponentFactory.Krypton.Workspace.dll
+
+### Step 4: Run the Program
+- Start the application.
