@@ -1,5 +1,5 @@
 # Project Title
-Student management systen with Krupton for GUI
+Student management systen with Krypton for GUI
 
 ## Steps to Setup the Project
 
